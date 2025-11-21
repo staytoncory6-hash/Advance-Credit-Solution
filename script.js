@@ -17,6 +17,29 @@ const $$ = (sel) => document.querySelectorAll(sel);
   toggle.addEventListener("click", () => {
     links.classList.toggle("open");
   });
+  // -------------------------------------------
+// LOCAL STORAGE SNAPSHOT SAVE / LOAD
+// -------------------------------------------
+const SNAPSHOT_STORAGE_KEY = "elite_ai_snapshots_v1";
+
+function saveSnapshotRecord(payload, snapshot, playbook) {
+  try {
+    const existingRaw = localStorage.getItem(SNAPSHOT_STORAGE_KEY);
+    const existing = existingRaw ? JSON.parse(existingRaw) : [];
+    const record = {
+      id: Date.now(),
+      createdAt: new Date().toISOString(),
+      payload,
+      snapshot,
+      playbook
+    };
+    existing.push(record);
+    localStorage.setItem(SNAPSHOT_STORAGE_KEY, JSON.stringify(existing));
+    console.log("✅ Snapshot saved locally:", record);
+  } catch (err) {
+    console.error("❌ Could not save snapshot:", err);
+  }
+}
 
   // Close menu when clicking a link (mobile)
   links.addEventListener("click", (e) => {
