@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Elite AI Credit – Admin</title>
+  <link rel="stylesheet" href="style.css" />
+  <!-- jsPDF for PDF generation -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+<body class="admin-body">
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#" class="brand">
+        <img src="assets/logo.png" alt="Elite Credit Mascot" class="brand-logo" />
+        <div class="brand-text">
+          <span class="brand-name">Elite AI Credit – Admin</span>
+          <span class="brand-tagline">Internal Snapshot Viewer</span>
+        </div>
+      </a>
+    </div>
+  </header>
+
+  <main class="admin-main">
+    <section class="section admin-section">
+      <div class="container">
+        <h1 class="section-title">Admin Snapshot Dashboard</h1>
+
+        <div class="admin-pin-card card">
+          <h3>Admin Access</h3>
+          <p>Enter your admin PIN to view saved snapshots on this device.</p>
+          <div class="pin-row">
+            <input type="password" id="admin-pin-input" placeholder="PIN" maxlength="8" />
+            <button type="button" class="btn-primary" id="admin-pin-btn">Unlock</button>
+          </div>
+          <p class="small-muted">
+            Note: This is a lightweight, front-end admin view. Data is stored in this browser’s local storage.
+          </p>
+        </div>
+
+        <div id="admin-content" class="admin-content card" style="display:none;">
+          <div class="admin-toolbar">
+            <h3>Saved Snapshots on This Device</h3>
+            <button type="button" class="btn-ghost" id="export-all-btn">
+              Download All as One PDF
+            </button>
+          </div>
+
+          <div id="admin-empty" class="small-muted">
+            No snapshots found yet. Generate at least one from the public site.
+          </div>
+
+          <table class="admin-table" id="snapshot-table">
+            <thead>
+              <tr>
+                <th>Date</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Score Range</th>
+                <th>State</th>
+                <th>Goal</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- rows injected by JS -->
+            </tbody>
+          </table>
+
+          <div id="detail-panel" class="detail-panel" style="display:none;">
+            <h3>Snapshot Detail</h3>
+            <pre id="detail-text"></pre>
+            <button type="button" class="btn-primary" id="detail-download-btn">
+              Download This Snapshot as PDF
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    // Simple PIN check (NOT high security, just keeps randoms out)
+    const ADMIN_PIN = "4321"; // <-- change this to whatever you want
+    const STORAGE_KEY = "elite_ai_snapshots_v1";
+
+    const $ = (sel) => document.querySelector(sel);
+
+    const pinInput = $("#admin-pin-input");
+    const pinBtn = $("#admin-pin-btn");
+    const adminContent = $("#admin-content");
+    const tableBody = $("#snapshot-table tbody");
+    const emptyMsg = $("#admin-empty");
+    const detailPanel = $("#detail-panel");
+    const detailText = $("#detail-text");
+    const detailDownloadBtn = $("#detail-download-btn");
+    const exportAllBtn = $("#export-all-btn");
+
+    let snapshots = [];
+    let currentDetail = null;
+
+    function loadSnapshots() {
+      try {
+        const raw = localStorage.getItem(STORAGE_KEY);
+        snapshots = raw ? JSON.parse(raw) : [];
+      } catch (e) {
+        console.error("Error reading snapshots:", e);
+        snapshots = [];
+      }
+    }
+
+    function formatDate(iso) {
+      if (!iso) return "";
+      const d = new Date(iso);
+      if (isNaN(d)) return iso;
+      return d.toLocaleString();
+    }
+
+    function renderTable() {
+      tableBody.innerHTML = "";
+      if (!snapshots.length) {
+        emptyMsg.style.display = "block";
+        return;
+      }
+      emptyMsg.style.display = "none";
+
+      snapshots
+        .slice()
+        .sort((a, b) => b.id - a.id)
+        .forEach((rec, index) => {
+          const tr = document.createElement("tr");
+
+          const p = rec.payload || {};
+          const dateTd = document.createElement("td");
+          dateTd.textContent = formatDate(rec.createdAt);
+
+          const nameTd = document.createElement("td");
+          nameTd.textContent = p.name || "—";
+
+          const emailTd = document.createElement("td");
+          emailTd.textContent = p.email || "—";
+
+          const scoreTd = document.createElement("td");
+          scoreTd.textContent = p.scoreRange || "—";
+
+          const stateTd = document.createElement("td");
+          stateTd.textContent = p.state || "—";
+
+          const goalTd = document.createElement("td");
+          goalTd.textContent = p.goal || "—";
+
+          const actionsTd = document.createElement("td");
+          const viewBtn = document.createElement("button");
+          viewBtn.textContent = "View";
+          viewBtn.className = "btn-ghost btn-small";
+          viewBtn.addEventListener("click", () => showDetail(rec));
+
+          const pdfBtn = document.createElement("button");
+          pdfBtn.textContent = "PDF";
+          pdfBtn.className = "btn-primary btn-small";
+          pdfBtn.style.marginLeft = "0.35rem";
+          pdfBtn.addEventListener("click", () => downloadSnapshotPDF(rec));
+
+          actionsTd.appendChild(viewBtn);
+          actionsTd.appendChild(pdfBtn);
+
+          tr.appendChild(dateTd);
+          tr.appendChild(nameTd);
+          tr.appendChild(emailTd);
+          tr.appendChild(scoreTd);
+          tr.appendChild(stateTd);
+          tr.appendChild(goalTd);
+          tr.appendChild(actionsTd);
+
+          tableBody.appendChild(tr);
+        });
+    }
+
+    function buildSnapshotText(rec) {
+      const p = rec.payload || {};
+      return [
+        "ELITE AI CREDIT – SNAPSHOT",
+        "Generated: " + formatDate(rec.createdAt),
+        "",
+        "Client:",
+        "  Name:  " + (p.name || "N/A"),
+        "  Email: " + (p.email || "N/A"),
+        "  Phone: " + (p.phone || "N/A"),
+        "  State: " + (p.state || "N/A"),
+        "  Score Range: " + (p.scoreRange || "N/A"),
+        "",
+        "Goal:",
+        "  " + (p.goal || "N/A"),
+        "",
+        "Reported Issues:",
+        "  " + (p.issues || "N/A"),
+        "",
+        "Timeline Preference:",
+        "  " + (p.timeline || "N/A"),
+        "",
+        "---------------------------------------",
+        "AI SNAPSHOT SUMMARY",
+        "---------------------------------------",
+        rec.snapshot || "",
+        "",
+        "---------------------------------------",
+        "AI 90-DAY PLAYBOOK",
+        "---------------------------------------",
+        rec.playbook || ""
+      ].join("\n");
+    }
+
+    function showDetail(rec) {
+      const text = buildSnapshotText(rec);
+      detailText.textContent = text;
+      detailPanel.style.display = "block";
+      currentDetail = rec;
+    }
+
+    async function downloadSnapshotPDF(rec) {
+      const { jsPDF } = window.jspdf;
+      const doc = new jsPDF({ unit: "pt", format: "letter" });
+      const text = buildSnapshotText(rec);
+
+      const margin = 40;
+      const maxWidth = 530;
+      const lines = doc.splitTextToSize(text, maxWidth);
+      doc.setFont("helvetica", "normal");
+      doc.setFontSize(11);
+      doc.text(lines, margin, margin);
+
+      const p = rec.payload || {};
+      const safeName = (p.name || "client").replace(/[^a-z0-9]+/gi, "_").toLowerCase();
+      const filename = `elite_snapshot_${safeName}_${rec.id}.pdf`;
+      doc.save(filename);
+    }
+
+    async function downloadAllSnapshotsPDF() {
+      if (!snapshots.length) {
+        alert("No snapshots to export.");
+        return;
+      }
+      const { jsPDF } = window.jspdf;
+      const doc = new jsPDF({ unit: "pt", format: "letter" });
+      const margin = 40;
+      const maxWidth = 530;
+      let y = margin;
+
+      snapshots
+        .slice()
+        .sort((a, b) => b.id - a.id)
+        .forEach((rec, idx) => {
+          const text = buildSnapshotText(rec);
+          const lines = doc.splitTextToSize(text, maxWidth);
+
+          lines.forEach((line) => {
+            if (y > 760) {
+              doc.addPage();
+              y = margin;
+            }
+            doc.text(line, margin, y);
+            y += 14;
+          });
+
+          if (idx < snapshots.length - 1) {
+            y += 24;
+            if (y > 760) {
+              doc.addPage();
+              y = margin;
+            }
+            doc.text("----------------------------------------------", margin, y);
+            y += 20;
+          }
+        });
+
+      const filename = `elite_all_snapshots_${Date.now()}.pdf`;
+      doc.save(filename);
+    }
+
+    pinBtn.addEventListener("click", () => {
+      const entered = pinInput.value.trim();
+      if (entered === ADMIN_PIN) {
+        loadSnapshots();
+        adminContent.style.display = "block";
+        renderTable();
+      } else {
+        alert("Incorrect PIN.");
+      }
+    });
+
+    pinInput.addEventListener("keypress", (e) => {
+      if (e.key === "Enter") {
+        pinBtn.click();
+      }
+    });
+
+    detailDownloadBtn.addEventListener("click", () => {
+      if (currentDetail) {
+        downloadSnapshotPDF(currentDetail);
+      }
+    });
+
+    exportAllBtn.addEventListener("click", downloadAllSnapshotsPDF);
+  </script>
+</body>
+</html>
