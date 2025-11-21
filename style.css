@@ -873,3 +873,17 @@ a:hover {
   color: #ffffffd9;
   margin-top: 10px;
 }
+/* ==========================
+   REASSURANCE BOX STYLE
+========================== */
+
+.reassure-box {
+  background: rgba(255, 255, 255, 0.10);
+  padding: 16px 20px;
+  border-left: 5px solid #ffb400;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #ffffffd9;
+  margin: 20px 0;
+}
