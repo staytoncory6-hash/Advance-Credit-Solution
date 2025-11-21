@@ -401,13 +401,14 @@ const aiEngine = {
         "• Option to have dispute / validation / goodwill letters generated for you",
         "",
         "How to pay:",
-        "• Cash App: $YOURCASHAPPNAME",
-        "• Zelle: your@email.com",
-        "",
-        "After you pay:",
-        "1. Send a screenshot + your full name to the number on this site.",
-        "2. We verify payment and attach your AI snapshot to your file.",
-        "3. You receive your full snapshot + plan (and letters if purchased)."
+"• Cash App: $YOURCASHAPPNAME",
+"• Zelle: your@email.com",
+"",
+"After you pay:",
+"1. Send a screenshot + your full name to the number on this site.",
+"2. We verify payment and attach your AI snapshot to your file.",
+"3. You receive your full snapshot + plan (and letters if purchased) as digital PDFs.",
+"4. You can print them for your own records, but no physical book or mail is sent."
       ].join("\n");
 
       typeOut(summaryEl, lockedText, 10);
