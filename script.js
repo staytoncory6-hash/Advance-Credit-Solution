@@ -358,7 +358,39 @@ const aiEngine = {
     }
   }
 
-  btn.addEventListener("click", () => {
+  btn.addEventListener("click", () => { // Build locked snapshot text with paywall
+const price = getSuggestedPrice(payload.scoreRange);
+const lockedText = [
+  "🔐 *Your Snapshot Is Ready — But Locked*",
+  "",
+  "To protect the value of this system and prevent misuse,",
+  "the full AI-written Snapshot, 90-Day Playbook, strategy breakdown,",
+  "and dispute letters are only released *after payment*.",
+  "",
+  `Snapshot Unlock Fee: $${price}.00`,
+  "",
+  "What unlocks after payment:",
+  "• Full AI-written Snapshot broken into phases",
+  "• 90-day playbook tailored to your situation",
+  "• Recommended dispute order that follows FCRA + Texas Finance Code",
+  "• Pricing breakdown so you know what to attack first",
+  "• Option to have dispute/validation letters auto-generated",
+  "",
+  "How to pay:",
+  `• Cash App: $Cory12151983`,
+  "",
+  "After you pay:",
+  "1. Send a screenshot + your full name to the number on this site.",
+  "2. We verify payment and attach your unlocked Snapshot.",
+  "3. You receive your full Snapshot + 90-day plan + letters (PDF).",
+  "4. You may print them yourself for personal use.",
+].join("\n");
+
+// Type out the locked message slowly
+typeOut(summaryEl, lockedText, 10);
+
+// Clear dynamic playbook for now
+if (playbookEl) playbookEl.innerHTML = "";
     const payload = {
       name: $("#intake-name")?.value.trim() || "",
       email: $("#intake-email")?.value.trim() || "",
