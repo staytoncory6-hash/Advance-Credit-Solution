@@ -360,6 +360,8 @@ const aiEngine = {
     // You can inspect this in browser dev tools or extend to send via email later:
     console.log("INTERNAL SNAPSHOT (for you only):\n", internalSnapshot);
     console.log("INTERNAL PLAYBOOK (for you only):\n", internalPlaybook);
+        // Save for admin page
+    saveSnapshotRecord(payload, internalSnapshot, internalPlaybook);
 
     // Quote price for snapshot (client sees this)
     const price = getSuggestedPrice(payload.scoreRange);
