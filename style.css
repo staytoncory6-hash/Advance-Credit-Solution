@@ -768,3 +768,98 @@ a:hover {
 .hero-subtitle {
   color: #e5e7eb;
 }
+/* ============================
+   SECRET EDUCATION SECTION
+=============================== */
+
+#secret-education {
+  padding: 4rem 0;
+  background: rgba(15, 23, 42, 0.92); /* deep navy */
+  border-top: 1px solid rgba(248, 250, 252, 0.15);
+}
+
+#secret-education .container {
+  max-width: 900px;
+}
+
+.secret-intro {
+  font-size: 1.05rem;
+  color: #e5e7eb;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.secret-box {
+  background: radial-gradient(circle at top left,
+              rgba(248, 250, 252, 0.12),
+              rgba(15, 23, 42, 0.98));
+  padding: 2rem;
+  border-radius: 14px;
+  border: 1px dashed rgba(248, 250, 252, 0.55); /* Arctic white */
+  margin-bottom: 2rem;
+  box-shadow: 
+    0 18px 40px rgba(0, 0, 0, 0.5),
+    0 0 0 1px rgba(255, 255, 255, 0.04);
+}
+
+.secret-box h3 {
+  color: #f9fafb;
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+}
+
+.secret-box p,
+.secret-box li {
+  color: #e5e7eb;
+  line-height: 1.5;
+}
+
+.secret-box ul {
+  margin-left: 1.25rem;
+  margin-top: 0.75rem;
+}
+
+.locked-msg {
+  color: #f97373;
+  font-weight: 600;
+  margin-top: 1.2rem;
+}
+
+.pay-now-area {
+  text-align: center;
+  margin-top: 2.5rem;
+}
+
+.unlock-title {
+  color: #fdfdfd;
+  margin-bottom: 1rem;
+}
+
+.pay-now-btn {
+  font-size: 1.15rem;
+  padding: 0.9rem 2.6rem;
+  display: inline-block;
+  border: 1px solid rgba(248, 250, 252, 0.9);
+  background: linear-gradient(135deg, #fbbf24, #dc2626);
+  border-radius: 50px;
+  color: white;
+  font-weight: 600;
+  text-decoration: none;
+  box-shadow:
+    0 0 0 0 rgba(248, 250, 252, 0),
+    0 14px 30px rgba(15, 23, 42, 0.9);
+  transition: all 0.25s ease;
+}
+
+.pay-now-btn:hover {
+  box-shadow:
+    0 0 0 14px rgba(248, 250, 252, 0.08),
+    0 18px 38px rgba(15, 23, 42, 1);
+  transform: translateY(-2px);
+}
+
+.verify-msg {
+  margin-top: 0.9rem;
+  color: #e5e7eb;
+  font-size: 0.95rem;
+}
