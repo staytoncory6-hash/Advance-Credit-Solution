@@ -659,3 +659,39 @@ a:hover {
     padding: 1.4rem 1.25rem 1.3rem;
   }
 }
+/* =======================================
+   SUPERHERO MASCOT REVEAL ANIMATION
+======================================= */
+
+.hero-mascot-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 1.5rem;
+}
+
+.hero-mascot-reveal {
+  width: 220px;
+  max-width: 80%;
+  animation: heroReveal 2.4s ease-out forwards;
+  opacity: 0;
+  transform: scale(0.4) rotate(-20deg);
+  filter: drop-shadow(0 12px 20px rgba(0,0,0,0.5));
+}
+
+@keyframes heroReveal {
+  0% {
+    opacity: 0;
+    transform: scale(0.4) rotate(-20deg);
+  }
+  40% {
+    opacity: 1;
+    transform: scale(1.15) rotate(2deg);
+  }
+  65% {
+    transform: scale(0.96) rotate(-1deg);
+  }
+  100% {
+    transform: scale(1) rotate(0deg);
+    opacity: 1;
+  }
+}
