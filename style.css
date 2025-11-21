@@ -731,3 +731,40 @@ a:hover {
     transform: scale(1) rotate(0deg);
   }
 }
+/* ================================
+   ARCTIC WHITE SNAPSHOT PAYWALL
+=================================== */
+
+.intake-output {
+  background: radial-gradient(circle at top left, rgba(255,255,255,0.04), rgba(15,23,42,0.98));
+  border: 1px solid rgba(248, 250, 252, 0.35); /* arctic white edge */
+  box-shadow:
+    0 18px 40px rgba(0, 0, 0, 0.7),
+    0 0 0 1px rgba(15, 23, 42, 0.9);
+}
+
+.output-block {
+  background: rgba(15, 23, 42, 0.9);
+  border: 1px dashed rgba(248, 250, 252, 0.55); /* brighter dashed border */
+  color: #f9fafb;
+}
+
+/* Section titles with white underlines */
+.section-title {
+  color: #f9fafb;
+}
+
+.section-title::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 3px;
+  margin: 0.7rem auto 0;
+  border-radius: 999px;
+  background: linear-gradient(90deg, rgba(255,255,255,0.8), rgba(148,163,184,0.4));
+}
+
+/* Hero subtitle a bit brighter */
+.hero-subtitle {
+  color: #e5e7eb;
+}
