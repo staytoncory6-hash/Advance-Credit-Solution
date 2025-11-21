@@ -863,3 +863,13 @@ a:hover {
   color: #e5e7eb;
   font-size: 0.95rem;
 }
+.reassure-box {
+  background: rgba(255, 255, 255, 0.08);
+  padding: 14px 18px;
+  border-left: 4px solid #ffb400;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #ffffffd9;
+  margin-top: 10px;
+}
