@@ -403,7 +403,7 @@ const aiEngine = {
         "• Option to have dispute / validation / goodwill letters generated for you",
         "",
         "How to pay:",
-"• Cash App: $YOURCASHAPPNAME",
+"• Cash App: $Cory12151983",
 "• Zelle: your@email.com",
 "",
 "After you pay:",
