@@ -405,9 +405,10 @@ const aiEngine = {
 "• Zelle: your@email.com",
 "",
 "After you pay:",
-"1. Send a screenshot + your full name...",
-"2. We verify payment...",
-"3. You receive your full snapshot..."
+"1. Send a screenshot + your full name to the number on this site.",
+"2. We verify payment and attach your AI snapshot to your file.",
+"3. Your full snapshot + 90-day plan + letters (if purchased) are delivered digitally as downloadable PDFs.",
+"4. You may print them yourself for personal use, but nothing physical is mailed.",
       ].join("\n");
 
       typeOut(summaryEl, lockedText, 10);
