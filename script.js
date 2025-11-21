@@ -307,11 +307,113 @@ const aiEngine = {
 // -------------------------------------------
 // INTAKE HANDLER
 // -------------------------------------------
+// -------------------------------------------
+// INTAKE HANDLER – SNAPSHOT IS PRODUCT (LOCKED UNTIL PAID)
+// -------------------------------------------
 (function initIntake() {
   const btn = $("#intake-submit");
   const summaryEl = $("#intake-summary");
   const playbookEl = $("#playbook-dynamic-output");
 
+  if (!btn || !summaryEl) return;
+
+  // simple pricing logic based on score range
+  function getSuggestedPrice(scoreRange) {
+    switch (scoreRange) {
+      case "sub500":
+        return 299;
+      case "500-579":
+        return 249;
+      case "580-639":
+        return 199;
+      case "640-699":
+        return 169;
+      case "700plus":
+        return 149;
+      default:
+        return 199;
+    }
+  }
+
+  btn.addEventListener("click", () => {
+    const payload = {
+      name: $("#intake-name")?.value.trim() || "",
+      email: $("#intake-email")?.value.trim() || "",
+      phone: $("#intake-phone")?.value.trim() || "",
+      state: $("#intake-state")?.value || "",
+      scoreRange: $("#intake-score")?.value || "",
+      issues: $("#intake-issues")?.value.trim() || "",
+      goal: $("#intake-goal")?.value.trim() || "",
+      timeline: $("#intake-timeline")?.value || ""
+    };
+
+    // Basic check – we don't want totally empty forms
+    if (!payload.scoreRange || !payload.state || !payload.goal) {
+      alert("Please choose your state, score range, and main 90-day goal so the AI can build your snapshot.");
+      return;
+    }
+
+    // Internally build snapshot + playbook for YOU (not shown to client)
+    const internalSnapshot = aiEngine.buildSnapshot(payload);
+    const internalPlaybook = aiEngine.buildPlaybook(payload);
+
+    // You can inspect this in browser dev tools or extend to send via email later:
+    console.log("INTERNAL SNAPSHOT (for you only):\n", internalSnapshot);
+    console.log("INTERNAL PLAYBOOK (for you only):\n", internalPlaybook);
+
+    // Quote price for snapshot (client sees this)
+    const price = getSuggestedPrice(payload.scoreRange);
+
+    // Show "processing" first to make it feel smart
+    const processingText =
+      "Analyzing your information, score range, goals, and potential law-based options..." +
+      "\n\nBuilding your personal AI snapshot. This may take up to 60 seconds.";
+
+    typeOut(summaryEl, processingText, 12);
+
+    if (playbookEl) {
+      playbookEl.textContent = ""; // keep this empty / locked for now
+    }
+
+    // After a short delay, show LOCKED paywall instead of the actual plan
+    setTimeout(() => {
+      const lockedText = [
+        "🔒 YOUR PERSONAL CREDIT SNAPSHOT IS READY (LOCKED)",
+        "-----------------------------------------------",
+        "",
+        "Your AI snapshot and 90-day plan have been generated based on:",
+        `• Your score range`,
+        `• The issues you described`,
+        `• Your main goal: "${payload.goal || "N/A"}"`,
+        `• Federal laws (FCRA/CROA) and your state selection`,
+        "",
+        "But to protect the value of the work (and stay compliant),",
+        "the full snapshot, legal strategy breakdown, and letters are only",
+        "released after payment.",
+        "",
+        `Snapshot unlock fee: $${price}.00`,
+        "",
+        "What you unlock after payment:",
+        "• Full AI-written snapshot broken into clear sections",
+        "• 90-day playbook tailored to your situation",
+        "• Recommended strategy sequence that respects the law",
+        "• Pricing breakdown so you know what you’re paying for",
+        "• Option to have dispute / validation / goodwill letters generated for you",
+        "",
+        "How to pay:",
+        "• Cash App: $YOURCASHAPPNAME",
+        "• Zelle: your@email.com",
+        "",
+        "After you pay:",
+        "1. Send a screenshot + your full name to the number on this site.",
+        "2. We verify payment and attach your AI snapshot to your file.",
+        "3. You receive your full snapshot + plan (and letters if purchased)."
+      ].join("\n");
+
+      typeOut(summaryEl, lockedText, 10);
+    }, 1800); // simulate “thinking” delay
+  });
+})();
   if (!btn || !summaryEl) return;
 
   btn.addEventListener("click", () => {
