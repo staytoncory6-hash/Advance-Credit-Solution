@@ -79,12 +79,10 @@ span {
   color: var(--text-main);
 }
 
-.logo {
-  width: 40px;
-  height: 40px;
-  object-fit: contain;
+  .logo {
+  width: 180px;   /* increase or decrease this number */
+  height: auto;
 }
-
 .brand-name {
   font-weight: 800;
   font-size: 0.98rem;
