@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Snapshot Plan | Elite AI Credit Repair</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body data-page="snapshot">
+
+<!-- HEADER -->
+<header class="main-header">
+  <div class="container header-inner">
+    <div class="logo-area">
+      <img src="assets/logo.png" alt="Elite AI Credit Repair Logo" class="site-logo" />
+      <div class="logo-text">
+        <h1>Elite AI Credit Repair</h1>
+        <p>Smarter. Faster. Stronger. Elite AI Credit Repair.</p>
+      </div>
+    </div>
+
+    <nav class="main-nav">
+      <a href="index.html">Home</a>
+      <a href="book.html">Secret Education Book</a>
+      <a href="contact.html">Contact</a>
+      <a href="#ask-ai">Ask Elite AI</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<!-- ====================== SNAPSHOT HERO ====================== -->
+<section class="hero-section snapshot-hero">
+  <div class="container hero-inner">
+    <h2>Your Customized Snapshot Plan</h2>
+    <p>
+      Tell Elite AI your situation — collections, late payments, charge-offs,
+      denials, identity theft, anything.  
+      The more details you give, the stronger and more accurate your personalized plan becomes.
+    </p>
+  </div>
+</section>
+
+<!-- ====================== SNAPSHOT FORM ====================== -->
+<section class="snapshot-section">
+  <div class="container">
+
+    <h2>Tell Elite AI What Happened</h2>
+    <p class="section-intro">
+      Describe your credit issue in detail (denial reasons, accounts involved, dates,
+      what you remember, what you don’t, etc).  
+      The AI will create a full plan **AND** generate downloadable dispute letters after payment.
+    </p>
+
+    <form id="snapshot-form" class="snapshot-form">
+
+      <label for="snapshot-details">Your Story</label>
+      <textarea 
+        id="snapshot-details" 
+        rows="7" 
+        placeholder="Example: I got denied for a $20,000 auto loan. They said my Experian score was too low. I see a collection from 2020 and a charge-off I don’t recognize..."
+        required></textarea>
+
+      <button type="submit" class="btn primary-btn" id="generatePlanBtn">
+        Generate My Snapshot Plan
+      </button>
+    </form>
+
+    <div id="snapshot-status" class="snapshot-status"></div>
+
+    <!-- Generated Plan -->
+    <div id="snapshot-output" class="snapshot-output hidden">
+      <h3>Your Elite AI Snapshot Plan</h3>
+      <div id="snapshot-text"></div>
+
+      <p class="cashapp-note">
+        To unlock the full written plan + downloadable letters:<br>
+        <strong>Send payment via Cash App: $Cory12151983</strong>
+      </p>
+
+      <a href="https://cash.app/$Cory12151983" target="_blank" class="btn primary-btn pay-btn">
+        Pay via Cash App
+      </a>
+    </div>
+
+  </div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="container footer-inner">
+
+    <div class="footer-left">
+      <p><strong>Elite AI Credit Repair</strong></p>
+      <p>
+        8500 Harwood Rd, Apt 6718<br />
+        North Richland Hills, TX 76180<br />
+        Phone: <a href="tel:16828889241">(682) 888-9241</a>
+      </p>
+    </div>
+
+    <div class="footer-middle">
+      <p>
+        This site provides education about credit and does not replace legal,
+        tax, or professional financial advice. Results vary. No guarantees are
+        made regarding specific deletions or score increases.
+      </p>
+    </div>
+
+    <div class="footer-right">
+      <p>&copy; <span id="year"></span> Elite AI Credit Repair. All rights reserved.</p>
+    </div>
+
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
