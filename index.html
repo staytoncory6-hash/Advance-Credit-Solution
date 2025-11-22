@@ -16,30 +16,42 @@
   <!-- <link rel="icon" type="image/png" href="assets/elite_favicon.png" /> -->
 </head>
 <body data-page="home">
-  <!-- ========================= HEADER / NAV ========================= -->
-<header class="site-header">
+  <!-- ================= HEADER / NAV ================== -->
+<header class="main-header">
   <div class="container header-inner">
-    <a href="index.html" class="brand">
-      <!-- ✅ Correct logo path -->
-      <img src="assets/logo.png" alt="Elite AI Credit Repair logo" class="logo">
 
-      <span class="brand-text">
-        <span class="brand-name">Elite AI Credit Repair</span>
-        <span class="brand-tagline">Smart, affordable credit solutions.</span>
-      </span>
-    </a>
+    <!-- Logo + title -->
+    <div class="logo-area">
+      <!-- ✅ correct logo file -->
+      <img src="assets/logo.png" alt="Elite AI Credit Repair logo" class="site-logo">
 
-    <nav class="main-nav">
-      <a href="#hero" data-scroll>Home</a>
-      <a href="#how-it-works" data-scroll>How It Works</a>
-      <a href="#ask-ai" data-scroll>Ask AI</a>
-      <a href="#pricing" data-scroll>Pricing</a>
-      <a href="#faq" data-scroll>FAQ</a>
-      <a href="book.html">Secret Education Book</a>
-      <a href="contact.html">Contact</a>
+      <div class="logo-text">
+        <h1>Elite AI Credit Repair</h1>
+        <p>Smart, affordable credit solutions.</p>
+      </div>
+    </div>
+
+    <!-- Mobile menu button (your CSS already knows this class) -->
+    <button class="menu-toggle" data-menu-toggle aria-label="Toggle navigation">
+      ☰
+    </button>
+
+    <!-- Main nav (classes & data attributes your CSS/JS expect) -->
+    <nav class="main-nav" data-menu>
+      <ul>
+        <li><a href="#hero" data-scroll>Home</a></li>
+        <li><a href="#how-it-works" data-scroll>How It Works</a></li>
+        <li><a href="#ask-ai" data-scroll>Ask AI</a></li>
+        <li><a href="#pricing" data-scroll>Pricing</a></li>
+        <li><a href="#faq" data-scroll>FAQ</a></li>
+        <li><a href="book.html">Secret Education Book</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
     </nav>
+
   </div>
 </header>
+
 
   <!-- ========================= HERO ========================= -->
   <section id="hero" class="hero-section">
