@@ -59,22 +59,7 @@ document.addEventListener("DOMContentLoaded", () => {
             <p>Try something like:</p>
             <ul>
               <li>“Why did my collection hurt my score so much?”</li>
-              <li>“What should I work on first if I want a $20,000 auto loan?”</li>
-              <li>“What does a charge-off actually mean?”</li>
-            </ul>
-          `;
-          return;
-        }
-
-        askAnswer.innerHTML = generateCreditAnswer(raw, lower);
-      }, 800);
-    });
-  }
-
-        askAnswer.innerHTML = generateCreditAnswer(raw, lower);
-      }, 900);
-    });
-  }
+              <li>“What should I work on first if I 
 
   // ---------------- SNAPSHOT PAGE LOGIC ----------------
   const snapshotForm = document.getElementById("snapshot-form");
