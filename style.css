@@ -46,6 +46,12 @@ span {
 }
 
 /* HEADER / NAV */
+.logo {
+  width: 90px;       /* adjust size */
+  height: auto;
+  object-fit: contain;
+  margin-right: 10px;
+}
 
 .site-header {
   border-bottom: 1px solid #011612;
