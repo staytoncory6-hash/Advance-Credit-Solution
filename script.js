@@ -289,6 +289,7 @@ function wrapAnswer(html) {
 
 function buildSnapshotPlanFromStory(story) {
   const lower = story.toLowerCase();
+  const safeStory = escapeHtml(story);
 
   const hasCollections =
     lower.includes("collection") || lower.includes("collections");
@@ -310,131 +311,167 @@ function buildSnapshotPlanFromStory(story) {
   const mentionsScores =
     lower.includes("score") || lower.includes("fico") || lower.match(/\d{3}/);
 
-  // Intro
+  // ===== Warm, encouraging intro =====
   let html = `
     <p>
-      Alright. Based on what you told me, here’s a calm, straight-line look
-      at your situation and the next moves that make the most sense.
+      First off, thank you for laying all of that out. Most people can’t even
+      describe their own situation this clearly – so you’re already ahead of
+      the average person just by getting this out of your head and onto “paper.”
+    </p>
+
+    <p>
+      Nothing you wrote here is something to be ashamed of. Everybody hits rough
+      patches with credit. The difference is that <strong>you’re actually doing
+      something about it</strong>, and that’s exactly the kind of person this
+      Snapshot Plan is built for.
+    </p>
+
+    <p>
+      The details you shared give me real signal to work with – denials,
+      accounts, history, what you remember and what you don’t. That’s exactly
+      what I need to build a calm, straight-line game plan instead of random
+      guessing. You’re not alone in this, and you’re not flying blind anymore.
     </p>
 
     <h4>1. What You Told Me</h4>
-    <p>${escapeHtml(story)}</p>
+    <p>${safeStory}</p>
   `;
 
-  // What’s hurting you
+  // ===== What’s hurting them most =====
   html += `<h4>2. What’s Probably Hurting You Most</h4><ul>`;
 
   if (hasCollections) {
-    html += `<li>Collections — these show serious delinquency and need to be listed and prioritized.</li>`;
+    html += `<li>Collections – these show serious delinquency and usually get a lot of weight from lenders and scoring models.</li>`;
   }
   if (hasChargeOff) {
-    html += `<li>Charge-offs — original creditors writing off debt, which lenders pay close attention to.</li>`;
+    html += `<li>Charge-offs – original creditors writing off debt, which can be a major red flag until it’s dealt with or aged out.</li>`;
   }
   if (hasLates) {
-    html += `<li>Late payments — especially any recent ones within the last 24 months.</li>`;
+    html += `<li>Late payments – especially any within the last 24 months, which can drag things down even if older history is decent.</li>`;
   }
   if (hasRepo) {
-    html += `<li>Repossession — this is a big negative for future auto lenders.</li>`;
+    html += `<li>Repossession – this tells future auto lenders that a previous auto account didn’t stay on track.</li>`;
   }
   if (hasBankruptcy) {
-    html += `<li>Bankruptcy/public record — major event that shapes how lenders view risk.</li>`;
+    html += `<li>Bankruptcy / public record – a big event that sets the tone for how cautious lenders will be for a while.</li>`;
   }
 
   if (!hasCollections && !hasChargeOff && !hasLates && !hasRepo && !hasBankruptcy) {
-    html += `<li>You didn’t clearly mention collections, charge-offs, late payments, repos, or bankruptcy. If any are there, we’d want to list them out with dates, balances, and bureaus.</li>`;
+    html += `<li>You didn’t clearly mention collections, charge-offs, late payments, repos, or bankruptcy. If any are there, we’d want to list them out with dates, balances, and bureaus so nothing important is hiding in the background.</li>`;
   }
 
   html += `</ul>`;
 
-  // Goal-based section
-  html += `<h4>3. Your Likely Goal</h4><p>`;
+  // ===== Goal-based section =====
+  html += `<h4>3. What It Sounds Like You Want</h4><p>`;
 
   if (wantsAuto) {
     html += `
-      It sounds like you’re focused on getting an auto loan approved —
-      something like a clean approval without crazy interest.
-      We’ll shape the plan around what auto lenders actually care about:
-      recent pay history, open negatives, and overall utilization.
+      It sounds like you’re focused on getting an auto loan through without
+      ridiculous interest – something like a clean approval on a $15k–$25k
+      vehicle instead of a “take it or leave it” deal. So we’ll shape the plan
+      around what auto lenders actually care about: recent pay history, open
+      negatives, and overall utilization.
     `;
   } else if (wantsHouse) {
     html += `
-      It sounds like you’re moving toward home-ownership or a mortgage.
-      That means we focus heavily on removing or neutralizing serious negatives,
-      building stable payment history, and keeping utilization low.
+      It sounds like the big picture for you is home-ownership or being
+      mortgage-ready. That means we’re looking at a slightly longer runway:
+      cleaning serious negatives, building stable payment history, and keeping
+      overall utilization low and predictable.
     `;
   } else {
     html += `
-      You’re working toward a stronger, cleaner profile — approvals on your terms,
-      not just "whatever they give you." The steps are similar: clean the file,
-      build positives, and give the bureaus time to catch up.
+      You’re working toward a stronger, cleaner profile where approvals are on
+      <em>your</em> terms – not just whatever you can get. The moves are
+      similar either way: clean the file, build positives, and give the bureaus
+      time to catch up.
     `;
   }
 
   html += `</p>`;
 
-  // Action steps
+  // ===== First moves =====
   html += `
     <h4>4. First Moves (Next 30–60 Days)</h4>
+    <p>
+      Here’s where we take all that stress and turn it into a simple sequence.
+      No magic, no hype – just the grown-up steps that actually move the needle.
+    </p>
     <ul>
       <li>Pull and save all 3 reports from TransUnion, Experian, and Equifax.</li>
-      <li>Highlight anything inaccurate, outdated, duplicated, or not yours — these are top dispute targets.</li>
+      <li>Highlight anything inaccurate, outdated, duplicated, or not yours – these are top dispute targets.</li>
       <li>List each negative with: name, balance, date opened, date reported, and which bureaus show it.</li>
-      <li>Keep all current accounts paid on time — no new late payments while you’re fixing the old ones.</li>
+      <li>Keep all current accounts paid on time – no new late payments while you’re fixing the old ones.</li>
     </ul>
 
     <h4>5. Dispute and Clean-Up Strategy</h4>
     <p>
       Under the Fair Credit Reporting Act (FCRA), you have the right to dispute
-      information that is inaccurate, incomplete, or cannot be verified.
-      That’s the law — not a trick.
+      information that is inaccurate, incomplete, or cannot be verified. That’s
+      the law – not a loophole.
     </p>
     <ul>
       <li>Start with the worst or most obviously wrong items first.</li>
       <li>Dispute in writing, clearly stating what’s wrong and attaching any proof you have.</li>
-      <li>Keep copies of every letter, report, and response.</li>
+      <li>Keep copies of every letter, report, and response in a single folder.</li>
     </ul>
   `;
 
-  // Rebuilding
+  // ===== Rebuilding =====
   html += `
     <h4>6. Rebuilding and Trade Lines</h4>
+    <p>
+      Cleaning up is half the battle. The other half is showing the bureaus and
+      future lenders a new story: low balances and on-time behavior.
+    </p>
     <ul>
-      <li>Keep credit card utilization low (under 30%, then under 10% if you can).</li>
+      <li>Keep credit card utilization low (under 30% total, then under 10% if you can).</li>
       <li>Consider a credit builder loan or secured card if you don’t have any positive trade lines.</li>
       <li>Use authorized user / piggybacking only on clean, low-utilization cards with on-time history.</li>
     </ul>
   `;
 
-  // Scores mention
+  // ===== Scores mention =====
   if (mentionsScores) {
     html += `
-      <h4>7. About Scores</h4>
+      <h4>7. About Your Scores</h4>
       <p>
-        Your scores aren’t permanent. As negatives are removed or updated and
-        new positive history builds, lenders start to see you differently.
+        Your scores aren’t a fixed “grade” on you as a person – they’re just a
+        snapshot of what’s reporting right now. As negatives are removed or
+        updated and new positive history builds, lenders literally start to see
+        you differently on their screens.
+      </p>
+      <p>
         Give each major change 30–60 days to fully show up across the bureaus
         before you judge your new starting point.
       </p>
     `;
   }
 
-  // Closing
+  // ===== Final thoughts with warm, hypey but calm close =====
   html += `
     <h4>8. Final Thoughts</h4>
     <p>
-      This Snapshot Plan is meant to help you think like the bureaus and
-      lenders think — calmly and in order. It’s not magic, and it’s not about
-      breaking any laws. It’s about using your rights under the FCRA, cleaning
-      up what’s wrong, and then building something stronger on top.
+      What you shared gives me more than enough to start carving out a smart,
+      legal, and realistic path forward. None of this is about tricks – it’s
+      about using your rights under the FCRA, cleaning up what’s wrong, and
+      then building something stronger on top of it.
+    </p>
+    <p>
+      If you stick with the steps and stay consistent, this stops being a
+      random mess on your report and starts looking like a turnaround story.
+      You’ve already done the hardest part by being honest about where you are.
+      From here, it’s just one smart move at a time.
     </p>
     <p style="font-size:0.85rem;color:#6b7280;margin-top:0.5rem;">
-      When you’re ready, you can save this plan as a PDF using
-      <strong>Print → Save as PDF</strong> on your device, and keep it as a
-      roadmap while you work.
+      You can save this plan using <strong>Print → Save as PDF</strong> on your
+      device and keep it as your personal roadmap while you work through it.
     </p>
   `;
 
   return html;
+}
 }
 
 // Escape HTML just in case (for the story text)
