@@ -5,6 +5,344 @@
   margin: 0;
   padding: 0;
 }
+/* ==============================
+   ELITE AI CREDIT REPAIR – LIGHT THEME
+   ============================== */
+
+:root {
+  --bg-main: #f5f7fb;
+  --bg-card: #ffffff;
+  --bg-subtle: #eef1f8;
+  --text-main: #0b1120;
+  --text-muted: #6b7280;
+  --accent: #fbbf24;      /* gold */
+  --accent-dark: #f59e0b;
+  --border-soft: #e5e7eb;
+}
+
+/* Reset */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: var(--bg-main);
+  color: var(--text-main);
+  line-height: 1.6;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.container {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* ================= HEADER ================= */
+
+.main-header {
+  background: #ffffff;
+  border-bottom: 1px solid var(--border-soft);
+  padding: 0.9rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 20;
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.logo-area {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.site-logo {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  object-fit: cover;
+  background: #fef3c7; /* pale gold behind logo if PNG is transparent */
+}
+
+.logo-text h1 {
+  font-size: 1.15rem;
+  font-weight: 800;
+  letter-spacing: 0.03em;
+}
+
+.logo-text p {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--accent-dark);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+/* Nav */
+
+.main-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  font-size: 0.9rem;
+}
+
+.main-nav a {
+  padding: 0.45rem 0.9rem;
+  border-radius: 999px;
+  border: 1px solid transparent;
+  font-weight: 600;
+  color: #111827;
+}
+
+.main-nav a:hover,
+.main-nav a:focus,
+.main-nav a.active {
+  border-color: var(--accent);
+  background: #fffbeb;
+}
+
+/* ================= HERO ================= */
+
+.hero-section {
+  background: radial-gradient(circle at top left, #e0f2fe, #f9fafb);
+  padding: 3rem 0 2.5rem;
+  border-bottom: 1px solid var(--border-soft);
+}
+
+.hero-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.hero-text h2 {
+  font-size: 2.1rem;
+  line-height: 1.2;
+  margin-bottom: 0.75rem;
+}
+
+.hero-text p {
+  max-width: 40rem;
+  color: var(--text-muted);
+  font-size: 0.98rem;
+  margin-bottom: 1rem;
+}
+
+.hero-cta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.hero-note {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+/* Buttons */
+
+.btn {
+  display: inline-block;
+  padding: 0.6rem 1.2rem;
+  border-radius: 999px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-align: center;
+  transition: background 0.15s ease, transform 0.1s ease, box-shadow 0.15s ease;
+}
+
+.primary-btn {
+  background: var(--accent);
+  color: #111827;
+  box-shadow: 0 8px 20px rgba(245, 158, 11, 0.35);
+}
+
+.primary-btn:hover {
+  background: var(--accent-dark);
+  transform: translateY(-1px);
+  box-shadow: 0 10px 24px rgba(245, 158, 11, 0.45);
+}
+
+.secondary-btn {
+  background: #ffffff;
+  color: #111827;
+  border: 1px solid var(--accent);
+}
+
+.secondary-btn:hover {
+  background: #fffbeb;
+}
+
+/* ================= HOW IT WORKS ================= */
+
+.how-section {
+  padding: 2.75rem 0;
+}
+
+.how-section h2 {
+  margin-bottom: 0.4rem;
+}
+
+.section-intro {
+  color: var(--text-muted);
+  max-width: 40rem;
+  margin-bottom: 1.5rem;
+}
+
+.steps-grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.step-card {
+  background: var(--bg-card);
+  border-radius: 0.85rem;
+  padding: 1rem 1.05rem;
+  border: 1px solid var(--border-soft);
+  box-shadow: 0 10px 25px rgba(15, 23, 42, 0.04);
+}
+
+.step-card h3 {
+  margin-bottom: 0.4rem;
+}
+
+/* ================= ASK AI SECTION ================= */
+
+.ask-ai-section {
+  padding: 2.75rem 0 3rem;
+  background: #f9fafb;
+  border-top: 1px solid var(--border-soft);
+}
+
+.ask-ai-section h2 {
+  margin-bottom: 0.3rem;
+}
+
+.ask-ai-section .section-intro {
+  margin-bottom: 1rem;
+}
+
+.ask-ai-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.ask-ai-form textarea {
+  width: 100%;
+  min-height: 120px;
+  padding: 0.8rem;
+  border-radius: 0.7rem;
+  border: 1px solid var(--border-soft);
+  background: #ffffff;
+  color: var(--text-main);
+  resize: vertical;
+  font-size: 0.95rem;
+}
+
+.ask-ai-form textarea::placeholder {
+  color: #9ca3af;
+}
+
+.ask-ai-status {
+  font-size: 0.9rem;
+  color: var(--accent-dark);
+  margin-bottom: 0.4rem;
+}
+
+.ask-ai-answer-wrap {
+  background: #ffffff;
+  border-radius: 0.85rem;
+  padding: 0.9rem 1rem;
+  border: 1px solid var(--border-soft);
+  box-shadow: 0 10px 25px rgba(15, 23, 42, 0.04);
+}
+
+.ask-ai-answer-wrap h3 {
+  margin-bottom: 0.35rem;
+}
+
+.ask-ai-answer {
+  font-size: 0.95rem;
+  color: var(--text-main);
+}
+
+.placeholder-text {
+  color: var(--text-muted);
+}
+
+/* ================= FOOTER ================= */
+
+.site-footer {
+  background: #ffffff;
+  border-top: 1px solid var(--border-soft);
+  padding: 1.75rem 0;
+  font-size: 0.9rem;
+}
+
+.footer-inner {
+  display: grid;
+  gap: 1rem;
+}
+
+.footer-left p + p {
+  margin-top: 0.35rem;
+}
+
+.footer-middle {
+  color: var(--text-muted);
+}
+
+.footer-right {
+  color: #6b7280;
+}
+
+/* ================= UTILITIES ================= */
+
+.visually-hidden {
+  position: absolute;
+  left: -9999px;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (min-width: 720px) {
+  .hero-inner {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .steps-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .footer-inner {
+    grid-template-columns: 2fr 3fr 2fr;
+  }
+}
 
 body {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
