@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Elite AI Credit Repair | Smart, Affordable Credit Solutions</title>
+
+  <!-- Basic SEO -->
+  <meta name="description" content="Elite AI Credit Repair helps you dispute errors, understand your reports, and build a smarter credit game plan using AI-powered tools and real-world strategies." />
+  <meta name="keywords" content="Elite AI Credit Repair, credit repair, dispute letters, credit scores, collections, charge-offs" />
+
+  <!-- You can connect this to your existing CSS file -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Favicon (optional) -->
+  <!-- <link rel="icon" type="image/png" href="assets/elite_favicon.png" /> -->
+</head>
+<body data-page="home">
+  <!-- ========================= HEADER / NAV ========================= -->
+  <header class="main-header">
+    <div class="container header-inner">
+      <div class="logo-area">
+        <!-- Update src to your actual logo path -->
+        <img src="assets/elite_logo.png" alt="Elite AI Credit Repair logo" class="site-logo">
+        <div class="logo-text">
+          <h1>Elite AI Credit Repair</h1>
+          <p>Smart, affordable credit solutions.</p>
+        </div>
+      </div>
+
+      <button class="menu-toggle" data-menu-toggle aria-label="Toggle navigation">
+        ☰
+      </button>
+
+      <nav class="main-nav" data-menu>
+        <ul>
+          <li><a href="#hero" data-scroll>Home</a></li>
+          <li><a href="#how-it-works" data-scroll>How It Works</a></li>
+          <li><a href="#ask-ai" data-scroll>Ask AI</a></li>
+          <li><a href="#pricing" data-scroll>Pricing</a></li>
+          <li><a href="#faq" data-scroll>FAQ</a></li>
+          <li><a href="book.html">Secret Education Book</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ========================= HERO ========================= -->
+  <section id="hero" class="hero-section">
+    <div class="container hero-inner">
+      <div class="hero-text">
+        <h2>Turn Credit Confusion into a Clear Game Plan.</h2>
+        <p>
+          Elite AI Credit Repair combines real strategies with AI-powered tools
+          to help you understand your reports, dispute errors, and build a stronger
+          credit profile—without the smoke and mirrors.
+        </p>
+        <div class="hero-cta">
+          <a href="#ask-ai" class="btn primary-btn" data-scroll>Ask Elite AI a Question</a>
+          <a href="#pricing" class="btn secondary-btn" data-scroll>See Plans & Pricing</a>
+        </div>
+        <div class="hero-trust">
+          <p><strong>No magic tricks.</strong> Just education, letters, and a clear process.</p>
+        </div>
+      </div>
+
+      <div class="hero-sidebox">
+        <h3>Quick Snapshot Plan</h3>
+        <p>
+          Ready for a fast, customized snapshot of what to fix first?
+          Pay via Cash App, send your reports, and get a real plan—not generic advice.
+        </p>
+        <button id="generatePlanButton" class="btn outline-btn">
+          How the Snapshot Plan Works
+        </button>
+        <p class="cashapp-note">
+          Cash App payments only – full instructions after you reach out.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================= HOW IT WORKS ========================= -->
+  <section id="how-it-works" class="how-section">
+    <div class="container">
+      <h2>How Elite AI Credit Repair Works</h2>
+      <div class="steps-grid">
+        <div class="step-card">
+          <h3>1. Get Your Reports</h3>
+          <p>
+            You pull your own credit reports so you stay in control.
+            We show you what to look for and what matters most.
+          </p>
+        </div>
+        <div class="step-card">
+          <h3>2. Use Elite AI for Guidance</h3>
+          <p>
+            Ask Elite AI questions about accounts, collections, charge-offs, and more.
+            Get explanations in plain English, not credit jargon.
+          </p>
+        </div>
+        <div class="step-card">
+          <h3>3. Targeted Dispute Strategy</h3>
+          <p>
+            We help you focus on real errors, missing information, and outdated
+            reporting—not fake promises or “delete everything overnight” scams.
+          </p>
+        </div>
+        <div class="step-card">
+          <h3>4. Build & Maintain</h3>
+          <p>
+            Learn how to rebuild credit the right way with positive accounts,
+            smart utilization, and long-term habits.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================= ASK AI SECTION ========================= -->
+  <section id="ask-ai" class="ask-ai-section">
+    <div class="container">
+      <h2>Ask Elite AI Anything About Credit</h2>
+      <p class="section-intro">
+        Not sure where to start? Nervous about a collection, charge-off, or public record?
+        Type your question below and let Elite AI give you a clear, friendly explanation.
+        This is <strong>education</strong>, not legal advice.
+      </p>
+
+      <div class="ask-ai-layout">
+        <!-- Ask AI Form -->
+        <div class="ask-ai-form-wrap">
+          <form id="ask-ai-form" class="ask-ai-form">
+            <label for="ask-ai-question" class="ask-ai-label">
+              Your question:
+            </label>
+            <textarea
+              id="ask-ai-question"
+              class="ask-ai-question"
+              rows="5"
+              placeholder="Example: I have a collection from 2019 that I think isn’t mine. What should I know before I dispute it?"
+              required
+            ></textarea>
+
+            <button type="submit" class="btn primary-btn ask-ai-submit">
+              Ask Elite AI
+            </button>
+          </form>
+
+          <div id="ask-ai-status" class="ask-ai-status"></div>
+        </div>
+
+        <!-- Ask AI Answer Box -->
+        <div class="ask-ai-answer-wrap">
+          <h3>AI Response</h3>
+          <div id="ask-ai-answer" class="ask-ai-answer">
+            <p class="placeholder-text">
+              Your answer will appear here. Elite AI will explain what’s going on,
+              what to watch out for, and what questions to ask before you act.
+            </p>
+          </div>
+          <p class="disclaimer">
+            <strong>Disclaimer:</strong> This tool is for educational purposes only and
+            does not provide legal, tax, or professional financial advice. Always talk to
+            a qualified professional before making big decisions.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================= PRICING ========================= -->
+  <section id="pricing" class="pricing-section">
+    <div class="container">
+      <h2>Simple, Straightforward Pricing</h2>
+      <p class="section-intro">
+        No long-term contracts. No fake “$99 setup, $200/month forever” games.
+        Just honest options that are cheaper than the big box credit repair companies.
+      </p>
+
+      <div class="pricing-grid">
+        <div class="price-card">
+          <h3>Education Only</h3>
+          <p class="price">$39.99</p>
+          <p class="tagline">“Masters of the Unknown” Digital Book</p>
+          <ul>
+            <li>Digital access to credit repair education</li>
+            <li>Step-by-step breakdown of letters & strategy</li>
+            <li>Lifetime access to updates of the book</li>
+          </ul>
+          <a href="book.html" class="btn secondary-btn">Learn More</a>
+        </div>
+
+        <div class="price-card featured">
+          <h3>AI Snapshot Plan</h3>
+          <p class="price">$99.00</p>
+          <p class="tagline">Best place to start</p>
+          <ul>
+            <li>Review of your major negative items</li>
+            <li>Custom “priority list” of what to tackle first</li>
+            <li>Guidance on which letters to send and why</li>
+            <li>Cash App payment required before plan is created</li>
+          </ul>
+          <button class="btn primary-btn generate-plan-btn" id="generatePlanButton">
+            Get My Snapshot Plan
+          </button>
+        </div>
+
+        <div class="price-card">
+          <h3>Hands-On Help</h3>
+          <p class="price">Custom</p>
+          <p class="tagline">Limited availability</p>
+          <ul>
+            <li>More in-depth, ongoing help</li>
+            <li>Best for complex situations with many accounts</li>
+            <li>Pricing depends on complexity and time</li>
+          </ul>
+          <a href="contact.html" class="btn outline-btn">Talk About Your Situation</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================= FAQ ========================= -->
+  <section id="faq" class="faq-section">
+    <div class="container">
+      <h2>Common Questions</h2>
+      <div class="faq-grid">
+        <div class="faq-item">
+          <h3>Can you guarantee results?</h3>
+          <p>
+            No. Nobody can honestly guarantee specific results or score jumps.
+            What we do is focus on real errors, missing info, and outdated items
+            that the law says must be accurate and verifiable.
+          </p>
+        </div>
+        <div class="faq-item">
+          <h3>Is this legal?</h3>
+          <p>
+            Yes, you have the legal right to dispute inaccurate, incomplete, or
+            outdated information on your credit reports. We never tell you to lie,
+            create fake documents, or dispute valid debt just to “see what happens.”
+          </p>
+        </div>
+        <div class="faq-item">
+          <h3>What does the AI actually do?</h3>
+          <p>
+            Elite AI gives you explanations, ideas, and educational guidance based
+            on your questions. It is not a lawyer or financial advisor, and it
+            doesn’t send letters or log in to your accounts.
+          </p>
+        </div>
+        <div class="faq-item">
+          <h3>How do I pay?</h3>
+          <p>
+            For paid services like the Snapshot Plan, you’ll use Cash App as explained
+            during your onboarding. We keep it simple and transparent.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================= FOOTER ========================= -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-left">
+        <p><strong>Elite AI Credit Repair</strong></p>
+        <p>
+          8500 Harwood Rd, Apt 6718<br />
+          North Richland Hills, TX 76180
+        </p>
+        <p>
+          Phone:
+          <a href="tel:+16828889241">(682) 888-9241</a>
+        </p>
+      </div>
+
+      <div class="footer-middle">
+        <p>
+          This site provides education about credit and does not replace legal,
+          tax, or professional financial advice. Results vary. No guarantees are made
+          regarding specific deletions or score increases.
+        </p>
+      </div>
+
+      <div class="footer-right">
+        <p>
+          &copy; <span id="currentYear"></span> Elite AI Credit Repair. All rights reserved.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========================= SCRIPTS ========================= -->
+  <script src="script.js"></script>
+</body>
+</html>
