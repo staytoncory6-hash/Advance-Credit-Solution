@@ -428,3 +428,46 @@ body {
   font-size: 0.95rem;
   color: #e5e7eb;
 }
+/* ===== FORCE FIX HOW-IT-WORKS CARDS ===== */
+
+.how-section {
+  padding: 2.5rem 0;
+  background: #022c22 !important;      /* deep green */
+  color: #f9fafb !important;           /* light text */
+}
+
+.how-section h2 {
+  color: #f9fafb !important;
+}
+
+.how-section .section-intro {
+  max-width: 650px;
+  color: #e5e7eb !important;
+}
+
+/* card grid */
+.steps-grid {
+  display: grid;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+/* each white box */
+.step-card {
+  background: #111827 !important;                       /* dark slate */
+  color: #f9fafb !important;
+  border-radius: 0.9rem;
+  padding: 1rem 1.1rem;
+  border: 1px solid rgba(148, 163, 184, 0.75) !important;
+  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.7);
+}
+
+.step-card h3 {
+  margin-bottom: 0.4rem;
+  color: #f9fafb !important;
+}
+
+.step-card p {
+  font-size: 0.95rem;
+  color: #e5e7eb !important;
+}
