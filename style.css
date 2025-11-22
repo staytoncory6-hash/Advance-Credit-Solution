@@ -82,6 +82,9 @@ span {
   .logo {
   width: 250px;   /* increase or decrease this number */
   height: auto;
+  /* Make the mascot stand out and not match the green background
+    filter: hue-rotate(210deg) saturate(1.4) drop-shadow (0 0 10px rgba(0, 0, 0, 0.7));
+    }
 }
 .brand-name {
   font-weight: 800;
