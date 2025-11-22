@@ -1,0 +1,155 @@
+// script.js
+// Site-wide JS for Advanced Credit Solution / Elite AI
+
+document.addEventListener('DOMContentLoaded', function () {
+  /* ===================== 1. Dynamic footer year ===================== */
+  const yearSpan = document.getElementById('year');
+  if (yearSpan) {
+    yearSpan.textContent = new Date().getFullYear();
+  }
+
+  /* ===================== 2. Ask AI / Elite AI ===================== */
+  const askForm      = document.getElementById('ask-ai-form');
+  const questionBox  = document.getElementById('ask-ai-question');
+  const statusBox    = document.getElementById('ask-ai-status');
+  const answerBox    = document.getElementById('ask-ai-answer');
+
+  // If this page doesn’t have Ask AI, do nothing
+  if (!askForm || !questionBox || !statusBox || !answerBox) return;
+
+  askForm.addEventListener('submit', function (event) {
+    event.preventDefault();
+
+    const question = questionBox.value.trim();
+
+    if (!question) {
+      statusBox.textContent = 'Type a question first so Elite AI knows what to answer.';
+      answerBox.innerHTML = '';
+      return;
+    }
+
+    statusBox.textContent = 'Thinking through your question…';
+
+    const lowerQ = question.toLowerCase();
+
+    // Base answer everyone gets
+    let answer = `
+      <p><strong>🔮 Elite AI (Credit Education):</strong></p>
+      <p>Here’s the basic blueprint most people need to follow:</p>
+      <ul>
+        <li>📄 Step 1: Pull all 3 credit reports (Experian, Equifax, TransUnion).</li>
+        <li>🔍 Step 2: Mark anything inaccurate, incomplete, outdated, or not yours.</li>
+        <li>✍️ Step 3: Dispute in writing, never just by phone.</li>
+        <li>📈 Step 4: Build new positive history (on-time payments, small limits you can manage, secured cards if needed).</li>
+        <li>⛔ Step 5: Protect the progress — no new late payments if you can help it.</li>
+      </ul>
+      <p><strong>Your question:</strong></p>
+      <blockquote>${question}</blockquote>
+    `;
+
+    // Collections / charge-offs
+    if (
+      lowerQ.includes('collection') ||
+      lowerQ.includes('collections') ||
+      lowerQ.includes('charge off') ||
+      lowerQ.includes('charge-off') ||
+      lowerQ.includes('chargeoff')
+    ) {
+      answer += `
+        <p><strong>Collections / Charge-offs Strategy:</strong></p>
+        <ul>
+          <li>1️⃣ Confirm the account details on all 3 bureaus: balance, dates, creditor, and status.</li>
+          <li>2️⃣ If anything is wrong or can’t be verified, dispute it in writing with the bureaus.</li>
+          <li>3️⃣ If you choose to settle, try to get the agreement in writing before you pay.</li>
+          <li>4️⃣ Keep copies of every letter, agreement, and payment receipt.</li>
+        </ul>
+      `;
+    }
+
+    // Late payments
+    if (
+      lowerQ.includes('late payment') ||
+      lowerQ.includes('late payments') ||
+      lowerQ.includes('30 days late') ||
+      lowerQ.includes('60 days late') ||
+      lowerQ.includes('90 days late')
+    ) {
+      answer += `
+        <p><strong>Late Payments Strategy:</strong></p>
+        <ul>
+          <li>1️⃣ If the late is reporting incorrectly, dispute it with the bureaus and the lender.</li>
+          <li>2️⃣ If it’s correct but rare, you can ask the lender for a goodwill adjustment.</li>
+          <li>3️⃣ Use autopay or reminders going forward to protect that history.</li>
+        </ul>
+      `;
+    }
+
+    // Repossession
+    if (
+      lowerQ.includes('repo') ||
+      lowerQ.includes('repossession') ||
+      lowerQ.includes('repossessed')
+    ) {
+      answer += `
+        <p><strong>Repossession Strategy:</strong></p>
+        <ul>
+          <li>1️⃣ Make sure the balance, dates, and status match what really happened.</li>
+          <li>2️⃣ If you spot errors or missing info, dispute them as inaccurate or incomplete.</li>
+          <li>3️⃣ Some lenders will discuss settlement; always get any deal in writing first.</li>
+        </ul>
+      `;
+    }
+
+    // Public records
+    if (
+      lowerQ.includes('public record') ||
+      lowerQ.includes('bankruptcy') ||
+      lowerQ.includes('judgment') ||
+      lowerQ.includes('tax lien')
+    ) {
+      answer += `
+        <p><strong>Public Records Strategy:</strong></p>
+        <p>
+          Courts usually do not send data directly to the credit bureaus. Bureaus
+          often buy that information from data-mining companies. If your report
+          says the court is the furnisher but the court confirms they don’t provide
+          data to third parties, that can raise accuracy questions under the Fair
+          Credit Reporting Act.
+        </p>
+        <p>
+          Dispute any incorrect or unverified public record in writing and keep
+          copies of all responses.
+        </p>
+      `;
+    }
+
+    // Rebuilding credit / general
+    if (
+      lowerQ.includes('rebuild') ||
+      lowerQ.includes('rebuilding') ||
+      lowerQ.includes('boost') ||
+      lowerQ.includes('increase my score') ||
+      lowerQ.includes('improve my score')
+    ) {
+      answer += `
+        <p><strong>Rebuilding / Score Boost Strategy:</strong></p>
+        <ul>
+          <li>1️⃣ Lower utilization: aim to keep reported balances under ~30% of each limit, lower is better.</li>
+          <li>2️⃣ Keep old positive accounts open if there are no fees — they help your age of credit.</li>
+          <li>3️⃣ Add positive trade lines you can actually manage, not just more debt.</li>
+        </ul>
+      `;
+    }
+
+    // Closing / disclaimer
+    answer += `
+      <p><strong>Next Step:</strong> Use this as education only. For each account
+      on your reports, you’d build a specific plan based on whether it’s accurate,
+      outdated, or cannot be verified.</p>
+      <p><em>This is general credit education, not legal, tax, or accounting advice.</em></p>
+    `;
+
+    statusBox.textContent = 'Here’s your educational game plan:';
+    answerBox.innerHTML = answer;
+  });
+});
