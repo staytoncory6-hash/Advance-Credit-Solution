@@ -123,56 +123,29 @@
   </section>
 
   <!-- ========================= ASK AI ABOUT THE BOOK ========================= -->
-  <section id="ask-ai" class="ask-ai-section">
-    <div class="container">
-      <h2>Ask Elite AI About the Book or Your Situation</h2>
-      <p class="section-intro">
-        Curious about a chapter? Have a real-world situation and want to know which part
-        of the book applies? Ask Elite AI a question below. It will give you an educational
-        explanation in plain English.
-      </p>
+  <!-- ======================= ASK AI / ASK A QUESTION ======================= -->
+<section id="ask-ai" class="ask-ai-section">
+  <div class="container">
+    <h2>Ask AI About the Book</h2>
+    <p class="ask-ai-subtext">
+      Ask anything from the Master of the Unknown book — strategy, disputes, collections, rebuilding credit, or any chapter.
+    </p>
 
-      <div class="ask-ai-layout">
-        <!-- Ask AI Form -->
-        <div class="ask-ai-form-wrap">
-          <form id="ask-ai-form" class="ask-ai-form">
-            <label for="ask-ai-question" class="ask-ai-label">
-              Your question about credit or the book:
-            </label>
-            <textarea
-              id="ask-ai-question"
-              class="ask-ai-question"
-              rows="5"
-              placeholder="Example: Which part of Masters of the Unknown should I focus on if I have multiple collections and a judgment?"
-              required
-            ></textarea>
+    <textarea
+      id="aiInput"
+      rows="4"
+      placeholder="Example: Which part of 'Master of the Unknown' should I focus on if I have multiple collections?"
+      required
+    ></textarea>
 
-            <button type="submit" class="btn primary-btn ask-ai-submit">
-              Ask Elite AI About the Book
-            </button>
-          </form>
+    <button id="aiButton" class="btn primary-btn">
+      Ask Elite AI About the Book
+    </button>
 
-          <div id="ask-ai-status" class="ask-ai-status"></div>
-        </div>
-
-        <!-- Ask AI Answer Box -->
-        <div class="ask-ai-answer-wrap">
-          <h3>AI Response</h3>
-          <div id="ask-ai-answer" class="ask-ai-answer">
-            <p class="placeholder-text">
-              Your answer will show up here. Elite AI will reference the kind of material
-              covered in Masters of the Unknown and guide you on what to pay attention to.
-            </p>
-          </div>
-          <p class="disclaimer">
-            <strong>Disclaimer:</strong> Elite AI is for educational purposes only. It does
-            not give legal, tax, or professional financial advice. Always talk to a qualified
-            professional before making big decisions.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
+    <div id="aiResponse" class="ask-ai-response" hidden></div>
+  </div>
+</section>
+<!-- ======================= END ASK AI / ASK A QUESTION =================== -->
 
   <!-- ========================= FOOTER ========================= -->
   <footer class="site-footer">
