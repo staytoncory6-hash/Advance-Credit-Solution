@@ -84,6 +84,14 @@ span {
   height: auto;
   /* Make the mascot stand out and not match the green background
     filter: hue-rotate(210deg) saturate(1.4) drop-shadow (0 0 10px rgba(0, 0, 0, 0.7));
+    .logo {
+  width: 200px;         /* adjust size if you want */
+  height: auto;
+  background: #f3e6c6;  /* light tan/cream so it pops off the green */
+  border-radius: 999px; /* makes a pill / circle around him */
+  padding: 8px 16px;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.4);
+}
     }
 }
 .brand-name {
