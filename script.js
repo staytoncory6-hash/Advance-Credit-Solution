@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  // ---------------- ASK ELITE AI (CREDIT ONLY) ----------------
+    // ---------------- ASK ELITE AI (CREDIT ONLY, UPLIFTING, PUSH TO PAID) ----------------
   const askForm = document.getElementById("ask-ai-form");
   const askInput = document.getElementById("ask-ai-question");
   const askAnswer = document.getElementById("ask-ai-answer");
@@ -37,9 +37,10 @@ document.addEventListener("DOMContentLoaded", () => {
       if (!raw) {
         askAnswer.innerHTML = `
           <p><strong>Elite AI:</strong><br>
-          Ask me anything about credit — collections, charge-offs, late payments,
+          Ask me anything about credit — collections, charge-offs, denials, scores,
           TransUnion, Experian, Equifax, auto loans, utilization, and rebuilding.
-          I’ll break it down calmly and simply.</p>
+          I’ll keep it calm and simple, and if it looks like you’d benefit from a
+          Snapshot Plan or membership, I’ll tell you.</p>
         `;
         return;
       }
@@ -50,20 +51,25 @@ document.addEventListener("DOMContentLoaded", () => {
         askStatus.textContent = "";
 
         if (!isCreditQuestion(lower)) {
-          // Non-credit / off-topic / rude questions
           askAnswer.innerHTML = `
             <p><strong>Elite AI:</strong><br>
-            I’m only programmed to answer credit questions and anything related to
-            TransUnion, Experian, Equifax, accounts, approvals, disputes, and rebuilding.</p>
+            I’m only programmed to answer <strong>credit-related</strong> questions –
+            things tied to TransUnion, Experian, Equifax, accounts, approvals,
+            denials, utilization, and rebuilding.</p>
             <p>Try something like:</p>
             <ul>
-              <li>"What is a collection and how does it hurt my score?"</li>
-              <li>"What should I fix first if I want a $20,000 auto loan?"</li>
-              <li>"How does piggybacking / authorized user trade lines work?"</li>
+              <li>“Why did my collection hurt my score so much?”</li>
+              <li>“What should I work on first if I want a $20,000 auto loan?”</li>
+              <li>“What does a charge-off actually mean?”</li>
             </ul>
           `;
           return;
         }
+
+        askAnswer.innerHTML = generateCreditAnswer(raw, lower);
+      }, 800);
+    });
+  }
 
         askAnswer.innerHTML = generateCreditAnswer(raw, lower);
       }, 900);
