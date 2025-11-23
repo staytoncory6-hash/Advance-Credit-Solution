@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Elite AI Credit Repair | Snapshot & Smart Credit Help</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta
+    name="description"
+    content="Elite AI Credit Repair offers bold, straight-to-the-point credit education, AI-assisted answers, and a guided Snapshot plan to help rebuild your credit the smart way."
+  />
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav">
+      <div class="brand">
+        <img src="assets/elite_logo.png" alt="Elite AI Credit Repair Logo" class="logo" />
+        <div class="brand-text">
+          <span class="brand-name">Elite <strong>AI</strong> Credit Repair</span>
+          <span class="brand-tagline"><strong>Smarter. Faster. Stronger Credit Repair.</strong></span>
+        </div>
+      </div>
+      <nav class="main-nav">
+        <a href="index.html"><strong>Home</strong></a>
+        <a href="book.html"><strong>Digital Book</strong></a>
+        <a href="contact.html"><strong>Contact</strong></a>
+        <a href="membership.html"><strong>Member Login</strong></a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-text">
+          <h1><strong>Denied for a car, apartment, or credit card?</strong></h1>
+          <p class="hero-sub">
+            <strong>
+              Elite AI Credit Repair gives you bold, no-nonsense guidance,
+              AI-powered answers, and a 90-day Snapshot plan that actually makes sense.
+            </strong>
+          </p>
+          <div class="hero-actions">
+            <a href="#snapshot" class="btn-primary"><strong>Start Your Snapshot Plan</strong></a>
+            <a href="#ask-ai" class="btn-secondary"><strong>Ask a Credit Question</strong></a>
+          </div>
+          <p class="hero-note">
+            <strong>Phone:</strong> <a href="tel:14694356294"><strong>(469) 435-6294</strong></a> &nbsp;|&nbsp;
+            <strong>Location:</strong> 8500 Harwood Rd Apt 6718, North Richland Hills, TX 76180
+          </p>
+        </div>
+        <div class="hero-side">
+          <div class="hero-card">
+            <h2><strong>Your Credit Snapshot</strong></h2>
+            <p>
+              <strong>
+                One guided form. One clear 90-day action plan. No fake promises, just
+                strategy based on the law and real-world experience.
+              </strong>
+            </p>
+            <ul class="hero-list">
+              <li><strong>Step-by-step dispute strategy</strong></li>
+              <li><strong>What to tackle first for max score impact</strong></li>
+              <li><strong>When to use regulators like CFPB & FTC</strong></li>
+            </ul>
+            <p class="small-bold">
+              <strong>Ready? Scroll down and fill out your Snapshot intake.</strong>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- HOW IT WORKS -->
+    <section class="section">
+      <div class="container">
+        <h2><strong>How Elite AI Credit Repair Works</strong></h2>
+        <div class="three-grid">
+          <div class="card">
+            <h3><strong>1. Snapshot Intake</strong></h3>
+            <p>
+              <strong>
+                You tell us your story — denials, collections, charge-offs, bankruptcies,
+                public records, identity theft, all of it.
+              </strong>
+            </p>
+          </div>
+          <div class="card">
+            <h3><strong>2. AI-Assisted 90-Day Plan</strong></h3>
+            <p>
+              <strong>
+                Our system turns your story into a focused 90-day plan: what to dispute,
+                in what order, and what laws to lean on.
+              </strong>
+            </p>
+          </div>
+          <div class="card">
+            <h3><strong>3. Ongoing Membership (Optional)</strong></h3>
+            <p>
+              <strong>
+                Want full service? Membership keeps you on track month after month with
+                rounds, escalations, and regulator pressure when needed.
+              </strong>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SNAPSHOT FORM -->
+    <section id="snapshot" class="section section-alt">
+      <div class="container">
+        <h2><strong>Build Your Snapshot Plan</strong></h2>
+        <p class="section-intro">
+          <strong>
+            The more detail you give, the better your plan. Be blunt, be honest, and list
+            the negative items that are holding you back.
+          </strong>
+        </p>
+
+        <form id="snapshot-form" class="snapshot-form">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="snap-name"><strong>Full Name</strong></label>
+              <input id="snap-name" name="name" type="text" placeholder="Your full name" required />
+            </div>
+            <div class="form-group">
+              <label for="snap-email"><strong>Email</strong></label>
+              <input id="snap-email" name="email" type="email" placeholder="you@example.com" required />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="snap-goal"><strong>What are you trying to get approved for?</strong></label>
+            <input
+              id="snap-goal"
+              name="goal"
+              type="text"
+              placeholder="Example: $20,000 auto loan, apartment, mortgage, credit cards, etc."
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="snap-story"><strong>Tell us your story & what’s on your reports</strong></label>
+            <textarea
+              id="snap-story"
+              name="story"
+              rows="6"
+              placeholder="List collections, charge-offs, late payments, public records, identity theft, student loans, etc. More detail = better plan."
+              required
+            ></textarea>
+          </div>
+
+          <p class="snapshot-note">
+            <strong>
+              Snapshot plans are a paid product. You’ll get a warm, detailed 90-day action plan
+              written in plain English, plus an intro for your dispute letters.
+            </strong>
+          </p>
+
+          <button type="button" id="snapshot-generate" class="btn-primary btn-full">
+            <strong>Preview Example Snapshot Plan</strong>
+          </button>
+
+          <div id="snapshot-output" class="snapshot-output hidden">
+            <h3><strong>Sample Snapshot Plan (Preview)</strong></h3>
+            <p class="small-bold">
+              <strong>
+                This is a sample of how your real 90-day Snapshot will look after payment. Your
+                actual plan will be fully customized to your story.
+              </strong>
+            </p>
+            <div id="snapshot-plan-text"></div>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <!-- ASK AI -->
+    <section id="ask-ai" class="section">
+      <div class="container">
+        <h2><strong>Ask AI a Credit Question</strong></h2>
+        <p class="section-intro">
+          <strong>
+            This box is ONLY for credit questions. Ask about collections, charge-offs,
+            public records, bureaus, FCRA, CFPB, or general strategy. No random non-credit stuff.
+          </strong>
+        </p>
+
+        <div class="ask-ai-box">
+          <form id="ask-ai-form">
+            <label for="ask-ai-input"><strong>Your Credit Question</strong></label>
+            <input
+              id="ask-ai-input"
+              type="text"
+              placeholder="Example: What is a collection? How long can late payments report? What’s the Shopping Cart Trick?"
+              required
+            />
+            <button type="submit" class="btn-primary"><strong>Get an AI Answer</strong></button>
+          </form>
+
+          <div id="ask-ai-answer" class="ask-ai-answer hidden">
+            <h3><strong>AI Answer</strong></h3>
+            <p id="ask-ai-answer-text"></p>
+            <p class="upsell-note">
+              <strong>
+                Want a full 90-day plan and downloadable dispute-letter intros based on
+                YOUR story? That’s what the Snapshot Plan is for.
+              </strong>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>
+        <strong>&copy; <span id="year"></span> Elite AI Credit Repair.</strong>
+        <strong> All rights reserved.</strong>
+      </p>
+      <p class="small-bold">
+        <strong>
+          We follow the Fair Credit Reporting Act. No guarantees of specific results. We do not
+          give legal or tax advice.
+        </strong>
+      </p>
+    </div>
+  </footer>
+</body>
+</html>
