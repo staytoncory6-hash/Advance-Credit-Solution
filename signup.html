@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Create Account | Elite AI Credit Repair</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body data-page="signup">
+
+  <!-- HEADER -->
+  <header class="main-header">
+    <div class="container header-inner">
+      <div class="logo-area">
+        <img src="assets/logo.png" alt="Elite AI Credit Repair logo" class="site-logo" />
+        <div class="logo-text">
+          <h1>Elite AI Credit Repair</h1>
+          <p>Smarter. Faster. Stronger. Elite AI Credit Repair.</p>
+        </div>
+      </div>
+
+      <nav class="main-nav">
+        <a href="login.html" style="color:#ffb347;font-weight:700;">Login</a>
+        <a href="index.html">Home</a>
+        <a href="snapshot.html">Snapshot Plan</a>
+        <a href="book.html">Secret Education Book</a>
+        <a href="contact.html">Contact</a>
+        <a href="membership.html">Membership</a>
+        <a href="#ask-ai">Ask Elite AI</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero-section">
+      <div class="container hero-inner">
+        <div>
+          <h2>Create Your Elite AI Account</h2>
+          <p>
+            This creates your personal account. After creating it, you will still need to
+            complete your Snapshot Plan or Membership payment before your account becomes active.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="login-section">
+      <div class="container login-grid">
+
+        <div class="login-card">
+          <h3>Create Account</h3>
+          <form class="login-form">
+            <label for="signup-name">Full Name</label>
+            <input id="signup-name" type="text" placeholder="John Doe" required />
+
+            <label for="signup-email">Email</label>
+            <input id="signup-email" type="email" placeholder="you@example.com" required />
+
+            <label for="signup-password">Password</label>
+            <input id="signup-password" type="password" placeholder="Create a password" required />
+
+            <button class="btn primary-btn" disabled>
+              Create Account (Coming Soon)
+            </button>
+
+            <p class="login-note">
+              Account creation is almost ready. For now, complete your Snapshot payment or
+              Membership payment, then message us through the Contact page to activate your account manually.
+            </p>
+          </form>
+        </div>
+
+        <div class="login-side-card">
+          <h3>Already Have an Account?</h3>
+          <p><a href="login.html" style="color:#ffb347;font-weight:700;">Click here to sign in.</a></p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Ask AI -->
+    <section id="ask-ai" class="ask-ai-section">
+      <div class="container">
+        <h2>Ask Elite AI</h2>
+        <p class="section-intro">
+          Have a question before creating your account? Ask anything credit-related here.
+        </p>
+
+        <form id="ask-ai-form" class="ask-ai-form">
+          <label for="ask-ai-question">Your question:</label>
+          <textarea id="ask-ai-question" rows="4" required></textarea>
+          <button class="btn primary-btn">Ask Elite AI</button>
+        </form>
+
+        <div id="ask-ai-status"></div>
+        <div class="ask-ai-answer-wrap">
+          <h3>AI Response</h3>
+          <div id="ask-ai-answer" class="ask-ai-answer">
+            <p class="placeholder-text">
+              Your answer will show here. Calm, warm, and credit-focused.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-left">
+        <p><strong>Elite AI Credit Repair</strong></p>
+        <p>8500 Harwood Rd, Apt 6718<br>
+        North Richland Hills, TX 76180<br>
+        Phone: <a href="tel:14694356294">(469) 435-6294</a></p>
+      </div>
+
+      <div class="footer-right">
+        <p>&copy; <span id="year"></span> Elite AI Credit Repair. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <a href="#ask-ai" class="ask-ai-floating">Ask Elite AI</a>
+
+  <script src="script.js"></script>
+</body>
+</html>
