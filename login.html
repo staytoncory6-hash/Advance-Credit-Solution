@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Member Login | Elite AI Credit Repair</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body data-page="login">
+
+  <!-- HEADER -->
+  <header class="main-header">
+    <div class="container header-inner">
+      <div class="logo-area">
+        <img src="assets/logo.png" alt="Elite AI Credit Repair logo" class="site-logo" />
+        <div class="logo-text">
+          <h1>Elite AI Credit Repair</h1>
+          <p>Smarter. Faster. Stronger. Elite AI Credit Repair.</p>
+        </div>
+      </div>
+
+      <nav class="main-nav">
+        <a href="index.html">Home</a>
+        <a href="snapshot.html">Snapshot Plan</a>
+        <a href="book.html">Secret Education Book</a>
+        <a href="contact.html">Contact</a>
+        <a href="membership.html">Membership</a>
+        <a href="#ask-ai">Ask Elite AI</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero-section">
+      <div class="container hero-inner">
+        <div>
+          <h2>Member Login</h2>
+          <p>
+            This area is for Snapshot + Membership clients. As we build out the
+            full dashboard, your login will be how we track your rounds, updates,
+            and next steps in the dispute process.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- LOGIN CARD -->
+    <section class="login-section">
+      <div class="container login-grid">
+        <div class="login-card">
+          <h3>Sign In to Your Account</h3>
+          <p class="login-intro">
+            Use your email and password to log in. If you don’t have access yet,
+            reach out on the Contact page after sending your Snapshot or first
+            membership payment.
+          </p>
+
+          <form class="login-form">
+            <label for="login-email">Email</label>
+            <input
+              type="email"
+              id="login-email"
+              placeholder="you@example.com"
+              required
+            />
+
+            <label for="login-password">Password</label>
+            <input
+              type="password"
+              id="login-password"
+              placeholder="Your password"
+              required
+            />
+
+            <button type="submit" class="btn primary-btn" disabled>
+              Login (Coming Soon)
+            </button>
+
+            <p class="login-note">
+              For now, the login system is under construction. We’re tagging
+              members manually using your Snapshot story + Cash App receipts
+              while we finish building your full dashboard.
+            </p>
+          </form>
+        </div>
+
+        <div class="login-side-card">
+          <h3>Don’t Have an Account Yet?</h3>
+          <ul>
+            <li>Start with a paid <strong>Snapshot Plan</strong> so your story and goals are clear.</li>
+            <li>Enroll in <strong>Membership</strong> using Cash App: <strong>$Cory12151983</strong>.</li>
+            <li>Save your receipt and reach out through the Contact page.</li>
+            <li>We’ll tag you as a member and connect your Snapshot to your file.</li>
+          </ul>
+          <p style="margin-top:0.6rem;">
+            As soon as the live login + dashboard is ready, this page will unlock
+            full access to your rounds, letters, and progress.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ASK AI (GENERAL, FREE) -->
+    <section id="ask-ai" class="ask-ai-section">
+      <div class="container">
+        <h2>Ask Elite AI About Your Next Step</h2>
+        <p class="section-intro">
+          Not sure if you should start with a Snapshot, jump straight into membership,
+          or just clean up a few items on your own? Ask a credit question here.
+        </p>
+
+        <form id="ask-ai-form" class="ask-ai-form">
+          <label for="ask-ai-question">Your credit question:</label>
+          <textarea
+            id="ask-ai-question"
+            rows="4"
+            placeholder="Example: Do I need full membership, or is a Snapshot enough for my situation?"
+            required
+          ></textarea>
+
+          <button type="submit" class="btn primary-btn">Ask Elite AI</button>
+        </form>
+
+        <div id="ask-ai-status" class="ask-ai-status"></div>
+
+        <div class="ask-ai-answer-wrap">
+          <h3>AI Response</h3>
+          <div id="ask-ai-answer" class="ask-ai-answer">
+            <p class="placeholder-text">
+              Your answer will show up here. Calm, honest, and focused on which
+              option is the best fit for what you’re actually dealing with.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-left">
+        <p><strong>Elite AI Credit Repair</strong></p>
+        <p>
+          8500 Harwood Rd, Apt 6718<br />
+          North Richland Hills, TX 76180<br />
+          Phone: <a href="tel:14694356294">(469) 435-6294</a>
+        </p>
+      </div>
+
+      <div class="footer-middle">
+        <p>
+          This site provides education and guidance. Results vary; no guarantees
+          of deletions or score increases.
+        </p>
+      </div>
+
+      <div class="footer-right">
+        <p>&copy; <span id="year"></span> Elite AI Credit Repair. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating Ask AI button -->
+  <a href="#ask-ai" class="ask-ai-floating">Ask Elite AI</a>
+
+  <script src="script.js"></script>
+</body>
+</html>
