@@ -510,3 +510,58 @@ form select:focus {
 .hidden {
   display: none;
 }
+/* ========== HEADER & LOGO ========== */
+.site-header {
+  background: #020817; /* dark navy */
+  color: #f9fafb;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid rgba(148, 163, 184, 0.4);
+}
+
+.header-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+
+.logo-link {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  text-decoration: none;
+  color: inherit;
+}
+
+.logo-mascot {
+  width: 56px;
+  height: 56px;
+  object-fit: contain;
+}
+
+.logo-text .brand-main {
+  display: block;
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+.logo-text .brand-tagline {
+  display: block;
+  font-size: 0.8rem;
+  opacity: 0.8;
+}
+
+.main-nav a {
+  margin-left: 1rem;
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #e5e7eb;
+}
+
+.main-nav a:hover {
+  color: #facc15;
+}
