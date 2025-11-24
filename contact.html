@@ -106,36 +106,27 @@
     </section>
 
     <!-- ASK AI SECTION -->
-    <section id="ask-ai" class="ask-ai-section">
-      <div class="container">
-        <h2>Ask Elite AI Before You Reach Out</h2>
-        <p class="section-intro">
-          Ask a credit question first. If it looks like you need deeper help,
-          you can follow up using the contact info above.
-        </p>
+<section id="ask-ai-section" class="section">
+  <div class="container">
+    <h2><strong>Ask AI About Your Credit</strong></h2>
+    <p><strong>
+      Type a question about your credit report, monthly services, or a specific account
+      and let the AI walk you through your next move.
+    </strong></p>
+    <form id="ask-ai-form">
+      <textarea
+        id="ask-ai-input"
+        rows="4"
+        placeholder="Example: 'Which monthly plan is best if I have 3 collections and 2 late payments?'"
+      ></textarea>
+      <button type="submit" class="btn-primary">
+        <strong>Ask AI</strong>
+      </button>
+    </form>
+    <div id="ask-ai-output" class="card" style="margin-top:1rem;"></div>
+  </div>
+</section>
 
-        <form id="ask-ai-form" class="ask-ai-form">
-          <label for="ask-ai-question">Your credit question:</label>
-          <textarea id="ask-ai-question" rows="4"
-            placeholder="Example: Is Elite Butler service better for identity theft situations?"
-            required></textarea>
-
-          <button type="submit" class="btn primary-btn">Ask Elite AI</button>
-        </form>
-
-        <div id="ask-ai-status" class="ask-ai-status"></div>
-
-        <div class="ask-ai-answer-wrap">
-          <h3>AI Response</h3>
-          <div id="ask-ai-answer" class="ask-ai-answer">
-            <p class="placeholder-text">
-              Your answer will show up here. Tone stays calm and focused:
-              what the law allows, what lenders care about, and what makes sense next.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
   </main>
 
   <!-- FOOTER -->
