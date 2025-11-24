@@ -1,0 +1,881 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Membership Plans – Elite A.I. Credit Repair</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta
+    name="description"
+    content="Join Elite A.I. Credit Repair membership plans – Starter Clean-Up, Elite Restoration, and Family Plan. A.I.-powered credit repair, real laws, real letters."
+  />
+  <style>
+    :root {
+      --bg: #050507;
+      --bg-elevated: #101015;
+      --bg-soft: #15151c;
+      --border: #262633;
+      --accent: #ffd700;
+      --accent-soft: #3b3212;
+      --text-main: #f5f5f5;
+      --text-muted: #9a9ab0;
+      --text-soft: #727289;
+      --shadow-soft: 0 18px 40px rgba(0, 0, 0, 0.65);
+      --radius-lg: 18px;
+      --radius-xl: 26px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: radial-gradient(circle at top, #151525 0, #050507 55%);
+      color: var(--text-main);
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .shell {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Header / Top Bar (same style family as book.html) */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 30;
+      backdrop-filter: blur(14px);
+      background: linear-gradient(
+        to bottom,
+        rgba(5, 5, 10, 0.96),
+        rgba(5, 5, 10, 0.88),
+        transparent
+      );
+      border-bottom: 1px solid rgba(255, 215, 0, 0.05);
+    }
+
+    .topbar {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0.6rem 1.25rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .brand-mark {
+      width: 42px;
+      height: 42px;
+      border-radius: 999px;
+      border: 1px solid rgba(255, 215, 0, 0.65);
+      background: radial-gradient(circle at 30% 20%, #ffffff 0, #ffe68a 28%, #7a5d19 80%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      font-size: 1.25rem;
+      color: #1a1300;
+      box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.75), 0 16px 30px rgba(0, 0, 0, 0.75);
+    }
+
+    .brand-text-main {
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      color: var(--accent);
+    }
+
+    .brand-text-sub {
+      font-size: 0.76rem;
+      color: var(--text-muted);
+    }
+
+    .top-links {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+
+    .pill-link {
+      font-size: 0.78rem;
+      padding: 0.35rem 0.85rem;
+      border-radius: 999px;
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      color: var(--text-muted);
+      background: rgba(17, 17, 25, 0.85);
+      display: inline-flex;
+      align-items: center;
+      gap: 0.3rem;
+    }
+
+    .pill-link strong {
+      color: var(--accent);
+      font-weight: 600;
+    }
+
+    .btn-cta {
+      font-size: 0.8rem;
+      padding: 0.45rem 1.1rem;
+      border-radius: 999px;
+      border: none;
+      background: linear-gradient(135deg, #ffd700, #f2b100);
+      color: #171307;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      cursor: pointer;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+    }
+
+    .btn-cta:hover {
+      filter: brightness(1.05);
+      transform: translateY(-1px);
+    }
+
+    main {
+      flex: 1;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 1.4rem 1.25rem 3.2rem;
+    }
+
+    /* Hero section */
+    .hero {
+      display: grid;
+      grid-template-columns: minmax(0, 1.4fr) minmax(260px, 1fr);
+      gap: 1.8rem;
+      align-items: center;
+      margin-bottom: 2.3rem;
+    }
+
+    @media (max-width: 880px) {
+      .hero {
+        grid-template-columns: minmax(0, 1fr);
+      }
+    }
+
+    .hero-main {
+      padding: 1.5rem 1.4rem;
+      border-radius: var(--radius-xl);
+      background: radial-gradient(circle at top, #191824 0, #090910 60%);
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow-soft);
+    }
+
+    .hero-eyebrow {
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      color: var(--text-soft);
+      margin-bottom: 0.4rem;
+    }
+
+    .hero-title {
+      font-size: clamp(2rem, 3vw, 2.45rem);
+      margin: 0 0 0.35rem;
+      color: var(--accent);
+      font-weight: 800;
+    }
+
+    .hero-sub {
+      font-size: 0.98rem;
+      color: var(--text-muted);
+      margin: 0.3rem 0 0.7rem;
+    }
+
+    .hero-highlight {
+      font-size: 0.88rem;
+      color: var(--text-main);
+      margin: 0.4rem 0 0.8rem;
+    }
+
+    .hero-highlight strong {
+      color: var(--accent);
+    }
+
+    .hero-list {
+      margin: 0.3rem 0 0.9rem;
+      padding-left: 1.3rem;
+    }
+
+    .hero-list li {
+      font-size: 0.9rem;
+      color: var(--text-main);
+      margin: 0.16rem 0;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.65rem;
+      align-items: center;
+      margin-top: 0.6rem;
+    }
+
+    .hero-note {
+      font-size: 0.78rem;
+      color: var(--text-soft);
+    }
+
+    .hero-aside {
+      padding: 1.3rem 1.2rem;
+      border-radius: var(--radius-lg);
+      background: radial-gradient(circle at top left, #26263a 0, #151521 35%, #0a0a11 80%);
+      border: 1px solid rgba(255, 215, 0, 0.12);
+      box-shadow: var(--shadow-soft);
+      font-size: 0.86rem;
+      color: var(--text-main);
+    }
+
+    .hero-aside h3 {
+      margin: 0 0 0.4rem;
+      font-size: 1rem;
+      color: #ffe469;
+    }
+
+    .hero-aside p {
+      margin: 0.25rem 0;
+      color: var(--text-muted);
+      font-size: 0.87rem;
+    }
+
+    .hero-aside strong {
+      color: var(--accent);
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.3rem;
+      font-size: 0.76rem;
+      padding: 0.18rem 0.55rem;
+      border-radius: 999px;
+      border: 1px solid rgba(255, 215, 0, 0.5);
+      background: rgba(9, 9, 14, 0.85);
+      margin-bottom: 0.25rem;
+      color: var(--accent);
+    }
+
+    .hero-aside ul {
+      margin: 0.4rem 0 0.1rem;
+      padding-left: 1.1rem;
+    }
+
+    .hero-aside li {
+      font-size: 0.82rem;
+      color: var(--text-main);
+      margin: 0.15rem 0;
+    }
+
+    /* Pricing section */
+    .section-title {
+      font-size: 1.4rem;
+      margin: 1.5rem 0 0.4rem;
+      color: var(--accent);
+      font-weight: 700;
+    }
+
+    .section-sub {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      margin-bottom: 1.3rem;
+    }
+
+    .pricing-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1.2rem;
+      margin-bottom: 2rem;
+    }
+
+    @media (max-width: 1000px) {
+      .pricing-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 720px) {
+      .pricing-grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+    }
+
+    .plan-card {
+      border-radius: var(--radius-lg);
+      background: linear-gradient(150deg, rgba(255, 215, 0, 0.05), rgba(12, 12, 20, 0.95));
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      padding: 1.15rem 1.1rem 1.3rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      box-shadow: 0 12px 28px rgba(0, 0, 0, 0.55);
+    }
+
+    .plan-card.featured {
+      border-color: rgba(255, 215, 0, 0.7);
+      box-shadow: 0 16px 34px rgba(0, 0, 0, 0.75);
+      transform: translateY(-1px);
+    }
+
+    .plan-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 0.4rem;
+    }
+
+    .plan-name {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--accent);
+      margin-bottom: 0.1rem;
+    }
+
+    .plan-tag {
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: var(--text-soft);
+    }
+
+    .plan-pill {
+      font-size: 0.72rem;
+      padding: 0.18rem 0.5rem;
+      border-radius: 999px;
+      border: 1px solid rgba(255, 215, 0, 0.6);
+      color: var(--accent);
+      background: rgba(0, 0, 0, 0.7);
+    }
+
+    .plan-price-wrap {
+      margin-top: 0.25rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.15rem;
+    }
+
+    .plan-price {
+      font-size: 1.2rem;
+      font-weight: 700;
+    }
+
+    .plan-price span {
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: var(--text-muted);
+    }
+
+    .plan-upfront {
+      font-size: 0.8rem;
+      color: var(--text-soft);
+    }
+
+    .plan-desc {
+      font-size: 0.86rem;
+      color: var(--text-muted);
+      margin-top: 0.1rem;
+    }
+
+    .plan-list {
+      margin: 0.5rem 0 0.7rem;
+      padding-left: 1.1rem;
+    }
+
+    .plan-list li {
+      font-size: 0.84rem;
+      color: var(--text-main);
+      margin: 0.16rem 0;
+    }
+
+    .plan-footer {
+      margin-top: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 0.35rem;
+    }
+
+    .plan-btn {
+      border-radius: 999px;
+      border: none;
+      padding: 0.5rem 0.9rem;
+      font-size: 0.82rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      cursor: pointer;
+    }
+
+    .plan-btn.primary {
+      background: linear-gradient(135deg, #ffd700, #f2b100);
+      color: #171307;
+      box-shadow: 0 8px 18px rgba(0, 0, 0, 0.65);
+    }
+
+    .plan-btn.secondary {
+      background: rgba(12, 12, 20, 0.95);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      color: var(--text-main);
+    }
+
+    .plan-note {
+      font-size: 0.76rem;
+      color: var(--text-soft);
+    }
+
+    /* How it works, FAQ, disclaimer */
+    .layout-two {
+      display: grid;
+      grid-template-columns: minmax(0, 1.3fr) minmax(260px, 1fr);
+      gap: 1.8rem;
+      margin-top: 0.5rem;
+    }
+
+    @media (max-width: 880px) {
+      .layout-two {
+        grid-template-columns: minmax(0, 1fr);
+      }
+    }
+
+    .card {
+      border-radius: var(--radius-lg);
+      background: rgba(11, 11, 20, 0.95);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      padding: 1.1rem 1.1rem 1.2rem;
+      box-shadow: var(--shadow-soft);
+      font-size: 0.88rem;
+      color: var(--text-main);
+    }
+
+    .card h3 {
+      margin: 0 0 0.4rem;
+      font-size: 1.02rem;
+      color: #ffe469;
+    }
+
+    .card p {
+      margin: 0.25rem 0;
+      color: var(--text-muted);
+    }
+
+    .steps-list {
+      margin: 0.4rem 0 0.6rem;
+      padding-left: 1.1rem;
+    }
+
+    .steps-list li {
+      font-size: 0.86rem;
+      margin: 0.2rem 0;
+    }
+
+    .faq-item {
+      margin: 0.4rem 0;
+      padding-bottom: 0.4rem;
+      border-bottom: 1px dashed rgba(255, 255, 255, 0.06);
+    }
+
+    .faq-item:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+
+    .faq-q {
+      font-weight: 600;
+      color: var(--text-main);
+      font-size: 0.9rem;
+    }
+
+    .faq-a {
+      font-size: 0.86rem;
+      color: var(--text-muted);
+      margin-top: 0.1rem;
+    }
+
+    .disclaimer {
+      font-size: 0.76rem;
+      color: var(--text-soft);
+      margin-top: 1rem;
+      border-top: 1px dashed rgba(255, 255, 255, 0.07);
+      padding-top: 0.6rem;
+    }
+
+    .law {
+      color: #ffe57c;
+      font-weight: 600;
+    }
+
+    .highlight-box {
+      border-radius: var(--radius-lg);
+      border: 1px solid rgba(255, 215, 0, 0.5);
+      background: rgba(255, 215, 0, 0.06);
+      padding: 0.75rem 0.9rem;
+      margin-top: 0.5rem;
+      font-size: 0.82rem;
+      color: var(--text-main);
+    }
+
+    .highlight-box strong {
+      color: var(--accent);
+    }
+
+    .center {
+      text-align: center;
+    }
+
+    .footer-note {
+      font-size: 0.78rem;
+      color: var(--text-soft);
+      margin-top: 2rem;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="shell">
+    <!-- HEADER -->
+    <header>
+      <div class="topbar">
+        <div class="brand">
+          <div class="brand-mark">E</div>
+          <div>
+            <div class="brand-text-main">Elite A.I. Credit Repair</div>
+            <div class="brand-text-sub">Membership Plans · A.I.-Powered Credit Strategy</div>
+          </div>
+        </div>
+        <div class="top-links">
+          <a href="index.html" class="pill-link">← Back to <strong>Home</strong></a>
+          <a href="book.html" class="pill-link">📕 Read the <strong>A.I. Credit Survival Guide</strong></a>
+          <a href="contact.html">
+            <button class="btn-cta" type="button">
+              Ask A.I. Before You Join
+            </button>
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <!-- MAIN -->
+    <main>
+      <!-- HERO SECTION -->
+      <section class="hero">
+        <div class="hero-main">
+          <div class="hero-eyebrow">Membership</div>
+          <h1 class="hero-title">Choose Your Credit Game Plan</h1>
+          <p class="hero-sub">
+            Real letters. Real laws. Real action. Membership with Elite A.I. Credit Repair means you’re
+            not walking into this blind anymore.
+          </p>
+          <p class="hero-highlight">
+            You bring your credit reports. <strong>We bring the blueprint.</strong> A.I. helps us stay organized,
+            fast, and sharp – but a human still watches every move.
+          </p>
+          <ul class="hero-list">
+            <li>A.I.-assisted dispute strategy + human review</li>
+            <li>Letter structures built from real consumer laws</li>
+            <li>Education so you understand what’s happening, not just “wait and hope”</li>
+            <li>Flexible plans depending on how deep the damage is</li>
+          </ul>
+
+          <div class="hero-actions">
+            <a href="#plans">
+              <button class="btn-cta" type="button">View Membership Plans</button>
+            </a>
+            <a href="contact.html" class="pill-link">
+              Have questions? <strong>Ask first</strong>
+            </a>
+            <div class="hero-note">
+              No pressure. No fake guarantees. Just a real plan and real work.
+            </div>
+          </div>
+        </div>
+
+        <aside class="hero-aside">
+          <div class="hero-badge">
+            <span>●</span> A.I. + Human Strategy
+          </div>
+          <h3>What You’re Really Paying For</h3>
+          <p>
+            Membership is not paying for “magic deletions.” You’re paying for <strong>strategy, time, and knowledge</strong>:
+          </p>
+          <ul>
+            <li>Breaking down your reports line by line</li>
+            <li>Targeted dispute and validation strategies</li>
+            <li>Tracking deadlines and responses</li>
+            <li>Turning confusing letters into plain English</li>
+          </ul>
+          <p>
+            A.I. helps us write faster and stay organized; the laws and decisions still come from
+            <strong>real humans</strong>.
+          </p>
+        </aside>
+      </section>
+
+      <!-- PLANS -->
+      <section id="plans">
+        <h2 class="section-title">Membership Plans</h2>
+        <p class="section-sub">
+          Pick the lane that matches your situation. You can always talk to us first if you’re not sure which one fits.
+        </p>
+
+        <div class="pricing-grid">
+          <!-- Plan 1: Starter Clean-Up -->
+          <article class="plan-card">
+            <div class="plan-header">
+              <div>
+                <div class="plan-name">Starter Clean-Up</div>
+                <div class="plan-tag">Light to Moderate Issues</div>
+              </div>
+              <div class="plan-pill">Best for “Small Fires”</div>
+            </div>
+
+            <div class="plan-price-wrap">
+              <div class="plan-price">
+                $149 <span>one-time setup</span>
+              </div>
+              <div class="plan-upfront">
+                then $79 per month while we’re actively working on your file
+              </div>
+            </div>
+
+            <p class="plan-desc">
+              Perfect if you have a few late payments, a couple of collections, and want help getting them addressed
+              without going overboard.
+            </p>
+
+            <ul class="plan-list">
+              <li>Review of all 3 credit reports</li>
+              <li>Personal info clean-up strategy</li>
+              <li>Targeted dispute letters for selected negative items</li>
+              <li>A.I.-assisted letter drafting + human review</li>
+              <li>Monthly progress check-in summary</li>
+            </ul>
+
+            <div class="plan-footer">
+              <a href="contact.html">
+                <button class="plan-btn primary" type="button">
+                  Start Starter Clean-Up
+                </button>
+              </a>
+              <div class="plan-note">
+                Good if your credit is bruised, not completely wrecked, and you want structure + support.
+              </div>
+            </div>
+          </article>
+
+          <!-- Plan 2: Elite Restoration -->
+          <article class="plan-card featured">
+            <div class="plan-header">
+              <div>
+                <div class="plan-name">Elite Restoration</div>
+                <div class="plan-tag">Heavy-Duty Credit Rehab</div>
+              </div>
+              <div class="plan-pill">Most Popular</div>
+            </div>
+
+            <div class="plan-price-wrap">
+              <div class="plan-price">
+                $199 <span>one-time setup</span>
+              </div>
+              <div class="plan-upfront">
+                then $109 per month while we’re actively working on your file
+              </div>
+            </div>
+
+            <p class="plan-desc">
+              Designed for people who feel like their reports are a full-blown crime scene: multiple collections,
+              charge-offs, public records, and mystery accounts.
+            </p>
+
+            <ul class="plan-list">
+              <li>Deep dive into all 3 bureaus all sections</li>
+              <li>Advanced dispute strategies (incomplete info, reinsertions, etc.)</li>
+              <li>Help with creditor / collector validation requests</li>
+              <li>Identity theft letter structures (if applicable)</li>
+              <li>Priority support + A.I.-organized timeline of actions</li>
+              <li>Education so you don’t end up back in the same mess</li>
+            </ul>
+
+            <div class="plan-footer">
+              <a href="contact.html">
+                <button class="plan-btn primary" type="button">
+                  Join Elite Restoration
+                </button>
+              </a>
+              <div class="plan-note">
+                If you’re serious about rebuilding and ready to commit to the process, this is your lane.
+              </div>
+            </div>
+          </article>
+
+          <!-- Plan 3: Family Plan -->
+          <article class="plan-card">
+            <div class="plan-header">
+              <div>
+                <div class="plan-name">Family Plan</div>
+                <div class="plan-tag">Protect the Whole Household</div>
+              </div>
+              <div class="plan-pill">2+ Members</div>
+            </div>
+
+            <div class="plan-price-wrap">
+              <div class="plan-price">
+                Custom <span>based on how many adults</span>
+              </div>
+              <div class="plan-upfront">
+                Built for couples &amp; households who want everyone’s credit to move together
+              </div>
+            </div>
+
+            <p class="plan-desc">
+              Because it doesn’t make sense for one person to get approved and the other get denied. We build
+              a linked strategy for your household.
+            </p>
+
+            <ul class="plan-list">
+              <li>Discounted pricing for multiple members</li>
+              <li>Separate file strategy for each adult</li>
+              <li>Shared education so everyone understands the game</li>
+              <li>Help planning for future goals (home, car, business)</li>
+            </ul>
+
+            <div class="plan-footer">
+              <a href="contact.html">
+                <button class="plan-btn secondary" type="button">
+                  Talk About the Family Plan
+                </button>
+              </a>
+              <div class="plan-note">
+                Tell us how many adults, what you’re trying to do, and we’ll build a custom quote.
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- HOW IT WORKS + FAQ -->
+      <section class="layout-two">
+        <!-- HOW IT WORKS -->
+        <article class="card">
+          <h3>How Membership Works (Step by Step)</h3>
+          <p>
+            No fine print tricks. No “pay and disappear.” Here is the general flow of what happens once you join:
+          </p>
+          <ol class="steps-list">
+            <li>
+              <strong>1. We review your credit reports.</strong> You send us copies or give us access. We map out
+              what’s on Experian, Equifax, and TransUnion.
+            </li>
+            <li>
+              <strong>2. We build a game plan.</strong> We decide what to target first: personal info, public records,
+              collections, charge-offs, etc.
+            </li>
+            <li>
+              <strong>3. We draft and send letters.</strong> A.I. helps us draft clean, organized, law-based letters.
+              A real human reviews them before they go out.
+            </li>
+            <li>
+              <strong>4. We track responses &amp; deadlines.</strong> We watch for the 30–45 day response windows
+              and decide the next moves based on what comes back.
+            </li>
+            <li>
+              <strong>5. We add positive strategies.</strong> Where it makes sense, we’ll talk about credit-builder
+              tools, rent reporting, and other positive moves.
+            </li>
+            <li>
+              <strong>6. We educate you as we go.</strong> We explain what’s happening in plain English so you’re not
+              in the dark about your own credit.
+            </li>
+          </ol>
+
+          <div class="highlight-box">
+            <strong>Important:</strong> No one can honestly promise you exact deletions or exact score increases.
+            What we can promise is effort, strategy, and transparency while we work your file.
+          </div>
+        </article>
+
+        <!-- FAQ + LEGAL -->
+        <article class="card">
+          <h3>Common Questions Before Joining</h3>
+
+          <div class="faq-item">
+            <div class="faq-q">How long does this take?</div>
+            <div class="faq-a">
+              Credit repair is a process. Some items move fast, others require multiple rounds or additional documentation.
+              Expect months, not days. Anyone promising “overnight miracles” is playing games.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-q">Can you guarantee specific deletions or scores?</div>
+            <div class="faq-a">
+              No – and anyone who says they can is ignoring the <span class="law">Credit Repair Organizations Act (CROA)</span>.
+              We follow the law. We can’t guarantee results, but we can guarantee real work, communication, and strategy.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-q">What if I just want education, no membership?</div>
+            <div class="faq-a">
+              Great. That’s exactly why we created the
+              <a href="book.html">A.I. Credit Survival Guide</a>. You can use that book + our A.I. tools to do a lot of
+              this yourself if you’re more of a DIY person.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-q">How do I pay?</div>
+            <div class="faq-a">
+              When you talk to us on the <a href="contact.html">contact page</a>, we’ll send clear instructions on how to
+              pay through our approved payment methods (for example Cash App or others we list). You’ll always know what
+              you’re paying for and when.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-q">Can I cancel?</div>
+            <div class="faq-a">
+              Yes. You can stop membership at any time going forward. You’re never locked into a lifetime contract.
+              We just ask that you give us notice so we can close out your file properly.
+            </div>
+          </div>
+
+          <div class="disclaimer">
+            <strong>Legal &amp; Compliance Note:</strong><br />
+            We respect the <span class="law">Fair Credit Reporting Act (FCRA)</span>,
+            <span class="law">Fair Debt Collection Practices Act (FDCPA)</span>,
+            <span class="law">CROA</span>, and related consumer protection laws. We do not create fake identities,
+            CPNs, or any illegal “credit profile” schemes. Our focus is on challenging inaccurate, incomplete,
+            or unverified information and helping you build better habits going forward.
+          </div>
+        </article>
+      </section>
+
+      <p class="footer-note">
+        Ready but still nervous? It’s normal. Hit the <a href="contact.html">Ask A.I. / Contact page</a> and tell us
+        your situation in your own words. We’ll help you figure out if membership makes sense for you right now.
+      </p>
+    </main>
+  </div>
+</body>
+</html>
