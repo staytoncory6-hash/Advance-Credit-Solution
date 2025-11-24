@@ -303,3 +303,106 @@ function escapeHtml(str) {
     .replace(/</g, "&lt;")
     .replace(/>/g, "&gt;");
 }
+<script type="module">
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.0/firebase-app.js";
+  import {
+    getAuth,
+    createUserWithEmailAndPassword,
+    signInWithEmailAndPassword,
+    signOut,
+    onAuthStateChanged
+  } from "https://www.gstatic.com/firebasejs/11.0.0/firebase-auth.js";
+
+  /* ===========================================================
+   * 1. Your Firebase Config
+   *    (Replace with your real config from Firebase Console)
+   * =========================================================== */
+  const firebaseConfig = {
+    apiKey: "YOUR_API_KEY",
+    authDomain: "YOUR_PROJECT.firebaseapp.com",
+    projectId: "YOUR_PROJECT",
+    storageBucket: "YOUR_PROJECT.appspot.com",
+    messagingSenderId: "YOUR_SENDER_ID",
+    appId: "YOUR_APP_ID"
+  };
+
+  const app = initializeApp(firebaseConfig);
+  const auth = getAuth(app);
+
+  /* ===========================================================
+   * 2. DOM Elements from membership.html
+   * =========================================================== */
+  const loginEmail = document.getElementById("login-email");
+  const loginPassword = document.getElementById("login-password");
+  const loginBtn = document.getElementById("login-btn");
+  const loginError = document.getElementById("login-error");
+
+  const signupEmail = document.getElementById("signup-email");
+  const signupPassword = document.getElementById("signup-password");
+  const signupBtn = document.getElementById("signup-btn");
+  const signupError = document.getElementById("signup-error");
+
+  const statusText = document.getElementById("auth-status-text");
+  const logoutBtn = document.getElementById("logout-btn");
+
+  /* ===========================================================
+   * 3. SIGNUP
+   * =========================================================== */
+  if (signupBtn) {
+    signupBtn.addEventListener("click", () => {
+      const email = signupEmail.value.trim();
+      const password = signupPassword.value.trim();
+
+      signupError.textContent = "";
+
+      createUserWithEmailAndPassword(auth, email, password)
+        .then(() => {
+          signupError.textContent = "";
+          alert("Account created successfully! You may now log in.");
+        })
+        .catch((err) => {
+          signupError.textContent = err.message;
+        });
+    });
+  }
+
+  /* ===========================================================
+   * 4. LOGIN
+   * =========================================================== */
+  if (loginBtn) {
+    loginBtn.addEventListener("click", () => {
+      const email = loginEmail.value.trim();
+      const password = loginPassword.value.trim();
+
+      loginError.textContent = "";
+
+      signInWithEmailAndPassword(auth, email, password)
+        .catch((err) => {
+          loginError.textContent = err.message;
+        });
+    });
+  }
+
+  /* ===========================================================
+   * 5. LOGOUT
+   * =========================================================== */
+  if (logoutBtn) {
+    logoutBtn.addEventListener("click", () => {
+      signOut(auth);
+    });
+  }
+
+  /* ===========================================================
+   * 6. AUTH STATE LISTENER
+   * =========================================================== */
+  onAuthStateChanged(auth, (user) => {
+    if (user) {
+      statusText.innerHTML = `Logged in as <strong>${user.email}</strong>`;
+      logoutBtn.style.display = "block";
+    } else {
+      statusText.textContent = "";
+      logoutBtn.style.display = "none";
+    }
+  });
+</script>
+
