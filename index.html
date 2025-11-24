@@ -182,41 +182,27 @@
     </section>
 
     <!-- ASK AI -->
-    <section id="ask-ai" class="section">
-      <div class="container">
-        <h2><strong>Ask AI a Credit Question</strong></h2>
-        <p class="section-intro">
-          <strong>
-            This box is ONLY for credit questions. Ask about collections, charge-offs,
-            public records, bureaus, FCRA, CFPB, or general strategy. No random non-credit stuff.
-          </strong>
-        </p>
+<section id="ask-ai-section" class="section">
+  <div class="container">
+    <h2><strong>Ask AI About Your Credit</strong></h2>
+    <p><strong>
+      Type a question about your credit report, monthly services, or a specific account
+      and let the AI walk you through your next move.
+    </strong></p>
+    <form id="ask-ai-form">
+      <textarea
+        id="ask-ai-input"
+        rows="4"
+        placeholder="Example: 'Which monthly plan is best if I have 3 collections and 2 late payments?'"
+      ></textarea>
+      <button type="submit" class="btn-primary">
+        <strong>Ask AI</strong>
+      </button>
+    </form>
+    <div id="ask-ai-output" class="card" style="margin-top:1rem;"></div>
+  </div>
+</section>
 
-        <div class="ask-ai-box">
-          <form id="ask-ai-form">
-            <label for="ask-ai-input"><strong>Your Credit Question</strong></label>
-            <input
-              id="ask-ai-input"
-              type="text"
-              placeholder="Example: What is a collection? How long can late payments report? What’s the Shopping Cart Trick?"
-              required
-            />
-            <button type="submit" class="btn-primary"><strong>Get an AI Answer</strong></button>
-          </form>
-
-          <div id="ask-ai-answer" class="ask-ai-answer hidden">
-            <h3><strong>AI Answer</strong></h3>
-            <p id="ask-ai-answer-text"></p>
-            <p class="upsell-note">
-              <strong>
-                Want a full 90-day plan and downloadable dispute-letter intros based on
-                YOUR story? That’s what the Snapshot Plan is for.
-              </strong>
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
   </main>
 
   <footer class="site-footer">
