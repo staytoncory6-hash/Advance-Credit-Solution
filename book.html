@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Masters of the Unknown – Digital Book | Elite AI Credit Repair</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta
+    name="description"
+    content="Masters of the Unknown is a $167 digital credit education book from Elite AI Credit Repair covering regulators, public records, letters, trade lines, and shopping cart tricks."
+  />
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Page-specific styling for the book hero + mascot -->
+  <style>
+    .hero-book {
+      background: radial-gradient(circle at top, #151525 0, #050507 60%);
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 2fr) minmax(0, 1.4fr);
+      gap: 2rem;
+      align-items: center;
+    }
+
+    @media (max-width: 800px) {
+      .hero-grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+    }
+
+    .hero-text h1 {
+      font-size: clamp(2.3rem, 4vw, 3rem);
+      margin-bottom: 0.5rem;
+    }
+
+    .hero-sub {
+      font-size: 0.98rem;
+      line-height: 1.7;
+      margin-bottom: 0.75rem;
+    }
+
+    .hero-price {
+      font-size: 1.05rem;
+      margin: 0.4rem 0;
+    }
+
+    .hero-note {
+      font-size: 0.88rem;
+      opacity: 0.9;
+      margin-bottom: 0.7rem;
+    }
+
+    .hero-side .card {
+      text-align: left;
+    }
+
+    /* Mascot / book visual */
+    .book-mascot-wrap {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .book-mascot-frame {
+      width: 100%;
+      max-width: 260px;
+      aspect-ratio: 3 / 4;
+      border-radius: 20px;
+      padding: 0.9rem;
+      background: radial-gradient(circle at top left, #facc15 0, #111827 55%, #020617 100%);
+      box-shadow: 0 18px 40px rgba(0, 0, 0, 0.75);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .book-mascot-frame img {
+      max-width: 100%;
+      max-height: 100%;
+      display: block;
+      object-fit: contain;
+    }
+
+    .book-mascot-caption {
+      font-size: 0.8rem;
+      text-align: center;
+      opacity: 0.85;
+    }
+
+    /* Chapter breakdown + locked section */
+    .small-bold {
+      font-size: 0.88rem;
+      font-weight: 600;
+    }
+
+    .locked-message {
+      margin-top: 0.9rem;
+    }
+
+    .full-book-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.25rem 0.8rem;
+      border-radius: 999px;
+      font-size: 0.78rem;
+    }
+
+    .pill-locked {
+      background: rgba(15, 23, 42, 0.95);
+      border: 1px solid rgba(248, 250, 252, 0.12);
+    }
+
+    .full-book-wrapper {
+      position: relative;
+      border-radius: 18px;
+      overflow: hidden;
+    }
+
+    .full-book-content.locked {
+      opacity: 0.16;
+      pointer-events: none;
+      filter: blur(1px);
+      padding: 1.2rem 1rem 1.4rem;
+      border-radius: 18px;
+      background: rgba(15, 23, 42, 0.8);
+      border: 1px solid rgba(148, 163, 184, 0.25);
+    }
+
+    .full-book-overlay {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 1.5rem 1.2rem;
+      background: radial-gradient(circle at top, rgba(15, 23, 42, 0.96), rgba(15, 23, 42, 0.94));
+      border-radius: 18px;
+    }
+
+    .ask-ai-hint {
+      margin-top: 1.2rem;
+      font-size: 0.86rem;
+    }
+  </style>
+</head>
+<body>
+  <!-- HEADER (matches other pages) -->
+  <header class="site-header">
+    <div class="container nav">
+      <div class="brand">
+        <img src="assets/elite_logo.png" alt="Elite AI Credit Repair Logo" class="logo" />
+        <div class="brand-text">
+          <span class="brand-name">Elite <strong>AI</strong> Credit Repair</span>
+          <span class="brand-tagline">
+            <strong>Masters of the Unknown – Digital Credit Education</strong>
+          </span>
+        </div>
+      </div>
+      <nav class="main-nav">
+        <a href="index.html"><strong>Home</strong></a>
+        <a href="book.html" class="active"><strong>Digital Book</strong></a>
+        <a href="services.html"><strong>Services</strong></a>
+        <a href="contact.html"><strong>Contact</strong></a>
+        <a href="membership.html"><strong>Member Login</strong></a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO + MASCOT -->
+    <section class="hero hero-book">
+      <div class="container hero-grid">
+        <div class="hero-text">
+          <h1><strong>Masters of the Unknown</strong></h1>
+          <p class="hero-sub">
+            <strong>
+              A digital playbook that shows you how to use regulators, public-record loopholes,
+              advanced letters, and smart rebuilding to take control of your credit report – with
+              AI helping you every step of the way.
+            </strong>
+          </p>
+          <p class="hero-price"><strong>$167.00 – One-time digital access</strong></p>
+          <p class="hero-note">
+            <strong>
+              This isn’t a fluffy eBook. It’s written like a survival manual – the kind of
+              information most people only hear from high-end credit coaches and insiders.
+            </strong>
+          </p>
+          <a
+            class="btn-primary"
+            href="https://cash.app/$Cory12151983"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <strong>Buy the Digital Book for $167.00</strong>
+          </a>
+          <p class="hero-note">
+            <strong>
+              After payment, you’ll receive instructions to access your digital copy and any
+              downloadable PDFs that go with it.
+            </strong>
+          </p>
+        </div>
+
+        <div class="hero-side">
+          <div class="card book-mascot-wrap">
+            <div class="book-mascot-frame">
+              <!-- 👇 Your mascot file -->
+              <img src="assets/mascot.png" alt="Elite AI Credit Repair Mascot" />
+            </div>
+            <p class="book-mascot-caption">
+              <strong>
+                Your Elite AI guide – think of him as the coach walking you through every chapter.
+              </strong>
+            </p>
+            <p class="small-bold">
+              <strong>
+                Pair this digital book with the Ask AI feature on the site to turn every strategy
+                into customized letters and action plans.
+              </strong>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CHAPTER BREAKDOWN -->
+    <section class="section">
+      <div class="container">
+        <h2><strong>Inside the Digital Book – Chapter Breakdown</strong></h2>
+        <div class="card">
+          <ol class="toc-list">
+            <li>
+              <strong>Chapter 1 – Regulators</strong><br />
+              <span class="small-bold">
+                FTC, CFPB, State Attorneys General, OCC – who they are, why they exist, and how
+                they force credit bureaus and furnishers to follow the law.
+              </span>
+            </li>
+            <li>
+              <strong>Chapter 2 – Public Records &amp; Loopholes</strong><br />
+              <span class="small-bold">
+                Bankruptcies, judgments, tax liens, foreclosures – where they really come from and
+                how data miners like LexisNexis create a removal opportunity.
+              </span>
+            </li>
+            <li>
+              <strong>Chapter 3 – Specialized Letters</strong><br />
+              <span class="small-bold">
+                Incomplete-information letters, return-mail letters, goodwill letters, bizarre
+                operational letters, and five-day reinsertion enforcement.
+              </span>
+            </li>
+            <li>
+              <strong>Chapter 4 – Trade Lines &amp; Rebuilding</strong><br />
+              <span class="small-bold">
+                Primary lines, authorized user trade lines, rent reporting, and the order to stack
+                them for maximum score jumps.
+              </span>
+            </li>
+            <li>
+              <strong>Chapter 5 – Shopping Cart Trick &amp; Starter Accounts</strong><br />
+              <span class="small-bold">
+                Store cards and alternative credit lines you can use as stepping stones instead of
+                begging big banks.
+              </span>
+            </li>
+          </ol>
+          <p class="locked-message small-bold">
+            <strong>
+              Full chapter content is locked to paying customers only. Once you purchase, you’ll
+              receive your private access link to the entire book.
+            </strong>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- LOCKED FULL BOOK PREVIEW -->
+    <section class="section section-alt">
+      <div class="container">
+        <div class="full-book-header">
+          <h2><strong>Full Digital Book (Locked)</strong></h2>
+          <span class="pill pill-locked"><strong>🔒 Members-Only Content</strong></span>
+        </div>
+
+        <div class="full-book-wrapper">
+          <div class="full-book-content locked">
+            <h3><strong>Chapter 1 – Regulators</strong></h3>
+            <p>
+              <strong>
+                (This is where your full chapter content will live – detailed explanations, law
+                citations, and real-world examples.)
+              </strong>
+            </p>
+
+            <h3><strong>Chapter 2 – Public Records &amp; Loopholes</strong></h3>
+            <p><strong>(Full content continues here.)</strong></p>
+
+            <h3><strong>Chapter 3 – Specialized Letters</strong></h3>
+            <p><strong>(Full content continues here.)</strong></p>
+
+            <h3><strong>Chapter 4 – Trade Lines &amp; Rebuilding</strong></h3>
+            <p><strong>(Full content continues here.)</strong></p>
+
+            <h3><strong>Chapter 5 – Shopping Cart Trick &amp; Starter Accounts</strong></h3>
+            <p><strong>(Full content continues here.)</strong></p>
+          </div>
+
+          <div class="full-book-overlay">
+            <h3><strong>Content Locked</strong></h3>
+            <p class="small-bold">
+              <strong>
+                The full five-chapter book lives here. To protect the value, it only unlocks after
+                confirmed payment.
+              </strong>
+            </p>
+            <a
+              class="btn-primary"
+              href="https://cash.app/$Cory12151983"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <strong>Unlock Digital Book – $167.00</strong>
+            </a>
+            <p class="hero-note small-bold">
+              <strong>
+                Already paid? Reach out through the Contact page with your payment proof so access
+                can be granted.
+              </strong>
+            </p>
+          </div>
+        </div>
+
+        <p class="ask-ai-hint small-bold">
+          <strong>
+            Not sure if the book is right for you? Use the Ask AI box on the Home page to ask a
+            credit question and see how clearly we break things down.
+          </strong>
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>
+        <strong>&copy; <span id="year-book"></span> Elite AI Credit Repair.</strong>
+        <strong> All rights reserved.</strong>
+      </p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year-book").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
