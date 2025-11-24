@@ -8,6 +8,36 @@
 </head>
 
 <body data-page="snapshot">
+  <body>
+  <!-- auth check -->
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.0/firebase-app.js";
+    import { getAuth, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/11.0.0/firebase-auth.js";
+
+    const firebaseConfig = {
+      apiKey: "YOUR_API_KEY",
+      authDomain: "YOUR_PROJECT_ID.firebaseapp.com",
+      projectId: "YOUR_PROJECT_ID",
+      storageBucket: "YOUR_PROJECT_ID.appspot.com",
+      messagingSenderId: "YOUR_SENDER_ID",
+      appId: "YOUR_APP_ID"
+    };
+
+    const app = initializeApp(firebaseConfig);
+    const auth = getAuth(app);
+
+    onAuthStateChanged(auth, (user) => {
+      if (!user) {
+        // not logged in → send them to login page
+        window.location.href = "login.html";
+      }
+    });
+  </script>
+
+  <!-- Rest of your secure content here -->
+  <h1>Welcome to your Elite AI Credit Snapshot</h1>
+</body>
+
 
 <!-- HEADER -->
 <header class="main-header">
