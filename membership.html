@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Member Login | Elite AI Credit Repair</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <link rel="stylesheet" href="style.css" />
+
+  <style>
+    /* Simple clean layout */
+    .auth-container {
+      max-width: 420px;
+      margin: 4rem auto;
+      background: #0f0f13;
+      padding: 2rem;
+      border-radius: 15px;
+      box-shadow: 0 0 25px rgba(0, 0, 0, 0.6);
+      color: #fff;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 1.5rem;
+      color: #ffd700;
+    }
+
+    label {
+      display: block;
+      margin-top: 1rem;
+      font-weight: 600;
+      color: #e5e5e5;
+    }
+
+    input {
+      width: 100%;
+      padding: 0.65rem;
+      border-radius: 8px;
+      border: 1px solid #333;
+      background: #1a1a1f;
+      color: #fff;
+      margin-top: 0.3rem;
+    }
+
+    button {
+      width: 100%;
+      margin-top: 1.2rem;
+      padding: 0.85rem;
+      font-size: 1rem;
+      background: #ffd700;
+      color: #111;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      font-weight: 700;
+    }
+
+    p {
+      font-size: 0.9rem;
+      text-align: center;
+    }
+
+    .error {
+      color: #ff5353;
+      font-weight: 600;
+      margin-top: 0.5rem;
+    }
+
+    .success {
+      color: #4ade80;
+      margin-top: 0.5rem;
+      font-weight: 600;
+    }
+
+    .logout-btn {
+      background: #ff5353;
+      margin-top: 2rem;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header class="site-header">
+    <div class="container nav">
+      <div class="brand">
+        <img src="assets/elite_logo.png" class="logo" />
+        <div class="brand-text">
+          <span class="brand-name">Elite <strong>AI</strong> Credit Repair</span>
+          <span class="brand-tagline"><strong>Member Login Portal</strong></span>
+        </div>
+      </div>
+      <nav class="main-nav">
+        <a href="index.html"><strong>Home</strong></a>
+        <a href="book.html"><strong>Digital Book</strong></a>
+        <a href="services.html"><strong>Services</strong></a>
+        <a href="contact.html"><strong>Contact</strong></a>
+        <a href="membership.html" class="active"><strong>Member Login</strong></a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="auth-container">
+
+      <h2>Member Login</h2>
+
+      <!-- SIGNUP -->
+      <label>Email</label>
+      <input id="signup-email" type="email" placeholder="Enter email" />
+
+      <label>Password</label>
+      <input id="signup-password" type="password" placeholder="Enter password" />
+
+      <button id="signup-btn">Create Account</button>
+      <p id="signup-error" class="error"></p>
+
+      <hr style="margin: 2rem 0; border: 1px solid #222;" />
+
+      <!-- LOGIN -->
+      <label>Login Email</label>
+      <input id="login-email" type="email" placeholder="Enter email" />
+
+      <label>Login Password</label>
+      <input id="login-password" type="password" placeholder="Enter password" />
+
+      <button id="login-btn">Login</button>
+      <p id="login-error" class="error"></p>
+
+      <p id="auth-status-text" class="success"></p>
+
+      <button id="logout-btn" class="logout-btn" style="display:none;">
+        Logout
+      </button>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>
+        <strong>&copy; <span id="year-m"></span> Elite AI Credit Repair.</strong>
+        <strong> All rights reserved.</strong>
+      </p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year-m").textContent = new Date().getFullYear();
+  </script>
+
+  <!-- FIREBASE AUTH LOGIC -->
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.0/firebase-app.js";
+    import {
+      getAuth,
+      createUserWithEmailAndPassword,
+      signInWithEmailAndPassword,
+      signOut,
+      onAuthStateChanged
+    } from "https://www.gstatic.com/firebasejs/11.0.0/firebase-auth.js";
+
+    const firebaseConfig = {
+      apiKey: "YOUR_API_KEY",
+      authDomain: "YOUR_PROJECT_ID.firebaseapp.com",
+      projectId: "YOUR_PROJECT_ID",
+      storageBucket: "YOUR_PROJECT_ID.appspot.com",
+      messagingSenderId: "YOUR_SENDER_ID",
+      appId: "YOUR_APP_ID"
+    };
+
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const auth = getAuth(app);
+
+    // SIGNUP
+    document.getElementById("signup-btn").onclick = () => {
+      const email = document.getElementById("signup-email").value;
+      const password = document.getElementById("signup-password").value;
+
+      createUserWithEmailAndPassword(auth, email, password)
+        .then(() => {
+          document.getElementById("signup-error").textContent = "";
+          alert("Account Created!");
+        })
+        .catch((error) => {
+          document.getElementById("signup-error").textContent = error.message;
+        });
+    };
+
+    // LOGIN
+    document.getElementById("login-btn").onclick = () => {
+      const email = document.getElementById("login-email").value;
+      const password = document.getElementById("login-password").value;
+
+      signInWithEmailAndPassword(auth, email, password)
+        .then(() => {
+          document.getElementById("login-error").textContent = "";
+        })
+        .catch((error) => {
+          document.getElementById("login-error").textContent = error.message;
+        });
+    };
+
+    // LOGOUT
+    document.getElementById("logout-btn").onclick = () => {
+      signOut(auth);
+    };
+
+    // AUTH STATE LISTENER
+    onAuthStateChanged(auth, (user) => {
+      const status = document.getElementById("auth-status-text");
+      const logoutBtn = document.getElementById("logout-btn");
+
+      if (user) {
+        status.textContent = "You are logged in!";
+        logoutBtn.style.display = "block";
+
+        // OPTIONAL: Redirect members after login
+        // window.location.href = "members-area.html";
+      } else {
+        status.textContent = "";
+        logoutBtn.style.display = "none";
+      }
+    });
+  </script>
+
+</body>
+</html>
