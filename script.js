@@ -28,18 +28,27 @@ document.addEventListener("DOMContentLoaded", () => {
    *
    * Expected HTML (can be on Home, Services, or Contact):
    *
-   * <section id="ask-ai-section">
-   *   <h2>Ask AI About Your Credit</h2>
-   *   <form id="ask-ai-form">
-   *     <textarea
-   *       id="ask-ai-input"
-   *       placeholder="Ask a question about your credit, monthly services, disputes, or rebuilding..."
-   *       rows="4"
-   *     ></textarea>
-   *     <button type="submit" class="btn-primary">Ask AI</button>
-   *   </form>
-   *   <div id="ask-ai-output"></div>
-   * </section>
+ <section id="ask-ai-section" class="section">
+  <div class="container">
+    <h2><strong>Ask AI About Your Credit</strong></h2>
+    <p><strong>
+      Type a question about your credit report, monthly services, or a specific account
+      and let the AI walk you through your next move.
+    </strong></p>
+    <form id="ask-ai-form">
+      <textarea
+        id="ask-ai-input"
+        rows="4"
+        placeholder="Example: 'Which monthly plan is best if I have 3 collections and 2 late payments?'"
+      ></textarea>
+      <button type="submit" class="btn-primary">
+        <strong>Ask AI</strong>
+      </button>
+    </form>
+    <div id="ask-ai-output" class="card" style="margin-top:1rem;"></div>
+  </div>
+</section>
+
    *
    * ========================= */
   const askAiForm = document.getElementById("ask-ai-form");
