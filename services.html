@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Services | Elite AI Credit Repair</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta
+    name="description"
+    content="Elite AI Credit Repair monthly services – Starter Clean-Up, Elite Restoration, and Education + DIY Assist with AI support."
+  />
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="container nav">
+      <div class="brand">
+        <img src="assets/elite_logo.png" alt="Elite AI Credit Repair Logo" class="logo" />
+        <div class="brand-text">
+          <span class="brand-name">Elite <strong>AI</strong> Credit Repair</span>
+          <span class="brand-tagline">
+            <strong>Smart Laws · Real Strategy · Human + AI</strong>
+          </span>
+        </div>
+      </div>
+      <nav class="main-nav">
+        <a href="index.html"><strong>Home</strong></a>
+        <a href="book.html"><strong>Digital Book</strong></a>
+        <a href="services.html" class="active"><strong>Services</strong></a>
+        <a href="contact.html"><strong>Contact</strong></a>
+        <a href="membership.html"><strong>Member Login</strong></a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- SERVICES HERO -->
+    <section class="hero hero-services">
+      <div class="container hero-grid">
+        <div class="hero-text">
+          <h1><strong>Monthly Services Built Around Real Laws, Not Hype</strong></h1>
+          <p class="hero-sub">
+            <strong>
+              Choose the smallest plan that can realistically hit your goals.
+              We don’t believe in overselling – we believe in honest timelines and clear moves.
+            </strong>
+          </p>
+        </div>
+        <div class="hero-side">
+          <div class="card">
+            <h2><strong>Not Sure Which Plan?</strong></h2>
+            <p>
+              <strong>
+                Scroll down and use the Ask AI buttons under each plan. The helper will break down
+                who that tier is for and what your timeline might look like.
+              </strong>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES TIERS -->
+    <section class="section">
+      <div class="container">
+        <h2><strong>Monthly Service Options</strong></h2>
+        <div class="card-grid">
+          <!-- STARTER CLEAN-UP -->
+          <div class="card">
+            <h3><strong>Starter Clean-Up</strong></h3>
+            <p class="small-bold">
+              <strong>
+                Ideal if you have a handful of collections, some late payments, and outdated personal info,
+                but not a complete disaster.
+              </strong>
+            </p>
+            <ul class="hero-list">
+              <li><strong>Focus:</strong> Inaccurate, incomplete, or outdated negative items.</li>
+              <li>Clean-up of names, addresses, and employers that don’t belong.</li>
+              <li>Structured dispute cycles with tracking and mail reminders.</li>
+              <li>Basic rebuilding guidance so new positive history starts working for you.</li>
+            </ul>
+            <p class="hero-price"><strong>Best for: Light–moderate damage files.</strong></p>
+            <button
+              class="btn-primary ask-ai-plan"
+              data-plan="starter"
+              type="button"
+              style="margin-top:0.8rem;"
+            >
+              <strong>Ask AI About Starter Clean-Up</strong>
+            </button>
+          </div>
+
+          <!-- ELITE RESTORATION -->
+          <div class="card">
+            <h3><strong>Elite Restoration</strong></h3>
+            <p class="small-bold">
+              <strong>
+                For serious clean-up: multiple collections, charge-offs, public records, or identity theft.
+              </strong>
+            </p>
+            <ul class="hero-list">
+              <li><strong>Focus:</strong> Deep restoration and long-term stability.</li>
+              <li>Advanced letters: incomplete info, returned mail, reinsertion, and more.</li>
+              <li>Help organizing documentation (police reports, ID theft proof, statements).</li>
+              <li>Full-year roadmap: clean-up plus rebuilding with trade lines and rent reporting.</li>
+            </ul>
+            <p class="hero-price"><strong>Best for: Heavy damage, big future goals.</strong></p>
+            <button
+              class="btn-primary ask-ai-plan"
+              data-plan="elite"
+              type="button"
+              style="margin-top:0.8rem;"
+            >
+              <strong>Ask AI About Elite Restoration</strong>
+            </button>
+          </div>
+
+          <!-- EDUCATION + DIY ASSIST -->
+          <div class="card">
+            <h3><strong>Education + DIY Assist</strong></h3>
+            <p class="small-bold">
+              <strong>
+                For people who want to stay hands-on, but still want guidance, letters, and the digital book.
+              </strong>
+            </p>
+            <ul class="hero-list">
+              <li>Includes the A.I. Credit Survival Guide digital book.</li>
+              <li>Letter templates you can reuse forever, plus AI help rewording them.</li>
+              <li>Checkpoints so you’re not stuck wondering what to do next.</li>
+              <li>Great for long-term “credit maintenance” and self-education.</li>
+            </ul>
+            <p class="hero-price"><strong>Best for: DIY learners and budget-conscious clients.</strong></p>
+            <button
+              class="btn-primary ask-ai-plan"
+              data-plan="education"
+              type="button"
+              style="margin-top:0.8rem;"
+            >
+              <strong>Ask AI About Education + DIY Assist</strong>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ASK AI SECTION (same IDs as script.js expects) -->
+    <section id="ask-ai-section" class="section section-alt">
+      <div class="container">
+        <h2><strong>Ask AI Which Plan Fits You</strong></h2>
+        <p>
+          <strong>
+            Tell the AI what’s on your reports — collections, late payments, score range, and goals.
+            It will explain which tier usually fits that kind of situation.
+          </strong>
+        </p>
+        <form id="ask-ai-form">
+          <textarea
+            id="ask-ai-input"
+            rows="4"
+            placeholder="Example: 'I have 5 collections and a bankruptcy. Trying to buy a home in 18 months. Which plan fits?'"
+          ></textarea>
+          <button type="submit" class="btn-primary">
+            <strong>Ask AI</strong>
+          </button>
+        </form>
+        <div id="ask-ai-output" class="card" style="margin-top:1rem;"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>
+        <strong>&copy; <span id="year-services"></span> Elite AI Credit Repair.</strong>
+        <strong> All rights reserved.</strong>
+      </p>
+    </div>
+  </footer>
+</body>
+</html>
