@@ -703,3 +703,16 @@ h1, h2, h3, p {
 .main-nav a:hover {
   opacity: 0.7;
 }
+/* ================= SIGNATURE LINE ================= */
+
+.signature-line {
+  margin-top: 2rem;
+  margin-bottom: 0;
+  text-align: center;
+  font-size: 1.1rem;
+  font-weight: 700;
+  font-style: italic;
+  color: #0fbf4b; /* your money-approved green */
+  opacity: 0.95;
+  letter-spacing: 0.5px;
+}
