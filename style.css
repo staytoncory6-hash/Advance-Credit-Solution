@@ -553,6 +553,72 @@ label {
   width: 70px;     /* make mascot small */
   height: auto;    /* keep the shape correct */
 }
+   /* =========================
+   FIXED HEADER + MASCOT SIZE
+   ========================= */
+
+.site-header {
+  background: transparent;
+  padding: 20px 0;
+  width: 100%;
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;   /* keeps spacing clean */
+  gap: 20px;
+}
+
+.logo-link {
+  display: flex;
+  align-items: center;
+  gap: 12px;                         /* space between mascot + text */
+  text-decoration: none;
+  color: inherit;
+}
+
+.logo-mascot {
+  width: 60px;                       /* <<< adjust mascot size here */
+  height: auto;
+  max-width: 60px;
+  display: block;
+}
+
+/* Make mascot smaller on small screens */
+@media (max-width: 480px) {
+  .logo-mascot {
+    width: 45px;
+    max-width: 45px;
+  }
+}
+
+.logo-text .brand-main {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.logo-text .brand-tagline {
+  font-size: 12px;
+  opacity: 0.8;
+}
+
+/* Navigation styles */
+.main-nav {
+  display: flex;
+  gap: 20px;
+}
+
+.main-nav a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.main-nav a:hover {
+  opacity: 0.7;
+}
    
 
   .auth-container {
