@@ -716,3 +716,132 @@ h1, h2, h3, p {
   opacity: 0.95;
   letter-spacing: 0.5px;
 }
+/* ============ FREE RESOURCES PAGE ============ */
+
+.free-resources-page {
+  padding-top: 2rem;
+  padding-bottom: 3rem;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: #0f172a;
+}
+
+.fr-hero {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.fr-hero h1 {
+  font-size: 2rem;
+  margin-bottom: 0.4rem;
+}
+
+.fr-subtitle {
+  font-size: 1.05rem;
+  color: #374151;
+}
+
+.fr-note {
+  margin-top: 0.4rem;
+  font-size: 0.95rem;
+  color: #4b5563;
+}
+
+/* sections */
+
+.fr-section {
+  margin-bottom: 2.25rem;
+}
+
+.fr-section h2 {
+  margin-bottom: 0.75rem;
+}
+
+/* bureau grid */
+
+.fr-bureau-grid {
+  display: grid;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.fr-bureau-card {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.75rem;
+  padding: 1rem 1.1rem;
+  box-shadow: 0 4px 10px rgba(15, 23, 42, 0.03);
+}
+
+.fr-bureau-card h3 {
+  margin-bottom: 0.4rem;
+}
+
+.fr-small {
+  font-size: 0.85rem;
+  color: #6b7280;
+  margin-top: 0.6rem;
+}
+
+/* list styling */
+
+.fr-list {
+  margin-left: 1.1rem;
+  margin-top: 0.5rem;
+}
+
+.fr-list li + li {
+  margin-top: 0.4rem;
+}
+
+/* tools section */
+
+.fr-tools-grid {
+  display: grid;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.fr-tool-card {
+  background: #ffffff;
+  border-radius: 0.75rem;
+  padding: 1rem 1.1rem;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 4px 10px rgba(15, 23, 42, 0.03);
+}
+
+.fr-tool-card h3 {
+  margin-bottom: 0.4rem;
+}
+
+.fr-tool-card .btn {
+  margin-top: 0.75rem;
+}
+
+/* heart section */
+
+.fr-heart {
+  background: #f9fafb;
+  border-radius: 0.75rem;
+  border: 1px solid #e5e7eb;
+  padding: 1.4rem 1.3rem;
+}
+
+.fr-heart p + p {
+  margin-top: 0.6rem;
+}
+
+/* responsive tweaks */
+
+@media (min-width: 768px) {
+  .fr-bureau-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .fr-tools-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .fr-hero h1 {
+    font-size: 2.2rem;
+  }
+}
