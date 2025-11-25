@@ -625,3 +625,81 @@ label {
     margin: 2.5rem 1rem;
   }
 }
+/* =========================
+   GLOBAL LAYOUT FIX
+   (stops content from being skinny)
+   ========================= */
+
+body {
+  margin: 0;
+}
+
+/* Make the main container wide and centered */
+.container {
+  max-width: 1100px;      /* width of your content area */
+  margin: 0 auto;         /* center it */
+  padding: 0 20px;        /* small left/right padding */
+}
+
+/* Make hero + sections use full width inside container */
+.hero,
+.section {
+  width: 100%;
+}
+
+/* Make sure headings and paragraphs are not forced into tiny columns */
+h1, h2, h3, p {
+  max-width: 100%;
+}
+
+/* Keep header + mascot fix from before */
+.site-header {
+  background: transparent;
+  padding: 20px 0;
+  width: 100%;
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.logo-link {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  color: inherit;
+}
+
+.logo-mascot {
+  width: 60px;    /* make mascot small */
+  height: auto;
+  max-width: 60px;
+  display: block;
+}
+
+@media (max-width: 480px) {
+  .logo-mascot {
+    width: 45px;
+    max-width: 45px;
+  }
+}
+
+.main-nav {
+  display: flex;
+  gap: 20px;
+}
+
+.main-nav a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.main-nav a:hover {
+  opacity: 0.7;
+}
