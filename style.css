@@ -548,6 +548,12 @@ label {
   .section-alt {
     padding: 2.6rem 0;
   }
+   /* Make homepage mascot logo smaller */
+.logo-mascot {
+  width: 70px;     /* make mascot small */
+  height: auto;    /* keep the shape correct */
+}
+   
 
   .auth-container {
     margin: 2.5rem 1rem;
