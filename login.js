@@ -85,14 +85,15 @@ onAuthStateChanged(auth, (user) => {
   // https://firebase.google.com/docs/web/setup#available-libraries
 
   // Your web app's Firebase configuration
-  const firebaseConfig = {
-    apiKey: "AIzaSyCeB-_qx3SD9ABfbq0ZHI3A9cUNtjQhVZ0",
-    authDomain: "elite-credit.firebaseapp.com",
-    projectId: "elite-credit",
-    storageBucket: "elite-credit.firebasestorage.app",
-    messagingSenderId: "1010475492974",
-    appId: "1:1010475492974:web:032c9b4a7a97c177dfe87f"
-  };
+const firebaseConfig = {
+  apiKey: "AIzaSyDPjNMpXSlG9AQaRNgqgMU2AzNDuVxPZ2w",
+  authDomain: "elite-credit-7f331.firebaseapp.com",
+  projectId: "elite-credit-7f331",
+  storageBucket: "elite-credit-7f331.firebasestorage.app",
+  messagingSenderId: "208721021996",
+  appId: "1:208721021996:web:cf3bcaed72b99f72ef5589"
+};
+
 
   // Initialize Firebase
   const app = initializeApp(firebaseConfig);
