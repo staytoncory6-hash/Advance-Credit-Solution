@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Member Dashboard | Elite AI Credit Repair</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="container nav">
+      <div class="brand">
+        <img src="assets/elite_logo.png" class="logo" alt="Elite AI Logo" />
+        <div class="brand-text">
+          <span class="brand-name">Elite <strong>AI</strong> Credit Repair</span>
+          <span class="brand-tagline">Smart Laws · Real Strategy · Human + AI</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="container membership-page">
+
+    <!-- STATUS + LOGOUT -->
+    <section class="auth-status-bar">
+      <p id="auth-status">Checking status...</p>
+      <button id="logout-btn" class="btn" style="display:none;">Log Out</button>
+    </section>
+
+    <!-- DASHBOARD HEADER -->
+    <section class="membership-hero">
+      <h1>Your Member Dashboard</h1>
+      <p class="tagline">Your personal credit plan lives here.</p>
+    </section>
+
+    <!-- SNAPSHOT INPUTS -->
+    <section class="snapshot-section">
+      <h2>Your Credit Snapshot</h2>
+
+      <p class="disclaimer">
+        <strong>Important:</strong> This plan works ONLY if you put your REAL scores and REAL situation.
+      </p>
+
+      <!-- SCORES -->
+      <div class="bureau-grid">
+        <div class="bureau-card">
+          <h3>TransUnion</h3>
+          <input id="score-transunion" type="number" placeholder="620" />
+        </div>
+
+        <div class="bureau-card">
+          <h3>Equifax</h3>
+          <input id="score-equifax" type="number" placeholder="590" />
+        </div>
+
+        <div class="bureau-card">
+          <h3>Experian</h3>
+          <input id="score-experian" type="number" placeholder="640" />
+        </div>
+      </div>
+
+      <!-- ISSUES -->
+      <section class="issues-section">
+        <h3>What Are You Dealing With?</h3>
+
+        <label><input type="checkbox" id="issue-lates" /> Late Payments</label><br>
+        <label><input type="checkbox" id="issue-collections" /> Collections / Charge-offs</label><br>
+        <label><input type="checkbox" id="issue-util" /> High Utilization</label><br>
+        <label><input type="checkbox" id="issue-inquiries" /> Too Many Inquiries</label><br>
+        <label><input type="checkbox" id="issue-idtheft" /> Identity Theft / Not Mine</label>
+      </section>
+
+      <!-- GOAL -->
+      <section class="notes-section">
+        <h3>Your Main Goal</h3>
+        <textarea id="main-goal" rows="3" placeholder="Buy a home, get a car, rebuild after divorce..."></textarea>
+      </section>
+
+      <!-- SAVE BUTTON -->
+      <button id="save-snapshot-btn" class="btn green-sign" style="margin-top:1rem;">
+        Save My Snapshot
+      </button>
+      <p id="save-status" class="auth-message"></p>
+    </section>
+
+    <!-- TIPS -->
+    <section class="tips-section">
+      <h2>Your Personalized Tips</h2>
+      <ul id="tips-list"></ul>
+    </section>
+
+    <!-- MEMBER EXTRAS -->
+    <section class="member-links">
+      <h2>More Member Resources</h2>
+      <ul>
+        <li><a href="mailing-etiquette.html">Proper Mailing Etiquette</a></li>
+        <li><a href="letters.html">Dispute Letter Templates</a></li>
+        <li><a href="ebook-download.html">AI Credit Survival Guide</a></li>
+      </ul>
+    </section>
+
+    <p class="signature-line">
+      “You don't want to work that hard for nothing.”
+    </p>
+  </main>
+
+  <!-- DASHBOARD LOGIC -->
+  <script type="module" src="member.js"></script>
+</body>
+</html>
