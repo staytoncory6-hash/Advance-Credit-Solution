@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Member Dashboard | Elite AI Credit Repair</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta
+    name="description"
+    content="Your Elite AI Credit Repair member dashboard for snapshots, next steps, and progress tracking."
+  />
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="container nav">
+      <div class="brand">
+        <img src="assets/elite_logo.png" alt="Elite AI Credit Repair Logo" class="logo" />
+        <div class="brand-text">
+          <span class="brand-name">Elite <strong>AI</strong> Credit Repair</span>
+          <span class="brand-tagline">
+            <strong>Smart Laws · Real Strategy · Human Heart</strong>
+          </span>
+        </div>
+      </div>
+
+      <nav class="main-nav">
+        <a href="index.html">Home</a>
+        <a href="free-resources.html">Free Resources</a>
+        <a href="membership.html">Membership</a>
+        <a href="dashboard.html" class="active">Member Dashboard</a>
+        <a href="login.html">Login / Create Account</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="page-hero">
+      <div class="container page-hero-inner">
+        <div>
+          <h1>Your Member Dashboard</h1>
+          <p class="lead">
+            This is where your snapshots, next moves, and progress tracking live.
+            Even while we’re still building out the tech, you can use this page as your
+            command center.
+          </p>
+          <p class="hero-note">
+            Over time, this will connect directly with your login so everything stays in sync.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SNAPSHOT / NEXT STEPS -->
+    <section class="dashboard-section">
+      <div class="container dashboard-grid">
+        <!-- Snapshot -->
+        <div class="dashboard-card">
+          <h2>Your Snapshot</h2>
+          <p>
+            Use this space to summarize your current situation. You can rewrite this in a notebook
+            or digital document:
+          </p>
+          <ul class="detail-list">
+            <li>Number of collections: ____</li>
+            <li>Number of charge-offs: ____</li>
+            <li>Number of late payments (last 24 months): ____</li>
+            <li>Any repossessions, public records, or judgments: ____</li>
+            <li>Current utilization (how much of limits you use): ____%</li>
+          </ul>
+        </div>
+
+        <!-- Next Moves -->
+        <div class="dashboard-card">
+          <h2>Your Next 3 Moves</h2>
+          <p>
+            Keep it simple. Write down only the next few actions so you don’t get overwhelmed.
+          </p>
+          <ol class="detail-list">
+            <li>___________________________________________</li>
+            <li>___________________________________________</li>
+            <li>___________________________________________</li>
+          </ol>
+          <p class="detail-note">
+            When those are done, pick the next three. Progress over perfection.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- MAILING / DEADLINES + WINS -->
+    <section class="dashboard-section">
+      <div class="container dashboard-grid">
+        <div class="dashboard-card">
+          <h2>Mailing &amp; Deadlines</h2>
+          <p>
+            Track what you’ve sent and when responses are due so you stay in control.
+          </p>
+          <table class="simple-table">
+            <thead>
+              <tr>
+                <th>Date Mailed</th>
+                <th>To</th>
+                <th>Account / Issue</th>
+                <th>Response Due</th>
+                <th>Outcome</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>__/__/____</td>
+                <td>Experian</td>
+                <td>Collection – ______</td>
+                <td>__/__/____</td>
+                <td>Pending</td>
+              </tr>
+              <tr>
+                <td>__/__/____</td>
+                <td>Equifax</td>
+                <td>Charge-off – ______</td>
+                <td>__/__/____</td>
+                <td>Pending</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="dashboard-card">
+          <h2>Wins &amp; Progress</h2>
+          <p>
+            Use this box to celebrate what’s actually changing. Deleted accounts, score jumps,
+            or just building new on-time history.
+          </p>
+          <ul class="detail-list">
+            <li>Account deleted: __________________ (date)</li>
+            <li>Score increase: ______ points (from ___ to ___)</li>
+            <li>New on-time streak: ___ months</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- DASHBOARD ASK AI -->
+    <section class="ask-ai-strip">
+      <div class="container ask-ai-inner">
+        <div>
+          <h2>Ask AI About Your Next Step</h2>
+          <p>
+            Stuck on what to do next? Ask about your exact situation — we’ll return a steady,
+            step-by-step answer.
+          </p>
+        </div>
+
+        <form class="ask-ai-form">
+          <textarea
+            id="ask-ai-input-dashboard"
+            rows="2"
+            placeholder="Example: I got a response from a bureau and they verified everything. What should I do now?"
+          ></textarea>
+
+          <button type="submit" class="btn-primary">Ask AI</button>
+
+          <div class="ask-ai-response"></div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>&copy; <span id="year"></span> Elite AI Credit Repair. All rights reserved.</p>
+      <p class="footer-small">
+        This dashboard will grow with you. As we add more tools, your login will tie everything together.
+      </p>
+    </div>
+  </footer>
+</body>
+</html>
