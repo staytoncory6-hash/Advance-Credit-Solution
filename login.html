@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Login | Elite AI Credit Repair</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta
+    name="description"
+    content="Log in to your Elite AI Credit Repair account to access your dashboard, snapshots, and tools."
+  />
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="login.js"></script>
+</head>
+<body>
+  <header class="site-header simple-header">
+    <div class="container nav">
+      <div class="brand">
+        <img src="assets/elite_logo.png" alt="Elite AI Credit Repair Logo" class="logo" />
+        <div class="brand-text">
+          <span class="brand-name">Elite <strong>AI</strong> Credit Repair</span>
+          <span class="brand-tagline">
+            Come as you are. Let’s rebuild from here.
+          </span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="auth-section">
+      <div class="container auth-inner">
+        <div class="auth-copy">
+          <h1>Welcome Back</h1>
+          <p>
+            Log in to your Elite AI Credit Repair account to see your snapshots, track progress,
+            and keep moving forward. If you’re new, you can create an account in a few seconds.
+          </p>
+        </div>
+
+        <div class="auth-card">
+          <form id="auth-form">
+            <label for="auth-email">Email</label>
+            <input type="email" id="auth-email" required />
+
+            <label for="auth-password">Password</label>
+            <input type="password" id="auth-password" required />
+
+            <div class="auth-actions">
+              <button type="button" id="login-button" class="btn-primary">Log In</button>
+              <button type="button" id="signup-button" class="btn-ghost">Create Account</button>
+            </div>
+
+            <button type="button" id="reset-password" class="link-button">
+              Forgot your password?
+            </button>
+
+            <p id="auth-message" class="auth-message"></p>
+          </form>
+
+          <p class="auth-small">
+            Once you’re signed in, you’ll be able to access your Member Dashboard and tools.
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>&copy; <span id="year"></span> Elite AI Credit Repair. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>
