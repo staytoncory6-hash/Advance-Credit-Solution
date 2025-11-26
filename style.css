@@ -1020,3 +1020,167 @@ h1, h2, h3, p {
     max-width: 160px;
   }
 }
+/* ===================== */
+/*   CASH APP SECTIONS   */
+/* ===================== */
+
+/* Home page Cash App section */
+.cashapp-section {
+  padding: 3rem 0;
+  background: #04101b;              /* deep navy/ink to feel serious */
+  color: #ffffff;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+}
+
+.cashapp-inner {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.cashapp-section h2 {
+  font-size: 1.9rem;
+  margin-bottom: 0.75rem;
+}
+
+.cashapp-section p {
+  font-size: 0.98rem;
+  line-height: 1.6;
+  margin-bottom: 0.75rem;
+}
+
+/* Cash App steps list */
+.cashapp-steps {
+  list-style: none;
+  padding-left: 0;
+  margin: 1.25rem 0 1.25rem;
+}
+
+.cashapp-steps li {
+  position: relative;
+  padding-left: 2rem;
+  margin-bottom: 0.8rem;
+  font-size: 0.95rem;
+}
+
+.cashapp-steps li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  top: 0.1rem;
+  font-size: 0.85rem;
+  opacity: 0.85;
+}
+
+/* Note under steps */
+.cashapp-note {
+  font-size: 0.9rem;
+  opacity: 0.9;
+  margin-top: 0.5rem;
+}
+
+/* Reuse main button style but make sure it pops on dark bg */
+.cashapp-section .btn-primary {
+  margin-top: 1rem;
+  display: inline-block;
+}
+
+/* Membership page payment text */
+.payment-intro {
+  margin-bottom: 1.5rem;
+  font-size: 0.98rem;
+  line-height: 1.6;
+}
+
+.payment-intro strong {
+  font-weight: 600;
+}
+
+.payment-note {
+  margin-top: 0.6rem;
+  font-size: 0.85rem;
+  opacity: 0.85;
+}
+
+/* Payment steps list under plans */
+.payment-steps {
+  margin-top: 2.5rem;
+  padding: 1.5rem 1.5rem 1.3rem;
+  border-radius: 1rem;
+  background: #fffaf0;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.payment-steps h3 {
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+}
+
+.payment-steps ol {
+  padding-left: 1.2rem;
+  margin: 0;
+}
+
+.payment-steps li {
+  margin-bottom: 0.4rem;
+  font-size: 0.9rem;
+}
+
+/* Contact page Cash App box */
+.cashapp-box {
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
+  padding: 1.25rem 1.3rem;
+  border-radius: 1rem;
+  background: #04101b;
+  color: #ffffff;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.25);
+}
+
+.cashapp-box p {
+  margin-bottom: 0.75rem;
+  font-size: 0.95rem;
+}
+
+.cashapp-box .cashapp-steps {
+  margin-top: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.cashapp-box .cashapp-steps li::before {
+  content: "•";
+  font-size: 1.2rem;
+  top: -0.1rem;
+}
+
+.cash-tag {
+  display: inline-block;
+  margin-top: 0.15rem;
+  padding: 0.25rem 0.65rem;
+  border-radius: 999px;
+  background: #00c244;  /* Cash App green */
+  color: #04101b;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  font-size: 0.9rem;
+}
+
+.cashapp-box .btn-primary {
+  margin-top: 0.5rem;
+}
+
+/* General responsive tweaks */
+@media (max-width: 768px) {
+  .cashapp-section {
+    padding: 2.4rem 0;
+  }
+
+  .cashapp-steps li {
+    padding-left: 1.6rem;
+  }
+
+  .payment-steps {
+    padding: 1.2rem 1.1rem;
+  }
+}
+
