@@ -233,3 +233,17 @@ onAuthStateChanged(auth, (user) => {
   // Load their saved snapshot
   loadSnapshot(user);
 });
+/* Mascot in membership header */
+.mascot-icon {
+  height: 20px;     /* YOU REQUESTED THIS SIZE */
+  width: auto;
+  margin-right: 0.35rem;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+/* Make sure logo + mascot + text line up correctly */
+.brand {
+  display: flex;
+  align-items: center;
+}
