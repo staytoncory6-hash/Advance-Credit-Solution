@@ -158,6 +158,48 @@
         </div>
       </div>
     </section>
+    <!-- PUBLIC SNAPSHOT (Visible to Everyone) -->
+<section class="public-snapshot-section">
+  <div class="container">
+    <h2>Your Free Credit Snapshot</h2>
+    <p class="lead">
+      Fill this out and the AI will respond based on YOUR real situation — not generic advice.
+      No account needed.
+    </p>
+
+    <form id="public-snapshot-form" class="snapshot-grid">
+      <div>
+        <label># of Collections</label>
+        <input id="ps-collections" type="number" min="0" placeholder="Example: 3" />
+      </div>
+
+      <div>
+        <label># of Charge-offs</label>
+        <input id="ps-chargeoffs" type="number" min="0" placeholder="Example: 1" />
+      </div>
+
+      <div>
+        <label>Late Payments (24 months)</label>
+        <input id="ps-lates" type="number" min="0" placeholder="Example: 4" />
+      </div>
+
+      <div>
+        <label>Repos / Judgments</label>
+        <input id="ps-repos" type="text" placeholder="Example: 1 repo, 0 judgments" />
+      </div>
+
+      <div>
+        <label>Utilization %</label>
+        <input id="ps-utilization" type="text" placeholder="Example: 75%" />
+      </div>
+    </form>
+
+    <p class="snapshot-note">
+      You don’t need to save anything — just fill it in, scroll down,
+      and Ask AI will automatically use your snapshot as context.
+    </p>
+  </div>
+</section>
 
     <!-- ASK AI SECTION -->
     <section class="ask-ai-section">
