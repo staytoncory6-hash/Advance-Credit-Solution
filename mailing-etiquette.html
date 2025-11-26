@@ -10,16 +10,32 @@
 <body>
   <!-- HEADER (reuse your main header/nav) -->
   <header class="site-header">
-    <div class="container nav">
-      <div class="brand">
-        <img src="assets/elite_logo.png" alt="Elite AI Credit Repair Logo" class="logo" />
-        <div class="brand-text">
-          <span class="brand-name">Elite <strong>AI</strong> Credit Repair</span>
-          <span class="brand-tagline">Smart Laws · Real Strategy · Human + AI</span>
-        </div>
+  <div class="container header-flex">
+    
+    <!-- LEFT SIDE: LOGO + BRAND -->
+    <a href="index.html" class="brand">
+      <img src="assets/elite_logo.png" alt="Elite AI Credit Repair Logo" class="logo" />
+      <div class="brand-text">
+        <span class="brand-name">Elite <strong>AI</strong> Credit Repair</span>
+        <span class="brand-tagline">Smart Laws · Real Strategy · Human + AI</span>
       </div>
-    </div>
-  </header>
+    </a>
+
+    <!-- MOBILE MENU BUTTON -->
+    <button class="menu-toggle" id="menu-toggle">
+      ☰
+    </button>
+
+    <!-- NAVIGATION -->
+    <nav id="navbar" class="navbar">
+      <a href="index.html">Home</a>
+      <a href="free-resources.html">Free Resources</a>
+      <a href="membership.html">Membership</a>
+      <a href="member.html">Member Dashboard</a>
+      <a href="contact.html">Ask AI / Contact</a>
+    </nav>
+  </div>
+</header>
 
   <main class="container mailing-page">
     <!-- HERO -->
