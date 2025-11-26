@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Contact | Elite AI Credit Repair</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta
+    name="description"
+    content="Contact Elite AI Credit Repair with your credit questions, goals, and situation. Get a suggested plan and next steps."
+  />
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="container nav">
+      <div class="brand">
+        <img src="assets/elite_logo.png" alt="Elite AI Credit Repair Logo" class="logo" />
+        <div class="brand-text">
+          <span class="brand-name">Elite <strong>AI</strong> Credit Repair</span>
+          <span class="brand-tagline">
+            <strong>Smart Laws · Real Strategy · Human Heart</strong>
+          </span>
+        </div>
+      </div>
+
+      <nav class="main-nav">
+        <a href="index.html">Home</a>
+        <a href="free-resources.html">Free Resources</a>
+        <a href="membership.html">Membership</a>
+        <a href="dashboard.html">Member Dashboard</a>
+        <a href="contact.html" class="active">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="container page-hero-inner">
+        <div>
+          <h1>Let’s Talk About Your Situation</h1>
+          <p class="lead">
+            Tell us what’s really going on — the good, the bad, and the ugly. We’re not here
+            to judge you. We’re here to help you make a plan.
+          </p>
+          <p class="hero-note">
+            Share whatever you’re comfortable with. We’ll reply with calm, respectful guidance.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT FORM + CASH APP INFO + ASK AI -->
+    <section class="contact-section">
+      <div class="container contact-grid">
+        <!-- CONTACT FORM -->
+        <div class="contact-form-wrap">
+          <h2>Send a Message</h2>
+          <form class="contact-form">
+            <label for="contact-name">Name</label>
+            <input type="text" id="contact-name" required />
+
+            <label for="contact-email">Email</label>
+            <input type="email" id="contact-email" required />
+
+            <label for="contact-details">What’s going on with your credit?</label>
+            <textarea
+              id="contact-details"
+              rows="5"
+              placeholder="Example: How many collections, repos, late payments, and what you’re trying to do (home, car, etc.)."
+              required
+            ></textarea>
+
+            <button type="submit" class="btn-primary">Send Message</button>
+          </form>
+
+          <p class="contact-small">
+            You can also mention if you’re interested in Starter Cleanup, Elite Restoration, or
+            just looking for advice first.
+          </p>
+        </div>
+
+        <!-- SIDE PANEL: CASH APP + AI -->
+        <div class="contact-side">
+          <h3>How Payment Works (Cash App)</h3>
+          <p>
+            After we talk and agree on the right plan for you, you’ll send your setup fee and
+            first month’s payment through Cash App. It’s simple and fast.
+          </p>
+
+          <div class="cashapp-box">
+            <p>
+              <strong>Official Cash App:</strong><br />
+              <span class="cash-tag">$Cory12151983</span>
+            </p>
+            <ol class="cashapp-steps">
+              <li>Open Cash App or click the button below.</li>
+              <li>Send the agreed amount to <strong>$Cory12151983</strong>.</li>
+              <li>
+                In the <strong>note</strong>, include your full name, phone number, and plan
+                (Starter / Elite / Family).
+              </li>
+              <li>Optional but smart: screenshot your payment for your records.</li>
+            </ol>
+
+            <a
+              href="https://cash.app/$Cory12151983"
+              class="btn-primary"
+              target="_blank"
+              rel="noopener"
+            >
+              Pay with Cash App
+            </a>
+          </div>
+
+          <h3>Quick Education with AI</h3>
+          <p>
+            Not ready to send a full message yet? Ask AI a quick question about your situation below
+            and get a general next-step answer.
+          </p>
+
+          <form class="ask-ai-form">
+            <textarea
+              id="ask-ai-input-contact"
+              rows="3"
+              placeholder="Example: I’m scared to even look at my credit. How do I start without freaking out?"
+            ></textarea>
+
+            <button type="submit" class="btn-primary">Ask AI</button>
+
+            <div class="ask-ai-response"></div>
+          </form>
+
+          <p class="disclaimer">
+            Educational guidance only. Not legal, tax, or investment advice.
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>&copy; <span id="year"></span> Elite AI Credit Repair. All rights reserved.</p>
+      <p class="footer-small">
+        We understand life hits hard. Reaching out is a win all by itself.
+      </p>
+    </div>
+  </footer>
+</body>
+</html>
