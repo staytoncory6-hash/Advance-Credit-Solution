@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Elite AI Credit Repair | Home</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="container header-flex">
+      <a href="home.html" class="brand">
+        <img src="assets/elite_logo.png" alt="Elite AI Credit Repair Logo" class="logo" />
+        <div class="brand-text">
+          <span class="brand-name">Elite <strong>AI</strong> Credit Repair</span>
+          <span class="brand-tagline">Smart Laws · Real Strategy · Human + AI</span>
+        </div>
+      </a>
+
+      <button class="menu-toggle" id="menu-toggle">☰</button>
+
+      <nav id="navbar" class="navbar">
+        <a href="home.html">Home</a>
+        <a href="free-resources.html">Free Resources</a>
+        <a href="membership.html">Membership</a>
+        <a href="member.html">Member Dashboard</a>
+        <a href="contact.html">Ask AI / Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container home-page">
+    <!-- HERO SECTION -->
+    <section class="hero">
+      <div class="hero-text">
+        <h1>Welcome to Elite AI Credit Repair</h1>
+        <p>
+          This is your starting point. From here you can ask questions, plan your moves,
+          and use the tools built to help you fix your credit the right way.
+        </p>
+        <ul class="hero-list">
+          <li>See where you stand and what’s hurting you</li>
+          <li>Use the laws, not guesswork or fear</li>
+          <li>Move toward cars, homes, and real peace of mind</li>
+        </ul>
+        <div class="hero-buttons">
+          <a href="member.html" class="btn green-sign">Go to Your Dashboard</a>
+          <a href="free-resources.html" class="btn">Check Out Free Resources</a>
+        </div>
+      </div>
+
+      <div class="hero-side">
+        <!-- Mascot / logo guy on the side -->
+        <img
+          src="assets/mascot.png"
+          alt="Elite Credit Mascot"
+          class="hero-mascot"
+        />
+        <p class="hero-caption">
+          “You don't want to work that hard for nothing.”
+        </p>
+      </div>
+    </section>
+
+    <!-- HOW IT WORKS -->
+    <section class="how-it-works">
+      <h2>Your Simple Credit Repair Path</h2>
+      <div class="three-grid">
+        <div class="step-card">
+          <h3>1. Get Clear on Your Report</h3>
+          <p>
+            Pull all three reports and use your dashboard to mark every late, collection,
+            charge-off, inquiry, and weird account that doesn’t look right.
+          </p>
+        </div>
+        <div class="step-card">
+          <h3>2. Use the Tools</h3>
+          <p>
+            Proper mailing etiquette, letter templates, and your snapshots help you send smart,
+            organized disputes instead of random letters that go nowhere.
+          </p>
+        </div>
+        <div class="step-card">
+          <h3>3. Adjust as You Go</h3>
+          <p>
+            As things get removed, updated, or changed, you update your snapshot and lean on
+            Ask AI whenever you’re not sure what comes next.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- FREE VS MEMBERSHIP -->
+    <section class="tiers-section">
+      <h2>What You Can Use Right Now</h2>
+      <div class="two-grid">
+        <div class="tier-card">
+          <h3>As a Visitor</h3>
+          <ul>
+            <li>Ask AI general credit questions</li>
+            <li>Learn basics about scores and reports</li>
+            <li>See if membership feels right for you</li>
+          </ul>
+          <a href="free-resources.html" class="btn">Start With Free Tools</a>
+        </div>
+
+        <div class="tier-card highlight">
+          <h3>As a Member</h3>
+          <ul>
+            <li>Member dashboard & saved plans</li>
+            <li>Proper Mailing Etiquette guide</li>
+            <li>Dispute letter templates (ID theft, FCRA, inquiries)</li>
+            <li>AI Credit Survival Guide ebook</li>
+            <li>Optional 1-on-1 time with your specialist</li>
+          </ul>
+          <a href="membership.html" class="btn green-sign">See Full Membership</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ASK AI SECTION -->
+    <section id="ask-ai" class="ask-ai-section">
+      <h2>Ask AI About Your Situation</h2>
+      <p class="ask-ai-note">
+        Type what you’re dealing with — collections, late payments, high balances, inquiries,
+        or identity theft — and get instant guidance on your next moves.
+      </p>
+
+      <form id="ask-ai-form">
+        <label for="ask-ai-input">Type your question here:</label>
+        <textarea
+          id="ask-ai-input"
+          rows="3"
+          placeholder="Example: I have 2 charge-offs and high utilization, what should I fix first?"
+        ></textarea>
+
+        <button type="submit" class="btn green-sign" id="ask-ai-btn">
+          Ask AI
+        </button>
+      </form>
+
+      <div id="ask-ai-response" class="ask-ai-response"></div>
+    </section>
+
+    <!-- CLOSING -->
+    <section class="closing-section">
+      <p>
+        This isn’t just about three numbers. It’s about cars, homes, safety, and being ready
+        when life throws something big at you.
+      </p>
+      <p class="signature-line">
+        “You don't want to work that hard for nothing.”
+      </p>
+    </section>
+  </main>
+</body>
+</html>
