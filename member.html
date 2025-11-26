@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Member Area | Elite AI Credit Repair</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="container nav">
+      <div class="brand">
+        <img src="assets/elite_logo.png" alt="Elite AI Credit Repair Logo" class="logo" />
+        <div class="brand-text">
+          <span class="brand-name">Elite <strong>AI</strong> Credit Repair</span>
+          <span class="brand-tagline">Smart Laws · Real Strategy · Human + AI</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="container membership-page">
+    <!-- STATUS + LOGOUT -->
+    <section class="auth-status-bar">
+      <p id="auth-status">Checking status...</p>
+      <button id="logout-btn" class="btn" style="display:none;">Log Out</button>
+    </section>
+
+    <!-- INTRO -->
+    <section class="membership-hero">
+      <h1>Your Member Dashboard</h1>
+      <p class="tagline">
+        Save your snapshots, track your progress, and use the same structure credit pros use.
+      </p>
+    </section>
+
+    <!-- SNAPSHOT SECTION -->
+    <section class="snapshot-section">
+      <h2>Your Credit Snapshot</h2>
+      <p>
+        Enter your current scores and what you’re dealing with. Be honest. This plan is only as
+        powerful as the truth you put into it.
+      </p>
+
+      <!-- Disclaimers about honesty -->
+      <p class="disclaimer">
+        <strong>Important:</strong> Everything here is based ONLY on the information
+        <strong>you</strong> enter. Elite AI Credit Repair does not automatically pull your credit
+        reports or scores.
+      </p>
+      <p class="disclaimer">
+        For this tool to give you a REAL plan, you must enter REAL numbers and REAL information.
+        If you put in incorrect, random, or fake numbers, the plan and tips will NOT be accurate.
+      </p>
+
+      <!-- Scores -->
+      <div class="bureau-grid">
+        <div class="bureau-card">
+          <h3>TransUnion</h3>
+          <label for="score-transunion">Score</label>
+          <input
+            type="number"
+            id="score-transunion"
+            min="300"
+            max="850"
+            placeholder="e.g. 620"
+          />
+        </div>
+
+        <div class="bureau-card">
+          <h3>Equifax</h3>
+          <label for="score-equifax">Score</label>
+          <input
+            type="number"
+            id="score-equifax"
+            min="300"
+            max="850"
+            placeholder="e.g. 590"
+          />
+        </div>
+
+        <div class="bureau-card">
+          <h3>Experian</h3>
+          <label for="score-experian">Score</label>
+          <input
+            type="number"
+            id="score-experian"
+            min="300"
+            max="850"
+            placeholder="e.g. 640"
+          />
+        </div>
+      </div>
+
+      <!-- Issues -->
+      <section class="issues-section">
+        <h3>What Are You Dealing With?</h3>
+        <p>Check everything that applies to your situation:</p>
+        <label><input type="checkbox" id="issue-lates" /> Late payments</label><br />
+        <label><input type="checkbox" id="issue-collections" /> Collections / charge-offs</label><br />
+        <label><input type="checkbox" id="issue-util" /> High credit card balances (high utilization)</label><br />
+        <label><input type="checkbox" id="issue-inquiries" /> Too many inquiries</label><br />
+        <label><input type="checkbox" id="issue-idtheft" /> Possible identity theft / accounts that are not mine</label>
+      </section>
+
+      <!-- Goal -->
+      <section class="notes-section">
+        <h3>Your Main Goal</h3>
+        <textarea
+          id="main-goal"
+          rows="3"
+          placeholder="Example: Buy a home, get approved for an auto loan, rebuild after divorce, etc."
+        ></textarea>
+      </section>
+
+      <!-- Save Button + Status -->
+      <button id="save-snapshot-btn" class="btn green-sign" style="margin-top:1rem;">
+        Save My Snapshot
+      </button>
+      <p id="save-status" class="auth-message" style="margin-top:0.5rem;"></p>
+    </section>
+
+    <!-- TIPS SECTION -->
+    <section class="tips-section">
+      <h2>Your Personalized Tips</h2>
+      <p>Based on your scores and issues, here are some key moves to focus on:</p>
+      <ul id="tips-list"></ul>
+    </section>
+
+    <!-- LINKS TO OTHER MEMBER GOODIES -->
+    <section class="member-links">
+      <h2>More Member Resources</h2>
+      <ul>
+        <li>
+          <a href="mailing-etiquette.html">Proper Mailing Etiquette (Members Only)</a>
+        </li>
+        <li>
+          <a href="letters.html">Dispute Letter Templates (Members Only)</a>
+        </li>
+        <li>
+          <a href="ebook-download.html">AI Credit Survival Guide (Members Only)</a>
+        </li>
+      </ul>
+    </section>
+
+    <!-- HEART LINE -->
+    <section class="closing-section">
+      <p>
+        This isn’t just numbers. It’s your life, your future, and your chance to say “yes” when
+        life tries to tell you “no.”
+      </p>
+      <p class="signature-line">
+        “You don't want to work that hard for nothing.”
+      </p>
+    </section>
+  </main>
+
+  <!-- MEMBER DASHBOARD LOGIC -->
+  <script type="module" src="member.js"></script>
+</body>
+</html>
