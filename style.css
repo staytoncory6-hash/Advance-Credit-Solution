@@ -1001,3 +1001,22 @@ h1, h2, h3, p {
     display: flex;
   }
 }
+/* Fix the big mascot */
+.hero-mascot {
+  max-width: 220px;   /* adjust size smaller */
+  height: auto;
+  display: block;
+  margin: 0 auto 20px auto; /* center + spacing */
+}
+
+/* Prevent overlap with header */
+.hero-section img {
+  margin-top: 120px; /* pushes image down below nav */
+}
+
+/* Mobile safe sizing */
+@media (max-width: 600px) {
+  .hero-mascot {
+    max-width: 160px;
+  }
+}
