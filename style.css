@@ -1452,4 +1452,273 @@ h1, h2, h3, p {
     padding: 1.2rem 1.1rem;
   }
 }
+/* ============================= */
+/*   FREE RESOURCES – UPGRADE   */
+/* ============================= */
+
+/* Main section spacing */
+.resources-section {
+  padding: 3rem 0 2.5rem;
+}
+
+.section-title {
+  font-size: 1.9rem;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+/* Card grid */
+.resource-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1.5rem;
+}
+
+@media (max-width: 1024px) {
+  .resource-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .resource-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Individual resource cards */
+.resource-card {
+  background: #ffffff;
+  border-radius: 1rem;
+  padding: 1.4rem 1.3rem 1.2rem;
+  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(4, 16, 27, 0.05);
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.resource-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at top left, rgba(0, 194, 68, 0.12), transparent 60%);
+  opacity: 0;
+  transition: opacity 0.25s ease-out;
+}
+
+.resource-card:hover::before {
+  opacity: 1;
+}
+
+.resource-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.14);
+  transition: all 0.18s ease-out;
+}
+
+.resource-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(4, 16, 27, 0.06);
+  font-size: 1.3rem;
+  margin-bottom: 0.25rem;
+}
+
+.resource-card h3 {
+  margin: 0;
+  font-size: 1.05rem;
+}
+
+.resource-card p {
+  margin: 0;
+  font-size: 0.92rem;
+  line-height: 1.5;
+  flex: 1;
+}
+
+/* Buttons on cards */
+.resource-card .btn-outline {
+  margin-top: 0.6rem;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+/* Detail sections */
+.resource-detail-section {
+  padding: 2.8rem 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.04);
+  background: #f9fafb;
+}
+
+.resource-detail-section:nth-of-type(even) {
+  background: #ffffff;
+}
+
+.resource-detail-section h2 {
+  font-size: 1.5rem;
+  margin-bottom: 0.8rem;
+}
+
+.resource-detail-section h3 {
+  margin-top: 1.6rem;
+  margin-bottom: 0.4rem;
+  font-size: 1.05rem;
+}
+
+.resource-detail-section p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* Lists in detail sections */
+.detail-list {
+  margin: 1rem 0;
+  padding-left: 1.2rem;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.detail-list li {
+  margin-bottom: 0.45rem;
+}
+
+/* Letter-style blocks */
+.letter-block {
+  display: block;
+  padding: 0.9rem 1rem;
+  background: #04101b;
+  color: #f5f5f5;
+  border-radius: 0.7rem;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  white-space: pre-wrap;
+  overflow-x: auto;
+}
+
+/* Tables for the budget sheet */
+.simple-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1rem 0 1.3rem;
+  font-size: 0.9rem;
+}
+
+.simple-table th,
+.simple-table td {
+  padding: 0.6rem 0.7rem;
+  text-align: left;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.simple-table thead th {
+  background: #04101b;
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.simple-table tbody tr:nth-child(even) {
+  background: rgba(4, 16, 27, 0.02);
+}
+
+/* Small note text under sections */
+.detail-note {
+  margin-top: 0.8rem;
+  font-size: 0.88rem;
+  opacity: 0.85;
+}
+
+/* Ask AI strip styling for this page */
+.ask-ai-strip {
+  padding: 2.8rem 0;
+  background: #04101b;
+  color: #ffffff;
+}
+
+.ask-ai-inner {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 2rem;
+  align-items: center;
+}
+
+@media (max-width: 800px) {
+  .ask-ai-inner {
+    grid-template-columns: 1fr;
+  }
+}
+
+.ask-ai-strip h2 {
+  margin-top: 0;
+  margin-bottom: 0.6rem;
+}
+
+.ask-ai-strip p {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+/* Ask AI form */
+.ask-ai-form textarea {
+  width: 100%;
+  border-radius: 0.7rem;
+  border: none;
+  padding: 0.8rem 0.9rem;
+  font-family: inherit;
+  font-size: 0.95rem;
+  resize: vertical;
+  min-height: 70px;
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.18);
+  background: rgba(0, 0, 0, 0.18);
+  color: #ffffff;
+}
+
+.ask-ai-form textarea::placeholder {
+  color: rgba(255, 255, 255, 0.55);
+}
+
+.ask-ai-form button {
+  margin-top: 0.7rem;
+}
+
+/* AI response box */
+.ask-ai-response {
+  margin-top: 0.8rem;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  padding: 0.9rem 0.9rem;
+  border-radius: 0.7rem;
+  background: rgba(0, 0, 0, 0.35);
+  white-space: pre-wrap;
+}
+
+/* Make primary button pop on dark bg */
+.ask-ai-strip .btn-primary {
+  background: #00c244;
+  border-color: #00c244;
+  color: #04101b;
+}
+
+.ask-ai-strip .btn-primary:hover {
+  filter: brightness(1.05);
+}
+
+/* Tighten spacing on mobile */
+@media (max-width: 640px) {
+  .resource-detail-section {
+    padding: 2.2rem 0;
+  }
+
+  .resource-card {
+    padding: 1.2rem 1.1rem;
+  }
+}
 
