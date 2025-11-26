@@ -898,3 +898,106 @@ h1, h2, h3, p {
   background: #f9fafb;
   resize: vertical;
 }
+/* ============ GLOBAL HEADER ============ */
+
+.site-header {
+  background: #ffffff;
+  border-bottom: 1px solid #e5e7eb;
+  padding: 0.7rem 0;
+  width: 100%;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+.header-flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* BRAND */
+
+.brand {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #0f172a;
+}
+
+.logo {
+  height: 48px;
+  width: auto;
+  margin-right: 0.6rem;
+}
+
+.brand-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.1;
+}
+
+.brand-name {
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+.brand-tagline {
+  font-size: 0.75rem;
+  color: #4b5563;
+}
+
+/* NAVIGATION */
+
+.navbar a {
+  margin-left: 1.2rem;
+  text-decoration: none;
+  color: #0f172a;
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+
+.navbar a:hover {
+  color: #0fbf4b; /* your money green */
+}
+
+/* MOBILE MENU BUTTON */
+
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.7rem;
+  cursor: pointer;
+}
+
+/* ============ MOBILE RESPONSIVE ============ */
+
+@media (max-width: 768px) {
+  .navbar {
+    position: absolute;
+    top: 64px;
+    right: 0;
+    background: white;
+    width: 100%;
+    text-align: center;
+    display: none;
+    flex-direction: column;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #e5e7eb;
+  }
+
+  .navbar a {
+    display: block;
+    padding: 0.8rem 0;
+    margin: 0;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .navbar.show {
+    display: flex;
+  }
+}
