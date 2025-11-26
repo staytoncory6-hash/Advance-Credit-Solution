@@ -1948,4 +1948,67 @@ h1, h2, h3, p {
     grid-template-columns: 1fr;
   }
 }
+/* ========================= */
+/*   HEADER BRAND GLOW-UP    */
+/* ========================= */
+
+.site-header {
+  background: #fafafa;
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.logo {
+  height: 54px;        /* adjust if you ever want smaller */
+  width: auto;
+  display: block;
+  border-radius: 6px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+}
+
+.brand-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.1;
+}
+
+.brand-name {
+  font-size: 1.2rem;
+  letter-spacing: 0.4px;
+  font-weight: 600;
+  color: #222;
+}
+
+.brand-name strong {
+  color: #d4af37;      /* gold pop */
+}
+
+.brand-tagline {
+  font-size: 0.82rem;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  opacity: 0.75;
+  margin-top: 2px;
+}
+
+/* Optional: subtle fade under the entire header */
+.site-header {
+  box-shadow: 0 4px 14px rgba(0,0,0,0.06);
+}
+
+/* Hover effect on the brand */
+.brand:hover .brand-name {
+  color: #d4af37;
+  transition: 0.2s;
+}
+
+.brand:hover .brand-tagline {
+  opacity: 1;
+  transition: 0.2s;
+}
 
