@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Login | Elite AI Credit Repair</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta
+    name="description"
+    content="Login or create your Elite AI Credit Repair account to access your member dashboard and snapshots."
+  />
+  <link rel="stylesheet" href="style.css" />
+  <!-- If you later hook up Firebase auth, point to login.js here -->
+  <!-- <script type="module" src="login.js"></script> -->
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="container nav">
+      <div class="brand">
+        <img src="assets/elite_logo.png" alt="Elite AI Credit Repair Logo" class="logo" />
+        <div class="brand-text">
+          <span class="brand-name">Elite <strong>AI</strong> Credit Repair</span>
+          <span class="brand-tagline">
+            <strong>Smart Laws · Real Strategy · Human Heart</strong>
+          </span>
+        </div>
+      </div>
+
+      <nav class="main-nav">
+        <a href="index.html">Home</a>
+        <a href="free-resources.html">Free Resources</a>
+        <a href="membership.html">Membership</a>
+        <a href="dashboard.html">Member Dashboard</a>
+        <a href="login.html" class="active">Login / Create Account</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="page-hero">
+      <div class="container page-hero-inner">
+        <div>
+          <h1>Login or Create Your Account</h1>
+          <p class="lead">
+            Your login will eventually connect to your member dashboard and snapshots.
+            For now, this page gives you a clear place for sign-in and sign-up forms.
+          </p>
+          <p class="hero-note">
+            When you’re ready, we can hook this page to Firebase so it fully powers membership.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- LOGIN / SIGNUP CARDS -->
+    <section class="auth-section">
+      <div class="container auth-grid">
+        <!-- Login -->
+        <div class="auth-card">
+          <h2>Login</h2>
+          <p class="auth-note">
+            Already have an account? Sign in here to access your member tools.
+          </p>
+          <form id="login-form">
+            <label for="login-email">Email</label>
+            <input type="email" id="login-email" required />
+
+            <label for="login-password">Password</label>
+            <input type="password" id="login-password" required />
+
+            <button type="submit" class="btn-primary">Login</button>
+          </form>
+
+          <p class="auth-small">
+            Forgot your password? We can add a reset option here when auth is live.
+          </p>
+        </div>
+
+        <!-- Create Account -->
+        <div class="auth-card">
+          <h2>Create Account</h2>
+          <p class="auth-note">
+            New here? Create an account to save snapshots and track your progress.
+          </p>
+          <form id="signup-form">
+            <label for="signup-name">Full Name</label>
+            <input type="text" id="signup-name" required />
+
+            <label for="signup-email">Email</label>
+            <input type="email" id="signup-email" required />
+
+            <label for="signup-password">Password</label>
+            <input type="password" id="signup-password" required />
+
+            <button type="submit" class="btn-primary">Create Account</button>
+          </form>
+
+          <p class="auth-small">
+            Once this connects to Firebase, your login will sync with the Member Dashboard.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- OPTIONAL: Ask AI on login page -->
+    <section class="ask-ai-strip">
+      <div class="container ask-ai-inner">
+        <div>
+          <h2>Not Sure If You’re Ready?</h2>
+          <p>
+            Ask a question about your situation or about how membership works,
+            and get an educational-style answer.
+          </p>
+        </div>
+
+        <form class="ask-ai-form">
+          <textarea
+            id="ask-ai-input-login"
+            rows="2"
+            placeholder="Example: Do I need to fix everything before I sign up for membership?"
+          ></textarea>
+
+          <button type="submit" class="btn-primary">Ask AI</button>
+
+          <div class="ask-ai-response"></div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>&copy; <span id="year"></span> Elite AI Credit Repair. All rights reserved.</p>
+      <p class="footer-small">
+        Login and membership tools are being built with your privacy and clarity in mind.
+      </p>
+    </div>
+  </footer>
+</body>
+</html>
