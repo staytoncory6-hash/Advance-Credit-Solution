@@ -4,97 +4,142 @@
   <meta charset="UTF-8" />
   <title>Services | Elite AI Credit Repair</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta
+    name="description"
+    content="See what Elite AI Credit Repair offers: free tools, memberships, and one-on-one credit guidance powered by real laws and AI."
+  />
   <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
 </head>
 <body>
   <!-- HEADER -->
   <header class="site-header">
-    <div class="container header-flex">
-      <a href="index.html" class="brand">
-        <img src="assets/elite_logo.png" alt="Elite AI Credit Repair Logo" class="logo" />
-        <div class="brand-text">
-          <span class="brand-name">Elite <strong>AI</strong> Credit Repair</span>
-          <span class="brand-tagline">Smart Laws · Real Strategy · Human + AI</span>
-        </div>
-      </a>
+    <div class="container nav">
+      <div class="brand">
+        <a href="index.html" class="brand-link">
+          <img src="assets/elite_logo.png" alt="Elite AI Credit Repair Logo" class="logo" />
+          <div class="brand-text">
+            <span class="brand-name">Elite <strong>AI</strong> Credit Repair</span>
+            <span class="brand-tagline">
+              <strong>Smart Laws · Real Strategy · Human Heart</strong>
+            </span>
+          </div>
+        </a>
+      </div>
 
-      <button class="menu-toggle" id="menu-toggle">☰</button>
-
-      <nav id="navbar" class="navbar">
+      <nav class="main-nav">
         <a href="index.html">Home</a>
         <a href="free-resources.html">Free Resources</a>
         <a href="membership.html">Membership</a>
-        <a href="member.html">Member Dashboard</a>
-        <a href="contact.html">Ask AI / Contact</a>
+        <a href="dashboard.html">Member Dashboard</a>
+        <a href="login.html">Login / Create Account</a>
+        <a href="contact.html">Contact</a>
       </nav>
     </div>
   </header>
 
-  <main class="container">
-    <!-- SERVICES LIST -->
-    <section class="services-section">
-      <h1>Services</h1>
-      <p>
-        From basic guidance to full-powered membership support, Elite AI Credit Repair is built
-        to meet you where you are.
-      </p>
+  <main class="services-page">
+    <div class="container">
+      <!-- SERVICES HERO -->
+      <section class="services-hero">
+        <h1>What Elite AI Can Do for You</h1>
+        <p class="lead">
+          Whether you’re broke and just trying to stop the bleeding or ready to go all-in on a full rebuild,
+          Elite AI Credit Repair has a lane for you.
+        </p>
+        <p class="hero-note">
+          No fluff. No magic tricks. Just real laws, real letters, and a plan that actually makes sense.
+        </p>
+      </section>
 
-      <div class="service-cards">
-        <div class="service-card">
-          <h2>Free Tools & Resources</h2>
-          <p>
-            Free resources, Ask AI, and starter guidance so you can begin cleaning up your credit
-            even if you’re not ready to spend money yet.
-          </p>
-          <a href="free-resources.html" class="btn">View Free Resources</a>
+      <!-- SERVICES LIST -->
+      <section class="services-section">
+        <div class="service-cards">
+          <!-- Free Tools -->
+          <article class="service-card">
+            <h2>Free Tools &amp; Resources</h2>
+            <p>
+              Start where you are. Get checklists, sample letters, budget sheets, and Ask AI for free
+              so you can begin taking control of your credit even if your wallet is on empty.
+            </p>
+            <ul class="service-bullets">
+              <li>Credit cleanup checklist</li>
+              <li>Sample dispute letter language</li>
+              <li>Budget &amp; debt snapshot layout</li>
+              <li>General credit questions answered by AI</li>
+            </ul>
+            <a href="free-resources.html" class="btn">View Free Resources</a>
+          </article>
+
+          <!-- Membership -->
+          <article class="service-card service-featured">
+            <h2>Elite Membership</h2>
+            <p>
+              For people who are done guessing. Membership gives you structure, tools, and support so you’re
+              not fighting your credit report alone at 2 a.m. with Google as your only friend.
+            </p>
+            <ul class="service-bullets">
+              <li>Member dashboard &amp; saved credit snapshot</li>
+              <li>Guidance on disputes, mailing etiquette, and tracking responses</li>
+              <li>Access to members-only education (including the AI Credit Survival Guide)</li>
+              <li>Priority use of Elite AI tools built for serious rebuilders</li>
+            </ul>
+            <a href="membership.html" class="btn green-sign">See Membership Options</a>
+          </article>
+
+          <!-- 1-on-1 -->
+          <article class="service-card">
+            <h2>1-on-1 Credit Guidance</h2>
+            <p>
+              Sometimes you just want a human to walk through it with you. For qualifying members, you can
+              request one-on-one time to go over your reports, letters, and next steps in plain English.
+            </p>
+            <ul class="service-bullets">
+              <li>Deep dive into your credit reports</li>
+              <li>Strategic order of attacks (what to fix first)</li>
+              <li>Help understanding lender requirements</li>
+              <li>Great for big goals: home, car, business funding</li>
+            </ul>
+            <a href="contact.html" class="btn">Request 1-on-1 Info</a>
+          </article>
         </div>
+      </section>
 
-        <div class="service-card">
-          <h2>Elite Membership</h2>
-          <p>
-            Unlimited snapshots, dispute letters, proper mailing etiquette, ebook, and priority
-            access to tools designed for serious rebuilders.
-          </p>
-          <a href="membership.html" class="btn green-sign">See Membership</a>
-        </div>
+      <!-- ASK AI SECTION -->
+      <section id="ask-ai" class="ask-ai-section">
+        <h2>Ask Elite AI Which Lane Fits You</h2>
+        <p class="section-intro">
+          Not sure if you should stay on free tools, jump into membership, or ask for 1-on-1 help?
+          Tell Elite AI what your credit life looks like right now and get a calm recommendation.
+        </p>
 
-        <div class="service-card">
-          <h2>1-on-1 Credit Guidance</h2>
-          <p>
-            Optional one-on-one time with your credit specialist for members who want a deeper
-            walkthrough of their unique situation.
-          </p>
-          <a href="contact.html" class="btn">Request 1-on-1 Info</a>
-        </div>
-      </div>
-    </section>
+        <form id="ask-ai-services-form" class="ask-ai-form">
+          <label for="ask-ai-input-services">Type your situation here:</label>
+          <textarea
+            id="ask-ai-input-services"
+            rows="3"
+            placeholder="Example: I have 3 collections, a repo from 2019, and scores in the low 500s. I want a reliable car and an apartment without getting denied."
+          ></textarea>
 
-    <!-- ASK AI SECTION -->
-    <section id="ask-ai" class="ask-ai-section">
-      <h2>Ask AI Which Service Fits You</h2>
-      <p class="ask-ai-note">
-        Not sure if you should start with free tools, membership, or one-on-one help?
-        Tell AI your situation and get instant guidance.
-      </p>
+          <button type="submit" class="btn green-sign">
+            Ask AI What to Do First
+          </button>
+        </form>
 
-      <form id="ask-ai-form">
-        <label for="ask-ai-input">Type your question here:</label>
-        <textarea
-          id="ask-ai-input"
-          rows="3"
-          placeholder="Example: I have 3 collections and low scores, where should I start?"
-        ></textarea>
-
-        <button type="submit" class="btn green-sign" id="ask-ai-btn">
-          Ask AI
-        </button>
-      </form>
-
-      <div id="ask-ai-response" class="ask-ai-response"></div>
-    </section>
+        <div id="ask-ai-response-services" class="ask-ai-response"></div>
+      </section>
+    </div>
   </main>
 
-  <!-- JS -->
-  <script src="script.js"></script>
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>&copy; <span id="year"></span> Elite AI Credit Repair. All rights reserved.</p>
+      <p class="footer-small">
+        Educational guidance only. No guaranteed deletions or score outcomes. Your results depend on your file, effort, and how the bureaus respond.
+      </p>
+    </div>
+  </footer>
 </body>
 </html>
+
