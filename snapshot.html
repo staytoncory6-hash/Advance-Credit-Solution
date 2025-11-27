@@ -4,16 +4,205 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Snapshot Plan | Elite AI Credit Repair</title>
+  <meta
+    name="description"
+    content="Create your Elite AI Snapshot Plan, pay securely with Cash App, and unlock a custom step-by-step strategy for your credit situation."
+  />
   <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
 </head>
 
 <body data-page="snapshot">
-  <body>
-  <!-- auth check -->
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="container nav">
+      <div class="brand">
+        <a href="index.html" class="brand-link">
+          <img src="assets/elite_logo.png" alt="Elite AI Credit Repair Logo" class="logo" />
+          <div class="brand-text">
+            <span class="brand-name">Elite <strong>AI</strong> Credit Repair</span>
+            <span class="brand-tagline">
+              <strong>Smart Laws · Real Strategy · Human Heart</strong>
+            </span>
+          </div>
+        </a>
+      </div>
+
+      <nav class="main-nav">
+        <a href="index.html">Home</a>
+        <a href="free-resources.html">Free Resources</a>
+        <a href="membership.html">Membership</a>
+        <a href="dashboard.html">Member Dashboard</a>
+        <a href="login.html">Login / Create Account</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero-section snapshot-hero">
+      <div class="container hero-inner">
+        <h1>Your Elite AI Snapshot Plan</h1>
+        <p>
+          Tell Elite AI exactly what happened — denials, collections, charge-offs, identity theft,
+          late payments, confusion… anything. The more detail you give, the stronger your Snapshot Plan becomes.
+        </p>
+        <p class="hero-note">
+          This is not a generic template. It’s a custom game plan built around your real story.
+        </p>
+      </div>
+    </section>
+
+    <!-- SNAPSHOT FORM -->
+    <section class="snapshot-section">
+      <div class="container">
+        <h2>Step 1: Tell Elite AI Your Story</h2>
+        <p class="section-intro">
+          This is where you unload everything. Denials, old accounts, identity theft, repos, late payments —
+          all of it. The more detail you share, the more precise your Snapshot Plan and action steps will be.
+        </p>
+
+        <form id="snapshot-form" class="snapshot-form">
+          <label for="snapshot-details">Your Story</label>
+          <textarea
+            id="snapshot-details"
+            rows="7"
+            placeholder="Example: I got denied for a $20,000 auto loan. They said my Experian score was too low. I have 2 collections from 2020, 1 charge-off I don’t recognize, and some lates from 2021..."
+            required
+          ></textarea>
+
+          <button type="submit" class="btn primary-btn" id="generatePlanBtn">
+            Continue to Payment
+          </button>
+        </form>
+
+        <div id="snapshot-status" class="snapshot-status"></div>
+
+        <!-- STEP 2: PAYWALL -->
+        <div id="snapshot-paywall" class="snapshot-output hidden">
+          <h3>Step 2: Send Payment via Cash App</h3>
+          <p>
+            To unlock your customized Snapshot Plan and action steps, send your payment through Cash App to:
+          </p>
+          <p><strong>Cash App: $Cory12151983</strong></p>
+
+          <a
+            href="https://cash.app/$Cory12151983"
+            target="_blank"
+            rel="noopener"
+            class="btn primary-btn pay-btn"
+          >
+            Pay with Cash App
+          </a>
+
+          <p class="snapshot-honor-note">
+            After you send payment, tap the button below to tell the system you’ve paid.
+            This runs on the honor system — your honesty is what keeps this affordable for everybody.
+          </p>
+
+          <button type="button" id="snapshot-paid-btn" class="btn secondary-btn">
+            I’ve sent the payment
+          </button>
+        </div>
+
+        <!-- STEP 3: SNAPSHOT PLAN + RESOURCES + DOWNLOADS -->
+        <div id="snapshot-output" class="snapshot-output hidden">
+          <h3>Your Elite AI Snapshot Plan</h3>
+          <div id="snapshot-text"></div>
+
+          <h3 style="margin-top:1.25rem;">Action Steps &amp; Contacts</h3>
+          <p class="snapshot-letter-intro">
+            Here’s a high-level set of moves and who you may need to contact (bureaus, regulators, etc.).
+            Full letter packs and escalations are reserved for ongoing membership, but this gives you a
+            serious starting point.
+          </p>
+
+          <div id="snapshot-letters"></div>
+
+          <div class="snapshot-download-actions">
+            <button id="download-plan-btn" class="btn secondary-btn" type="button">
+              Download Plan as PDF
+            </button>
+            <button id="download-resources-btn" class="btn secondary-btn" type="button">
+              Download Contacts as PDF
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ASK AI (GENERAL, FREE) -->
+    <section id="ask-ai" class="ask-ai-section">
+      <div class="container">
+        <h2>Ask Elite AI About Your Credit</h2>
+        <p class="section-intro">
+          This box is only for general credit questions — collections, charge-offs, auto loans,
+          utilization, and rebuilding. Answers stay calm, simple, and educational, and may
+          recommend the paid Snapshot or membership when it makes sense.
+        </p>
+
+        <form id="ask-ai-form" class="ask-ai-form">
+          <label for="ask-ai-question">Your credit question:</label>
+          <textarea
+            id="ask-ai-question"
+            rows="4"
+            placeholder="Example: What should I fix first if I just got denied for a $20,000 auto loan?"
+            required
+          ></textarea>
+
+          <button type="submit" class="btn primary-btn">Ask Elite AI</button>
+        </form>
+
+        <div id="ask-ai-status" class="ask-ai-status"></div>
+
+        <div class="ask-ai-answer-wrap">
+          <h3>AI Response</h3>
+          <div id="ask-ai-answer" class="ask-ai-answer">
+            <p class="placeholder-text">
+              Your answer will show up here — calm, direct, focused on what the law allows
+              and what usually matters most to lenders.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-left">
+        <p><strong>Elite AI Credit Repair</strong></p>
+        <p>
+          8500 Harwood Rd, Apt 6718<br />
+          North Richland Hills, TX 76180<br />
+          Phone: <a href="tel:14694356294">(469) 435-6294</a>
+        </p>
+      </div>
+
+      <div class="footer-middle">
+        <p>
+          This site provides education and guidance. Results vary; there are no guaranteed deletions
+          or score increases. Your effort and your file are unique.
+        </p>
+      </div>
+
+      <div class="footer-right">
+        <p>&copy; <span id="year"></span> Elite AI Credit Repair</p>
+      </div>
+    </div>
+  </footer>
+
+  <a href="#ask-ai" class="ask-ai-floating">Ask Elite AI</a>
+
+  <!-- 🔒 AUTH CHECK: SNAPSHOT IS MEMBERS-ONLY -->
   <script type="module">
     import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.0/firebase-app.js";
     import { getAuth, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/11.0.0/firebase-auth.js";
 
+    // 🔥 IMPORTANT:
+    // Use the EXACT SAME firebaseConfig you use in login.js / member.js
     const firebaseConfig = {
       apiKey: "YOUR_API_KEY",
       authDomain: "YOUR_PROJECT_ID.firebaseapp.com",
@@ -28,198 +217,11 @@
 
     onAuthStateChanged(auth, (user) => {
       if (!user) {
-        // not logged in → send them to login page
+        // Not logged in → send them to login page
         window.location.href = "login.html";
       }
     });
   </script>
-
-  <!-- Rest of your secure content here -->
-  <h1>Welcome to your Elite AI Credit Snapshot</h1>
-</body>
-
-
-<!-- HEADER -->
-<header class="main-header">
-  <div class="container header-inner">
-    <div class="logo-area">
-      <img src="assets/logo.png" alt="Elite AI Credit Repair Logo" class="site-logo" />
-      <div class="logo-text">
-        <h1>Elite AI Credit Repair</h1>
-        <p>Smarter. Faster. Stronger.</p>
-      </div>
-    </div>
-
-    <nav class="main-nav">
-      <a href="index.html">Home</a>
-      <a href="snapshot.html" class="active">Snapshot Plan</a>
-      <a href="book.html">Secret Education Book</a>
-      <a href="contact.html">Contact</a>
-      <a href="#ask-ai">Ask Elite AI</a>
-    </nav>
-  </div>
-</header>
-
-<main>
-
-  <!-- HERO -->
-  <section class="hero-section snapshot-hero">
-    <div class="container hero-inner">
-      <h2>Your Customized Snapshot Plan</h2>
-      <p>
-        Tell Elite AI exactly what happened — denials, collections, charge-offs,
-        identity theft, late payments, confusion… anything.
-        The more detail you give, the stronger your Snapshot Plan becomes.
-      </p>
-    </div>
-  </section>
-
-  <!-- SNAPSHOT FORM -->
-  <section class="snapshot-section">
-    <div class="container">
-
-      <h2>Step 1: Tell Elite AI Your Story</h2>
-      <p class="section-intro">
-        This is where you unload everything. Denials, old accounts, identity theft,
-        repos, late payments — all of it. The more detail you share, the more precise
-        your Snapshot Plan and action steps will be.
-      </p>
-
-      <form id="snapshot-form" class="snapshot-form">
-        <label for="snapshot-details">Your Story</label>
-        <textarea
-          id="snapshot-details"
-          rows="7"
-          placeholder="Example: I got denied for a $20,000 auto loan. They said my Experian score was too low. I have 2 collections from 2020, 1 charge-off I don’t recognize, and some lates from 2021..."
-          required
-        ></textarea>
-
-        <button type="submit" class="btn primary-btn" id="generatePlanBtn">
-          Continue to Payment
-        </button>
-      </form>
-
-      <div id="snapshot-status" class="snapshot-status"></div>
-
-      <!-- STEP 2: PAYWALL -->
-      <div id="snapshot-paywall" class="snapshot-output hidden">
-        <h3>Step 2: Send Payment via Cash App</h3>
-        <p>
-          To unlock your customized Snapshot Plan and action steps,
-          send your payment through Cash App to:
-        </p>
-        <p><strong>Cash App: $Cory12151983</strong></p>
-
-        <a
-          href="https://cash.app/$Cory12151983"
-          target="_blank"
-          class="btn primary-btn pay-btn"
-        >
-          Pay with Cash App
-        </a>
-
-        <p style="margin-top:0.6rem;font-size:0.9rem;">
-          After you send payment, tap the button below to tell the system you’ve paid.
-          This is honor system — your honesty keeps this affordable for everybody.
-        </p>
-
-        <button type="button" id="snapshot-paid-btn" class="btn secondary-btn">
-          I’ve sent the payment
-        </button>
-      </div>
-
-      <!-- STEP 3: SNAPSHOT PLAN + RESOURCES + DOWNLOADS -->
-      <div id="snapshot-output" class="snapshot-output hidden">
-
-        <h3>Your Elite AI Snapshot Plan</h3>
-        <div id="snapshot-text"></div>
-
-        <h3 style="margin-top:1.25rem;">Action Steps & Contacts</h3>
-        <p class="snapshot-letter-intro">
-          This is a high-level set of moves and who you may need to contact
-          (bureaus, regulators, etc.). Full letter packs and escalations are
-          reserved for ongoing membership.
-        </p>
-
-        <div id="snapshot-letters"></div>
-
-        <div class="snapshot-download-actions" style="margin-top:1rem;display:flex;flex-wrap:wrap;gap:0.6rem;">
-          <button id="download-plan-btn" class="btn secondary-btn" type="button">
-            Download Plan as PDF
-          </button>
-          <button id="download-resources-btn" class="btn secondary-btn" type="button">
-            Download Contacts as PDF
-          </button>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ASK AI (GENERAL, FREE) -->
-  <section id="ask-ai" class="ask-ai-section">
-    <div class="container">
-      <h2>Ask Elite AI About Your Credit</h2>
-      <p class="section-intro">
-        This box is only for general credit questions — collections, charge-offs, auto loans,
-        utilization, and rebuilding. Answers stay calm, simple, and educational, and may
-        recommend the paid Snapshot or membership when it makes sense.
-      </p>
-
-      <form id="ask-ai-form" class="ask-ai-form">
-        <label for="ask-ai-question">Your credit question:</label>
-        <textarea
-          id="ask-ai-question"
-          rows="4"
-          placeholder="Example: What should I fix first if I just got denied for a $20,000 auto loan?"
-          required
-        ></textarea>
-
-        <button type="submit" class="btn primary-btn">Ask Elite AI</button>
-      </form>
-
-      <div id="ask-ai-status" class="ask-ai-status"></div>
-
-      <div class="ask-ai-answer-wrap">
-        <h3>AI Response</h3>
-        <div id="ask-ai-answer" class="ask-ai-answer">
-          <p class="placeholder-text">
-            Your answer will show up here. Calm, direct, focused on what the law allows
-            and what usually matters most to lenders.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-</main>
-
-<!-- FOOTER -->
-<footer class="site-footer">
-  <div class="container footer-inner">
-    <div class="footer-left">
-      <p><strong>Elite AI Credit Repair</strong></p>
-      <p>
-        8500 Harwood Rd, Apt 6718<br />
-        North Richland Hills, TX 76180<br />
-        Phone: <a href="tel:14694356294">(469) 435-6294</a>
-      </p>
-    </div>
-
-    <div class="footer-middle">
-      <p>
-        This site provides education and guidance. Results vary; no guarantees
-        of deletions or score increases.
-      </p>
-    </div>
-
-    <div class="footer-right">
-      <p>&copy; <span id="year"></span> Elite AI Credit Repair</p>
-    </div>
-  </div>
-</footer>
-
-<a href="#ask-ai" class="ask-ai-floating">Ask Elite AI</a>
-
-<script src="script.js"></script>
 </body>
 </html>
+
