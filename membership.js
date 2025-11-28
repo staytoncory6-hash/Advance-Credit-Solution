@@ -19,15 +19,23 @@ import {
 //    🔥 IMPORTANT 🔥
 //    Replace this with the EXACT same firebaseConfig used in login.js
 // ===============================
+// Import the functions you need from the SDKs you need
+import { initializeApp } from "firebase/app";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+
+// Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "YOUR_API_KEY_HERE",
-  authDomain: "YOUR_PROJECT_ID.firebaseapp.com",
-  projectId: "YOUR_PROJECT_ID",
-  storageBucket: "YOUR_PROJECT_ID.appspot.com",
-  messagingSenderId: "YOUR_SENDER_ID",
-  appId: "YOUR_APP_ID",
+  apiKey: "AIzaSyDPjNMpXSlG9AQaRNgqgMU2AzNDuVxPZ2w",
+  authDomain: "elite-credit-7f331.firebaseapp.com",
+  projectId: "elite-credit-7f331",
+  storageBucket: "elite-credit-7f331.firebasestorage.app",
+  messagingSenderId: "208721021996",
+  appId: "1:208721021996:web:cf3bcaed72b99f72ef5589"
 };
 
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
 // ===============================
 // 2) INIT APP, AUTH, DB
 // ===============================
