@@ -11,26 +11,32 @@ import {
   signOut,
   onAuthStateChanged,
 } from "https://www.gstatic.com/firebasejs/11.0.0/firebase-auth.js";
+// ================== FIREBASE INITIALIZATION ==================
+import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.0/firebase-app.js";
+import {
+  getAuth,
+  signInWithEmailAndPassword,
+  createUserWithEmailAndPassword,
+  sendPasswordResetEmail
+} from "https://www.gstatic.com/firebasejs/11.0.0/firebase-auth.js";
 
-// 2) YOUR FIREBASE CONFIG
-// Go to Firebase console → Project settings → General → Your apps → SDK setup & configuration
-// and copy the config object exactly into here:
+// Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "YOUR_API_KEY_HERE",
-  authDomain: "YOUR_PROJECT_ID.firebaseapp.com",
-  projectId: "YOUR_PROJECT_ID",
-  storageBucket: "YOUR_PROJECT_ID.appspot.com",
-  messagingSenderId: "YOUR_SENDER_ID",
-  appId: "YOUR_APP_ID",
+  apiKey: "AIzaSyDPjNMpXSlG9AQaRNgqgMU2AzNDuVxPZ2w",
+  authDomain: "elite-credit-7f331.firebaseapp.com",
+  projectId: "elite-credit-7f331",
+  storageBucket: "elite-credit-7f331.firebasestorage.app",
+  messagingSenderId: "208721021996",
+  appId: "1:208721021996:web:cf3bcaed72b99f72ef5589"
 };
 
-// ❗ VERY IMPORTANT ❗
-// Replace EVERYTHING above with the exact config from Firebase.
-// Do not leave "YOUR_API_KEY_HERE" etc. No extra spaces, no missing commas.
-
-// 3) INITIALIZE FIREBASE
+// Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
+
+// ================== END FIREBASE SETUP ==================
+
+
 
 // 4) GRAB DOM ELEMENTS (these IDs should match your login.html)
 const signupForm = document.getElementById("signup-form");
