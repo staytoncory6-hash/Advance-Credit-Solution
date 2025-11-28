@@ -11,6 +11,51 @@
   <link rel="stylesheet" href="style.css" />
   <script defer src="script.js"></script>
 </head>
+  <!-- ======================= FREE RESOURCES ======================= -->
+<section id="free-resources" class="section">
+  <div class="container">
+    <h1 class="section-title">Free Credit Resources</h1>
+    <p class="section-intro">
+      These tools are meant to give you a simple starting point. They are not
+      legal, tax, or financial advice – just education to help you get more
+      organized and more confident.
+    </p>
+
+    <!-- Resource cards -->
+    <div class="resource-cards-grid">
+      <button class="resource-card" data-resource="cleanup">
+        <h2>Credit Cleanup Checklist</h2>
+        <p>A quick “do it yourself” checklist to see where you stand.</p>
+      </button>
+
+      <button class="resource-card" data-resource="sample-dispute">
+        <h2>Sample Dispute Letter</h2>
+        <p>See an example of a simple inaccuracy dispute.</p>
+      </button>
+
+      <button class="resource-card" data-resource="budget">
+        <h2>Budget Snapshot</h2>
+        <p>Write out your money picture so you can plan ahead.</p>
+      </button>
+
+      <button class="resource-card" data-resource="book-preview">
+        <h2>Book Preview</h2>
+        <p>A short, motivating taste of the full credit survival guide.</p>
+      </button>
+    </div>
+
+    <!-- Where the content shows up when you click a box -->
+    <div id="resource-detail" class="resource-detail hidden">
+      <h2 id="resource-detail-title"></h2>
+      <div id="resource-detail-body" class="resource-detail-body"></div>
+      <p class="mini-disclaimer">
+        Educational purposes only. This is not legal, tax, or financial advice.
+        Always review your rights under the FCRA, FDCPA, and your state laws.
+      </p>
+    </div>
+  </div>
+</section>
+
 <body>
   <!-- HEADER -->
   <header class="site-header">
