@@ -1976,3 +1976,193 @@ tbody tr:nth-child(even) {
 }
 
 /* End of stylesheet */
+/* ==========================================================
+   LOGIN / AUTH PAGE STYLES
+   ========================================================== */
+
+/* Page hero at the top of login page */
+.page-hero {
+  margin: 2.8rem auto 2.2rem;
+}
+
+.page-hero-inner {
+  max-width: var(--page-max-width);
+  padding: 1.8rem 1.6rem;
+  border-radius: var(--radius-2xl);
+  background: linear-gradient(
+    135deg,
+    rgba(22, 163, 74, 0.16),
+    rgba(249, 115, 22, 0.14),
+    rgba(4, 17, 10, 0.98)
+  );
+  border: 1px solid rgba(148, 163, 184, 0.4);
+  box-shadow: var(--shadow-subtle);
+}
+
+.page-hero h1 {
+  margin-bottom: 0.6rem;
+}
+
+.hero-note {
+  margin-top: 0.4rem;
+  font-size: 0.86rem;
+  color: var(--text-muted);
+}
+
+/* ==========================================================
+   AUTH CARDS (LOGIN + CREATE ACCOUNT)
+   ========================================================== */
+
+.auth-section {
+  margin: 0 auto var(--section-spacing-lg);
+}
+
+.auth-grid {
+  max-width: var(--page-max-width);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.6rem;
+}
+
+.auth-card {
+  background: radial-gradient(circle at top left,
+    rgba(22, 163, 74, 0.16),
+    rgba(4, 17, 10, 0.98)
+  );
+  border-radius: var(--radius-2xl);
+  padding: 1.6rem 1.5rem;
+  border: 1px solid rgba(148, 163, 184, 0.5);
+  box-shadow: var(--shadow-soft);
+}
+
+.auth-card h2 {
+  font-size: 1.2rem;
+  margin-bottom: 0.4rem;
+}
+
+.auth-note {
+  font-size: 0.9rem;
+  color: var(--text-soft);
+  margin-bottom: 0.9rem;
+}
+
+.auth-card form {
+  display: grid;
+  gap: 0.7rem;
+  margin-bottom: 0.9rem;
+}
+
+.auth-card label {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--text-main);
+}
+
+.auth-card input {
+  width: 100%;
+}
+
+.auth-card .btn-primary {
+  margin-top: 0.4rem;
+}
+
+.auth-small {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+/* Highlight active nav item on this page */
+.main-nav a.active {
+  border-radius: var(--radius-pill);
+  border: 1px solid var(--accent);
+  background: rgba(249, 115, 22, 0.16);
+  color: var(--accent);
+}
+
+/* Responsive layout tweaks */
+@media (max-width: 900px) {
+  .auth-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+/* ==========================================================
+   ASK AI STRIP ON LOGIN PAGE
+   ========================================================== */
+
+.ask-ai-strip {
+  margin: 0 auto var(--section-spacing-lg);
+}
+
+.ask-ai-inner {
+  max-width: var(--page-max-width);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(0, 1.2fr);
+  gap: 1.5rem;
+  align-items: flex-start;
+  padding: 1.5rem 1.4rem;
+  border-radius: var(--radius-2xl);
+  background: linear-gradient(
+    120deg,
+    rgba(249, 115, 22, 0.18),
+    rgba(4, 17, 10, 0.98),
+    rgba(22, 163, 74, 0.18)
+  );
+  border: 1px solid rgba(148, 163, 184, 0.5);
+  box-shadow: var(--shadow-soft);
+}
+
+.ask-ai-strip h2 {
+  margin-bottom: 0.35rem;
+}
+
+.ask-ai-strip p {
+  font-size: 0.9rem;
+  max-width: 26rem;
+}
+
+/* Right side: form */
+.ask-ai-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.ask-ai-form textarea {
+  width: 100%;
+  font-size: 0.9rem;
+  min-height: 80px;
+  resize: vertical;
+}
+
+.ask-ai-form .btn-primary {
+  align-self: flex-start;
+}
+
+.ask-ai-response {
+  margin-top: 0.35rem;
+  font-size: 0.84rem;
+  color: var(--text-soft);
+  padding: 0.6rem 0.75rem;
+  border-radius: var(--radius-lg);
+  background: rgba(4, 17, 10, 0.95);
+  border: 1px dashed rgba(148, 163, 184, 0.6);
+}
+
+/* If empty, keep it visually subtle */
+.ask-ai-response:empty {
+  padding: 0;
+  border: none;
+  background: transparent;
+}
+
+@media (max-width: 900px) {
+  .ask-ai-inner {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+
