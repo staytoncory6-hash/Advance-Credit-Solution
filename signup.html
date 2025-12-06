@@ -72,7 +72,11 @@
 
         <div class="login-side-card">
           <h3>Already Have an Account?</h3>
-          <p><a href="login.html" style="color:#ffb347;font-weight:700;">Click here to sign in.</a></p>
+          <p>
+            <a href="login.html" style="color:#ffb347;font-weight:700;">
+              Click here to sign in.
+            </a>
+          </p>
         </div>
 
       </div>
@@ -110,9 +114,11 @@
     <div class="container footer-inner">
       <div class="footer-left">
         <p><strong>Elite AI Credit Repair</strong></p>
-        <p>8500 Harwood Rd, Apt 6718<br>
-        North Richland Hills, TX 76180<br>
-        Phone: <a href="tel:14694356294">(469) 435-6294</a></p>
+        <p>
+          8500 Harwood Rd, Apt 6718<br />
+          North Richland Hills, TX 76180<br />
+          Phone: <a href="tel:14694356294">(469) 435-6294</a>
+        </p>
       </div>
 
       <div class="footer-right">
@@ -123,15 +129,25 @@
 
   <a href="#ask-ai" class="ask-ai-floating">Ask Elite AI</a>
 
+  <!-- Main site scripts -->
   <script src="script.js"></script>
-  const firebaseConfig = {
-  apiKey: "AIzaSyBffVfE1M8V8hSbp06R0zaiwGR8bvUvxg",
-  authDomain: "elite-js-7b05b.firebaseapp.com",
-  projectId: "elite-js-7b05b",
-  storageBucket: "elite-js-7b05b.appspot.com",
-  messagingSenderId: "226880604356",
-  appId: "1:226880604356:web:12d66acf740b7959493e191",
-  measurementId: "G-D2TQR1PJVK"
-};
+
+  <!-- Firebase config saved for future auth hookup -->
+  <script type="module">
+    const firebaseConfig = {
+      apiKey: "AIzaSyBffVfE1M8V8hSbp06R0zaiwGR8bvUvxg",
+      authDomain: "elite-js-7b05b.firebaseapp.com",
+      projectId: "elite-js-7b05b",
+      storageBucket: "elite-js-7b05b.appspot.com",
+      messagingSenderId: "226880604356",
+      appId: "1:226880604356:web:12d66acf740b7959493e191",
+      measurementId: "G-D2TQR1PJVK"
+    };
+
+    // Later we’ll do:
+    // import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.0/firebase-app.js";
+    // import { getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/11.0.0/firebase-auth.js";
+    // and wire this form up to real signup.
+  </script>
 </body>
 </html>
