@@ -4,359 +4,91 @@
   <meta charset="UTF-8" />
   <title>Free Resources | Elite AI Credit Repair</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta
-    name="description"
-    content="Free credit repair checklists, guides, and templates you can use right on this page from Elite AI Credit Repair."
-  />
+  <meta name="description" content="Free credit repair resources, templates, checklists, and tools from Elite AI Credit Repair." />
   <link rel="stylesheet" href="style.css" />
   <script defer src="script.js"></script>
 </head>
-  <!-- ======================= FREE RESOURCES ======================= -->
-<section id="free-resources" class="section">
-  <div class="container">
-    <h1 class="section-title">Free Credit Resources</h1>
-    <p class="section-intro">
-      These tools are meant to give you a simple starting point. They are not
-      legal, tax, or financial advice – just education to help you get more
-      organized and more confident.
-    </p>
-
-    <!-- Resource cards -->
-    <div class="resource-cards-grid">
-      <button class="resource-card" data-resource="cleanup">
-        <h2>Credit Cleanup Checklist</h2>
-        <p>A quick “do it yourself” checklist to see where you stand.</p>
-      </button>
-
-      <button class="resource-card" data-resource="sample-dispute">
-        <h2>Sample Dispute Letter</h2>
-        <p>See an example of a simple inaccuracy dispute.</p>
-      </button>
-
-      <button class="resource-card" data-resource="budget">
-        <h2>Budget Snapshot</h2>
-        <p>Write out your money picture so you can plan ahead.</p>
-      </button>
-
-      <button class="resource-card" data-resource="book-preview">
-        <h2>Book Preview</h2>
-        <p>A short, motivating taste of the full credit survival guide.</p>
-      </button>
-    </div>
-
-    <!-- Where the content shows up when you click a box -->
-    <div id="resource-detail" class="resource-detail hidden">
-      <h2 id="resource-detail-title"></h2>
-      <div id="resource-detail-body" class="resource-detail-body"></div>
-      <p class="mini-disclaimer">
-        Educational purposes only. This is not legal, tax, or financial advice.
-        Always review your rights under the FCRA, FDCPA, and your state laws.
-      </p>
-    </div>
-  </div>
-</section>
 
 <body>
-  <!-- HEADER -->
+
+  <!-- ======================= HEADER ======================= -->
   <header class="site-header">
     <div class="container nav">
+
+      <!-- BRAND / LOGO -->
       <div class="brand">
-       <img src="assets/mad_scientist.png" alt="Credit Scientist Mascot" class="logo" />
+        <img src="assets/mad_scientist.png" alt="Mascot" class="logo" />
 
         <div class="brand-text">
           <span class="brand-name">Elite <strong>AI</strong> Credit Repair</span>
-          <span class="brand-tagline">
-            <strong>Smart Laws · Real Strategy · Human Heart</strong>
-          </span>
+          <span class="brand-tagline"><strong>Smart Laws · Real Strategy · Human + AI</strong></span>
         </div>
       </div>
 
       <nav class="main-nav">
         <a href="index.html">Home</a>
-        <a href="free-resources.html" class="active">Free Resources</a>
         <a href="membership.html">Membership</a>
-        <a href="dashboard.html">Member Dashboard</a>
-        <a href="login.html">Login / Create Account</a>
+        <a href="free-resources.html" class="active">Free Resources</a>
         <a href="contact.html">Contact</a>
       </nav>
     </div>
   </header>
 
-  <main>
-    <!-- HERO -->
-    <section class="page-hero">
-      <div class="container page-hero-inner">
-        <div>
-          <h1>Free Tools You Can Use Right Now</h1>
-          <p class="lead">
-            If money’s tight or you’re just not ready for membership, you can still start moving forward today.
-            These are real tools you can read and use directly on this page — no downloads, no logins, no tricks.
-          </p>
-          <p class="hero-note">
-            Scroll down or click any card below to jump straight to the full resource.
-          </p>
-        </div>
-        <div class="page-hero-badge">
-          <p>From</p>
-          <strong>Elite AI Credit Repair</strong>
-        </div>
-      </div>
-    </section>
+  <!-- ======================= HERO SECTION ======================= -->
+  <section class="hero small-hero">
+    <h1>Free Credit Repair Resources</h1>
+    <p>Professional tools designed to help you take control of your credit — powered by Elite AI.</p>
+  </section>
 
-    <!-- RESOURCE GRID -->
-    <section class="resources-section">
-      <div class="container">
-        <h2 class="section-title">Free Credit Resources</h2>
-
-        <div class="resource-grid">
-          <!-- Credit Cleanup Checklist -->
-          <article class="resource-card">
-            <div class="resource-icon">📋</div>
-            <h3>Credit Cleanup Checklist</h3>
-            <p>A simple, step-by-step list so you don’t forget anything important before you start disputing.</p>
-            <a href="#credit-cleanup-checklist" class="btn-outline">Open Checklist</a>
-          </article>
-
-          <!-- Sample Dispute Letter Pack -->
-          <article class="resource-card">
-            <div class="resource-icon">✉️</div>
-            <h3>Sample Dispute Letter Pack</h3>
-            <p>Starter language you can adjust and personalize for your own credit report issues.</p>
-            <a href="#sample-dispute-letters" class="btn-outline">View Letter Pack</a>
-          </article>
-
-          <!-- Budget & Debt Snapshot -->
-          <article class="resource-card">
-            <div class="resource-icon">📊</div>
-            <h3>Budget &amp; Debt Snapshot Sheet</h3>
-            <p>Lay out your income, bills, and debts on one page so your next move is clear instead of confusing.</p>
-            <a href="#budget-snapshot" class="btn-outline">View the Sheet</a>
-          </article>
-
-          <!-- AI Survival Guide Preview -->
-          <article class="resource-card">
-            <div class="resource-icon">📚</div>
-            <h3>AI Survival Guide (Preview)</h3>
-            <p>A preview of your AI-powered credit survival guide and how the “snapshot” method works.</p>
-            <a href="#ai-survival-preview" class="btn-outline">View Book Preview</a>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- DETAILED SECTIONS -->
-
-    <!-- Credit Cleanup Checklist -->
-    <section id="credit-cleanup-checklist" class="resource-detail-section">
-      <div class="container">
-        <h2>Credit Cleanup Checklist</h2>
-        <p>Use this checklist as a roadmap before sending any disputes. Don’t rush — being organized gives you power.</p>
-
-        <ol class="detail-list">
-          <li>Pull all three credit reports (Equifax, Experian, TransUnion) as close to the same date as possible.</li>
-          <li>Highlight every negative item: collections, charge-offs, late payments, repossessions, public records.</li>
-          <li>Write the creditor name, account number (or partial), balance, and important dates for each item.</li>
-          <li>Mark anything that looks suspicious: wrong dates, wrong amounts, mixed names, or accounts that are “not mine.”</li>
-          <li>Group similar issues together (all medical, all old collections, all late payments, etc.).</li>
-          <li>Choose the easiest or most obviously inaccurate items to dispute first to build momentum.</li>
-          <li>Create a folder (physical or digital) for letters, reports, envelopes, and responses.</li>
-          <li>Track mailing dates, certified mail numbers, and response deadlines in one simple log.</li>
-          <li>Make notes on every response you receive so you can see the story of your cleanup over time.</li>
-        </ol>
-      </div>
-    </section>
-
-    <!-- Sample Dispute Letter Pack -->
-    <section id="sample-dispute-letters" class="resource-detail-section">
-      <div class="container">
-        <h2>Sample Dispute Letter Pack</h2>
-        <p>
-          These are example paragraphs and structures. Always customize with your own information and truth.
-          Keep copies of everything you send and everything they send back.
-        </p>
-
-        <h3>1. General Inaccuracy Dispute</h3>
-        <pre class="letter-block">
-To Whom It May Concern:
-
-I am writing to dispute the accuracy of information on my credit report. Please investigate
-the items listed below and remove or correct any information that cannot be verified as
-complete and accurate.
-
-[Insert account name, account number (if available), and what is wrong]
-
-This information does not reflect my true payment history and appears to be reported in error.
-Under the Fair Credit Reporting Act, I am requesting that you conduct a reasonable investigation
-and provide me with written results of your findings.
-
-Sincerely,
-[Your Name]
-[Your Address]
-[Last 4 of SSN]
-[Date of Birth]
-        </pre>
-
-        <h3>2. Late Payment Date Dispute</h3>
-        <pre class="letter-block">
-To Whom It May Concern:
-
-I am disputing the late payment reporting for the account listed below:
-
-[Insert account name, account number (if available), and reported late date]
-
-Your report shows a late payment that is not accurate based on my records. Please review your
-records and correct any late payment information that cannot be verified as accurate. If you
-cannot verify the late payment, please remove it from my credit file.
-
-Sincerely,
-[Your Name]
-[Your Address]
-[Last 4 of SSN]
-[Date of Birth]
-        </pre>
-
-        <h3>3. Fraudulent / Not Mine Account</h3>
-        <pre class="letter-block">
-To Whom It May Concern:
-
-I am writing to dispute a fraudulent account appearing on my credit report. I did not open
-this account and I am not responsible for it.
-
-[Insert account name, account number (if available), and how it is being reported]
-
-Please block this account from my file and remove any associated negative information. I am
-requesting that you investigate this as potential identity theft and send me the results in
-writing. I am also keeping copies of this dispute for my records.
-
-Sincerely,
-[Your Name]
-[Your Address]
-[Last 4 of SSN]
-[Date of Birth]
-        </pre>
-      </div>
-    </section>
-
-    <!-- Budget & Debt Snapshot Sheet -->
-    <section id="budget-snapshot" class="resource-detail-section">
-      <div class="container">
-        <h2>Budget &amp; Debt Snapshot Sheet</h2>
-        <p>
-          This layout helps you organize all your income, essentials, and debts on one page.
-          The goal isn’t to judge you — it’s to see clearly so you can make better decisions.
-        </p>
-
-        <h3>1. Income</h3>
-        <table class="simple-table">
-          <thead>
-            <tr><th>Source</th><th>Amount</th><th>Notes</th></tr>
-          </thead>
-          <tbody>
-            <tr><td>Main job</td><td>$___</td><td>After taxes</td></tr>
-            <tr><td>Side income</td><td>$___</td><td>Gig/side work</td></tr>
-            <tr><td>Other income</td><td>$___</td><td>Benefits, etc.</td></tr>
-          </tbody>
-        </table>
-
-        <h3>2. Essential Bills</h3>
-        <table class="simple-table">
-          <thead>
-            <tr><th>Bill</th><th>Amount</th><th>Due Date</th></tr>
-          </thead>
-          <tbody>
-            <tr><td>Rent</td><td>$___</td><td>__/__/____</td></tr>
-            <tr><td>Utilities</td><td>$___</td><td>__/__/____</td></tr>
-            <tr><td>Phone/Internet</td><td>$___</td><td>__/__/____</td></tr>
-            <tr><td>Transportation</td><td>$___</td><td>__/__/____</td></tr>
-          </tbody>
-        </table>
-
-        <h3>3. Debts &amp; Accounts</h3>
-        <table class="simple-table">
-          <thead>
-            <tr><th>Creditor</th><th>Type</th><th>Balance</th><th>Min. Payment</th><th>Status</th></tr>
-          </thead>
-          <tbody>
-            <tr><td>____</td><td>Credit Card</td><td>$___</td><td>$___</td><td>Current / Late</td></tr>
-            <tr><td>____</td><td>Loan</td><td>$___</td><td>$___</td><td>Current / Late</td></tr>
-            <tr><td>____</td><td>Collection</td><td>$___</td><td>$0</td><td>Active / Paid</td></tr>
-          </tbody>
-        </table>
-      </div>
-    </section>
-
-    <!-- AI SURVIVAL GUIDE PREVIEW -->
-    <section id="ai-survival-preview" class="resource-detail-section">
-      <div class="container">
-        <h2>AI Credit Survival Guide (Preview)</h2>
-        <p>A small preview of your AI-powered credit survival guide.</p>
-
-        <h3>What It Teaches</h3>
-        <ul class="detail-list">
-          <li>How to read your credit reports without freezing or panicking</li>
-          <li>Which laws actually matter for real, everyday situations</li>
-          <li>How to build a “snapshot” so you always know where you stand</li>
-          <li>How to choose the next best step instead of guessing</li>
-        </ul>
-
-        <h3>Preview Section: The Snapshot Method</h3>
-        <p>
-          Instead of trying to fix everything at once, you create one clear page
-          that shows your current situation:
-        </p>
-
-        <ul class="detail-list">
-          <li>How many collections</li>
-          <li>How many charge-offs</li>
-          <li>How many late payments</li>
-          <li>Your utilization &amp; positive history</li>
-        </ul>
-
-        <p>
-          When you see everything on one page, your credit stops feeling like a mystery.
-          You can make a calm plan instead of reacting out of fear.
-        </p>
-
-        <p>
-          The full guide goes deeper into letters, timelines, tracking, and how to
-          work with — not against — the system while protecting yourself.
-        </p>
-      </div>
-    </section>
-
-    <!-- ASK AI -->
-    <section class="ask-ai-strip">
-      <div class="container ask-ai-inner">
-        <div>
-          <h2>Have a Quick Credit Question?</h2>
-          <p>Ask your question below and we’ll give you a calm, step-by-step style answer.</p>
-        </div>
-
-        <form class="ask-ai-form" action="#" method="post">
-          <label class="visually-hidden" for="ask-ai-input-free">Type your question</label>
-          <textarea
-            id="ask-ai-input-free"
-            name="question"
-            rows="2"
-            placeholder="Example: I just found out about a collection from years ago — what now?"
-          ></textarea>
-
-          <button type="submit" class="btn-primary">Ask AI</button>
-
-          <div class="ask-ai-response"></div>
-        </form>
-      </div>
-    </section>
-  </main>
-
-  <!-- FOOTER -->
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <p>&copy; <span id="year"></span> Elite AI Credit Repair. All rights reserved.</p>
-      <p class="footer-small">
-        These tools are for education and general information. For complex legal or tax questions, talk to a licensed professional.
-      </p>
+  <!-- ======================= RESOURCES GRID ======================= -->
+  <section class="resources container">
+    <div class="resource-card">
+      <h3>📄 Credit Cleanup Checklist</h3>
+      <p>Your step-by-step guide to cleaning your credit the right way.</p>
+      <a class="btn" href="assets/credit_cleanup_checklist.pdf" download>Download PDF</a>
     </div>
+
+    <div class="resource-card">
+      <h3>📝 Goodwill Letter Template</h3>
+      <p>A proven goodwill letter used to remove late payments.</p>
+      <a class="btn" href="assets/goodwill_letter.pdf" download>Download PDF</a>
+    </div>
+
+    <div class="resource-card">
+      <h3>📬 Dispute Letter (Basic)</h3>
+      <p>Send this when you find inaccurate information on your report.</p>
+      <a class="btn" href="assets/basic_dispute_letter.pdf" download>Download PDF</a>
+    </div>
+
+    <div class="resource-card">
+      <h3>🔍 609 Dispute Letter</h3>
+      <p>Request verification directly under FCRA law.</p>
+      <a class="btn" href="assets/609_letter.pdf" download>Download PDF</a>
+    </div>
+
+    <div class="resource-card">
+      <h3>📂 Document Upload Portal</h3>
+      <p>Upload your credit reports or documents securely.</p>
+      <a class="btn" href="#">Coming Soon</a>
+    </div>
+  </section>
+
+  <!-- ======================= ASK AI SECTION ======================= -->
+  <section class="ask-ai container">
+    <h2>Ask AI Anything About Credit</h2>
+    <p>You get 3 free questions. Members get unlimited access.</p>
+
+    <textarea id="aiQuestion" placeholder="Type your question here..."></textarea>
+    <button class="btn" onclick="askAI()">Ask AI</button>
+
+    <div id="aiResponse" class="ai-response"></div>
+  </section>
+
+  <!-- ======================= FOOTER ======================= -->
+  <footer class="footer">
+    <p>© 2025 Elite AI Credit Repair | All Rights Reserved</p>
   </footer>
+
 </body>
 </html>
+
