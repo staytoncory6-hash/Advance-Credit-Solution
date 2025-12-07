@@ -2164,5 +2164,51 @@ tbody tr:nth-child(even) {
     grid-template-columns: minmax(0, 1fr);
   }
 }
+/* HEADER */
+.site-header {
+  background: #0a1a3c; /* Navy */
+  padding: 15px 0;
+  border-bottom: 3px solid #d4af37; /* Gold */
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo {
+  width: 70px;
+  height: auto;
+  object-fit: contain;
+}
+
+.brand-text {
+  display: flex;
+  flex-direction: column;
+  color: white;
+}
+
+.brand-name {
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+.brand-tagline {
+  font-size: 0.9rem;
+  opacity: 0.85;
+}
+
+.main-nav a {
+  color: white;
+  margin-left: 20px;
+  font-size: 1rem;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.main-nav a:hover {
+  color: #d4af37; /* Gold hover */
+}
 
 
