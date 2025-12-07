@@ -17,7 +17,7 @@
 
       <!-- BRAND / LOGO -->
       <div class="brand">
-        <img src="assets/mad_scientist.png" alt="Mascot" class="logo" />
+        <img src="assets/mad_scientist.png" alt="Elite AI Mascot" class="logo" />
 
         <div class="brand-text">
           <span class="brand-name">Elite <strong>AI</strong> Credit Repair</span>
@@ -37,7 +37,7 @@
   <!-- ======================= HERO SECTION ======================= -->
   <section class="hero small-hero">
     <h1>Free Credit Repair Resources</h1>
-    <p>Professional tools designed to help you take control of your credit — powered by Elite AI.</p>
+    <p>Download professional dispute tools and securely send us your credit reports.</p>
   </section>
 
   <!-- ======================= RESOURCES GRID ======================= -->
@@ -45,32 +45,83 @@
     <div class="resource-card">
       <h3>📄 Credit Cleanup Checklist</h3>
       <p>Your step-by-step guide to cleaning your credit the right way.</p>
-      <a class="btn" href="assets/credit_cleanup_checklist.pdf" download>Download PDF</a>
+      <!-- Replace the href with your real Google Drive / Dropbox link -->
+      <a class="btn" href="https://YOUR-CREDIT-CLEANUP-LINK.com" target="_blank" rel="noopener">
+        Open / Download from Cloud
+      </a>
     </div>
 
     <div class="resource-card">
       <h3>📝 Goodwill Letter Template</h3>
       <p>A proven goodwill letter used to remove late payments.</p>
-      <a class="btn" href="assets/goodwill_letter.pdf" download>Download PDF</a>
+      <a class="btn" href="https://YOUR-GOODWILL-LETTER-LINK.com" target="_blank" rel="noopener">
+        Open / Download from Cloud
+      </a>
     </div>
 
     <div class="resource-card">
-      <h3>📬 Dispute Letter (Basic)</h3>
-      <p>Send this when you find inaccurate information on your report.</p>
-      <a class="btn" href="assets/basic_dispute_letter.pdf" download>Download PDF</a>
+      <h3>📬 Basic Dispute Letter</h3>
+      <p>Use this when you find inaccurate items on your report.</p>
+      <a class="btn" href="https://YOUR-BASIC-DISPUTE-LINK.com" target="_blank" rel="noopener">
+        Open / Download from Cloud
+      </a>
     </div>
 
     <div class="resource-card">
       <h3>🔍 609 Dispute Letter</h3>
       <p>Request verification directly under FCRA law.</p>
-      <a class="btn" href="assets/609_letter.pdf" download>Download PDF</a>
+      <a class="btn" href="https://YOUR-609-LETTER-LINK.com" target="_blank" rel="noopener">
+        Open / Download from Cloud
+      </a>
     </div>
 
     <div class="resource-card">
-      <h3>📂 Document Upload Portal</h3>
-      <p>Upload your credit reports or documents securely.</p>
-      <a class="btn" href="#">Coming Soon</a>
+      <h3>📂 Upload Your Credit Reports</h3>
+      <p>Securely send us your credit reports so we can build a real plan.</p>
+      <a class="btn secondary" href="#upload-portal">
+        Go to Upload Portal
+      </a>
     </div>
+  </section>
+
+  <!-- ======================= UPLOAD PORTAL SECTION ======================= -->
+  <section id="upload-portal" class="upload-section container">
+    <h2>Secure Credit Report Upload</h2>
+    <p>
+      To protect your data, uploads are handled through a secure cloud portal.
+      You can send us your credit reports directly from your phone or computer.
+    </p>
+
+    <!-- 🔹 This button should link to your Google Drive / Dropbox File Request URL -->
+    <a
+      class="btn large-btn"
+      href="https://YOUR-SECURE-FILE-REQUEST-LINK.com"
+      target="_blank"
+      rel="noopener"
+    >
+      Upload Credit Reports Securely
+    </a>
+
+    <ul class="upload-notes">
+      <li>✔ Combine all pages for each bureau into one PDF if you can.</li>
+      <li>✔ Remove or hide any account numbers you don’t want visible.</li>
+      <li>✔ We recommend uploading Experian, Equifax, and TransUnion reports.</li>
+    </ul>
+
+    <!-- OPTIONAL: If later you get a real backend, you can swap this in:
+    <form class="upload-form" action="https://YOUR-BACKEND-ENDPOINT.com/upload" method="POST" enctype="multipart/form-data">
+      <label for="fullName">Full Name</label>
+      <input type="text" id="fullName" name="fullName" required />
+
+      <label for="email">Email Address</label>
+      <input type="email" id="email" name="email" required />
+
+      <label for="reports">Upload Credit Reports (PDF only)</label>
+      <input type="file" id="reports" name="reports" accept=".pdf" multiple required />
+
+      <button type="submit" class="btn">Submit Securely</button>
+    </form>
+    -->
   </section>
 
   <!-- ======================= ASK AI SECTION ======================= -->
@@ -91,4 +142,3 @@
 
 </body>
 </html>
-
